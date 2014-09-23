@@ -1,0 +1,170 @@
+# ------------------------------------------------------------
+#
+# Title         : track_lost_trades.skt
+# Author        : Simon Chudley
+# Creation Date : Fed 2007
+#
+# Description
+# -----------
+# This SKitLet tool aims to identify when trades processed
+# by a headend have been lost downstream.
+#
+# It does this simply by identifying non-contigious NUM_MOVES
+# for a set RIC universe.
+#
+# It visually shows when a trade has been missed for a RIC, 
+# and also records to a log file.
+#
+# This tool is part of SKit, and uses the SKitLet library to
+# interact with core SKit tools.
+#
+# Change History
+# --------------
+# 04-Feb-2007  S.R. Chudley      1.0.1.0 : Created
+
+# Version
+my $l_version = "1.0.2.0";
+
+# Use the SKitLet library
+use SKitLet;
+use POSIX qw(strftime);
+use Win32::Console;
+
+# Read in parameters
+my $l_feed = $ARGV[0];
+my $l_rics = $ARGV[1];
+my %l_moves = ();
+my $l_ric_c = 0;
+my $l_trade_c = 0;
+my $l_trade_mc = 0;
+my $l_total_inactive = 0;
+my %l_total_missed = ();
+if ($l_feed eq "" or !(-f $l_rics))
+{
+   print "TrackLostTrades v$l_version: Developed by S. Chudley\n\n";
+   print "Usage:\n\n   track_lost_trades <IDN|QDN|FEED> <ric_file>\n";
+   print "\nA log of missing trades will be appended to the file 'track_lost_trades.log'.\n";
+   exit(1);
+}
+
+# Read in list of RICs we want to watch from file
+if (!SKitLet::skt_parse_ric_file($l_rics, \@l_rics))
+{
+   print STERR "Unable to read RICs from file '$l_rics'!\n";
+   exit(1);
+}
+my $l_ric_c = @l_rics;
+
+# Set up WIN32 console
+my @l_rows = ();
+my $l_console = new Win32::Console(STD_OUTPUT_HANDLE);
+($l_left, $l_top, $l_right, $l_bottom) = $l_console->Window();
+my $l_max_y = $l_bottom - $l_top - 7;
+$l_console->Cls();
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 80, 0, 0);
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 80, 0, $l_bottom - $l_top);
+$l_console->WriteChar("Use Ctrl+C to exit...", 0, $l_bottom - $l_top);
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 80, 0, 1);
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 80, 0, 2);
+my $l_str = sprintf("Track Lost Trades %-23s %36s", "(v".$l_version.")", "Powered by SKitLets (v".SKitLet::skt_version().")");
+$l_console->WriteChar($l_str, 1, 0);
+$l_console->WriteChar("-------------------------------------------------------------------------------", 0, 1);
+my $l_str = sprintf("RICs: %-20s Total Trades: %-10s %24s", $l_ric_c." (0 inactive)", $l_trade_c, "Missed Trades: ".$l_trade_mc);
+$l_console->WriteChar($l_str, 2, 2);
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 76, 2, 4);
+$l_str = sprintf("%-10s %-25s %-9s %-9s %-9s %-9s", "Time", "RIC             NUM_MOVES", "Expected", "Got", "Missed", "Total");
+$l_console->WriteChar($l_str, 2, 4);
+
+# Create the SKitLet
+my $l_skitlet = new SKitLet("feed" => $l_feed) or die "Can't create SKitLet on $l_feed!";
+
+# Set our callback functions, interested only on PCUpdates
+SKitLet::skt_set_callback("PCUPDATE", \&process_update);
+SKitLet::skt_set_callback("RECORDINACTIVE", \&process_inactive);
+
+# Set Ctrl+C signal handler callback
+SKitLet::skt_signal_handler(\&app_terminate);
+sub app_terminate
+{
+   # Terminate the SKitLet
+   &SKitLet::skt_terminate();
+   $l_console->Cls();
+}
+
+# Just watch updates with FID NUM_MOVES in them
+my @l_fids = ("NUM_MOVES");
+$l_skitlet->set_option("no_empty_upds");
+
+# Set the SKitLet to watch these RICs
+if (!$l_skitlet->watch_rics(\@l_rics, \@l_fids))
+{
+   print STDERR "Unable to watch RICS: ".$l_skitlet->last_error()."\n";
+   exit(1);
+}
+
+# Start the SKitLet dispatcher, this won't return till we're done
+SKitLet::skt_dispatch();
+exit(0);
+
+
+##########
+# Called when watched RICs receive a PCUpdate message
+#
+sub process_update
+{
+   local ($a_feed, $a_ric, $a_attr, *a_fids) = @_;
+
+   # Got NUM_MOVES in this update?
+   my $l_moves_now = $a_fids{"NUM_MOVES"}; $l_moves_now =~ s/\+//;
+   if (defined $l_moves_now)
+   {
+      # Fetch last number of moves for this RIC
+      my $l_moves_last = $l_moves{$a_ric};
+      if (defined $l_moves_last)
+      {
+         # Moves not gone up by one?
+         if ($l_moves_now != $l_moves_last + 1)
+         {
+            # Work out what we have missed
+            my $l_ts = strftime("%H:%M:%S", gmtime());
+            my $l_missed = ($l_moves_now - $l_moves_last - 1);
+            if ($l_missed < 0) { $l_missed = 0; }
+            my $l_total = $l_missed;
+            if (defined $l_total_missed{$a_ric}) { $l_total += $l_total_missed{$a_ric}; }
+            $l_total_missed{$a_ric} = $l_total;
+            $l_trade_mc += $l_missed;
+
+            # Update console
+            my $l_str = sprintf("%-10s %-25s %-9s %-9s %-9s %-9s", $l_ts, $a_ric, ($l_moves_last + 1), $l_moves_now, $l_missed, $l_total);
+            my @l_new_rows = ($l_str);
+            for (my $i = 0; $i != $l_max_y && $i < @l_rows;$i++)
+               { push(@l_new_rows, $l_rows[$i]); }
+            @l_rows = @l_new_rows;
+            my $l_id = 5;
+            foreach my $l_row (@l_rows)
+               { $l_console->WriteChar($l_row, 2, $l_id++); }
+
+            # Update log
+            open(OUTF, ">>track_lost_trades.log");
+            print OUTF "[$l_ts] $a_ric - missed trade (last mov: $l_moves_last, got mov: $l_moves_now, missed: $l_missed, ric_total: $l_total, all_total: $l_trade_mc)\n";
+            close(OUT);
+         }
+      }
+
+      # Remember the number of moves
+      $l_moves{$a_ric} = $l_moves_now;
+      $l_trade_c++;
+
+      # Update console statistics
+      my $l_str = sprintf("RICs: %-20s Total Trades: %-10s %24s", $l_ric_c." (".$l_total_inactive." inactive)", $l_trade_c, "Missed Trades: ".$l_trade_mc);
+      $l_console->WriteChar($l_str, 2, 2);
+   }
+}
+
+# Case that a RIC is in-active (not built)
+sub process_inactive
+{
+   $l_total_inactive++;
+   my $l_str = sprintf("RICs: %-20s Total Trades: %-10s %24s", $l_ric_c." (".$l_total_inactive." inactive)", $l_trade_c, "Missed Trades: ".$l_trade_mc);
+   $l_console->WriteChar($l_str, 2, 2);
+}

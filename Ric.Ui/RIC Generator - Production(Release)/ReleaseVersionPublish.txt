@@ -1,0 +1,10 @@
+Application:
+Assembly name:Ric.Ui.Production
+Default namespace:Ric.Ui.Production
+
+
+Publish:
+Publish Folder Location:\\10.35.16.40\Publish\RIC Generator - Production(Release)\
+Product name:RIC Generator - Production
+Deployment web page:RIC Generator - Production.html
+Publish version:according last publish version

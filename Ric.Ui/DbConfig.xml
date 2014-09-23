@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DbConfig>
+  <ConnectionString>server=10.35.16.40;uid=ETIAsia;pwd=Welcome1;database=Tactical Automation</ConnectionString>
+</DbConfig>

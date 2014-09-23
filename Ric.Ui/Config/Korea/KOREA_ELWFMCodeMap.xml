@@ -1,0 +1,1978 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ClassCodeMap>
+  <IssuerCodeMap>
+    <IssuerCodeConversion>
+      <orgname>SHINH</orgname>
+      <fullname>Shinhan Investment</fullname>
+      <shortname>SHIC</shortname>
+      <NDA_TC>SHINHAN INVEST</NDA_TC>
+      <NDA_Issuer_ORGID>46360</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>신한</DSPLY_NMLL>
+      <no>50</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>DAISH</orgname>
+      <fullname>Daishin Securities</fullname>
+      <shortname>DSHA</shortname>
+      <NDA_TC>DAISHIN SEC</NDA_TC>
+      <NDA_Issuer_ORGID>40314</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>대신</DSPLY_NMLL>
+      <no>51</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>DAEWO</orgname>
+      <fullname>Daewoo Securities</fullname>
+      <shortname>DWSG</shortname>
+      <NDA_TC>DAEWOO SEC</NDA_TC>
+      <NDA_Issuer_ORGID>40294</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>대우</DSPLY_NMLL>
+      <no>52</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>SAMSU</orgname>
+      <fullname>Samsung Securities</fullname>
+      <shortname>SMSC</shortname>
+      <NDA_TC>SAMSUNG SEC</NDA_TC>
+      <NDA_Issuer_ORGID>41836</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>삼성</DSPLY_NMLL>
+      <no>53</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>SHINY</orgname>
+      <fullname>Shinyoung Securities</fullname>
+      <shortname>SYSE</shortname>
+      <NDA_TC>SHINYOUNG SEC</NDA_TC>
+      <NDA_Issuer_ORGID>45998</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>신영</DSPLY_NMLL>
+      <no>54</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>WOORI</orgname>
+      <fullname>Woori Investment @ Securities</fullname>
+      <shortname>WRIS</shortname>
+      <NDA_TC>WOORI INV SEC</NDA_TC>
+      <NDA_Issuer_ORGID>43382</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>우리</DSPLY_NMLL>
+      <no>55</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>KOREA</orgname>
+      <fullname>Korea Investment @ Securities</fullname>
+      <shortname>KISE</shortname>
+      <NDA_TC>KOREA INV SEC</NDA_TC>
+      <NDA_Issuer_ORGID>101432833</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>한국</DSPLY_NMLL>
+      <no>57</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>HYUND</orgname>
+      <fullname>Hyundai Securities</fullname>
+      <shortname>HDSE</shortname>
+      <NDA_TC>HYUNDAI SEC</NDA_TC>
+      <NDA_Issuer_ORGID>42198</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>현대</DSPLY_NMLL>
+      <no>58</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>MIRAE</orgname>
+      <fullname>Mirae Asset Securities</fullname>
+      <shortname>MRAE</shortname>
+      <NDA_TC>MIRAE ASSET SEC</NDA_TC>
+      <NDA_Issuer_ORGID>157955</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>미래</DSPLY_NMLL>
+      <no>59</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>MACQU</orgname>
+      <fullname>Maquarie Sec</fullname>
+      <shortname>MAQS</shortname>
+      <NDA_TC>MACQUARIE SEC KR</NDA_TC>
+      <NDA_Issuer_ORGID>103581523</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>맥쿼리</DSPLY_NMLL>
+      <no>60</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>MERIT</orgname>
+      <fullname>Meritz Sec</fullname>
+      <shortname>MRTZ</shortname>
+      <NDA_TC>MERITZ SEC</NDA_TC>
+      <NDA_Issuer_ORGID>64857</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>메리츠</DSPLY_NMLL>
+      <no>61</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>KYOBO</orgname>
+      <fullname>KYOBO SECURITIES</fullname>
+      <shortname>KYOS</shortname>
+      <NDA_TC>KYOBO SECURITIES</NDA_TC>
+      <NDA_Issuer_ORGID>124063</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>교보</DSPLY_NMLL>
+      <no>62</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>CITIG</orgname>
+      <fullname>Citigroup Securities</fullname>
+      <shortname>CTGK</shortname>
+      <NDA_TC>CITIGROUP KOREA</NDA_TC>
+      <NDA_Issuer_ORGID>123974</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>씨티</DSPLY_NMLL>
+      <no>63</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>EUGEN</orgname>
+      <fullname>EUGENE INVESTMENT @ SECURITIES</fullname>
+      <shortname>EUGN</shortname>
+      <NDA_TC>EUGENEIS</NDA_TC>
+      <NDA_Issuer_ORGID>46268</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>유진</DSPLY_NMLL>
+      <no>64</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>HANWH</orgname>
+      <fullname>HANWHA SECURITIES</fullname>
+      <shortname>HWSE</shortname>
+      <NDA_TC>HANWHA SEC</NDA_TC>
+      <NDA_Issuer_ORGID>41346</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>한화</DSPLY_NMLL>
+      <no>65</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>TONGY</orgname>
+      <fullname>TONGYANG INVESTMENT BANK</fullname>
+      <shortname>TYIB</shortname>
+      <NDA_TC>TONG YANG INV BK</NDA_TC>
+      <NDA_Issuer_ORGID>47191</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>동양</DSPLY_NMLL>
+      <no>66</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>NH IN</orgname>
+      <fullname>NH INVESTMENT @ SECURITIES</fullname>
+      <shortname>NHSE</shortname>
+      <NDA_TC>NH INV SEC</NDA_TC>
+      <NDA_Issuer_ORGID>43011</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>NH</DSPLY_NMLL>
+      <no>69</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>HANA </orgname>
+      <fullname>Hana Daetoo Securities Co Ltd</fullname>
+      <shortname>HNDT</shortname>
+      <NDA_TC>HANA DAETOO</NDA_TC>
+      <NDA_Issuer_ORGID>100254931</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>하나</DSPLY_NMLL>
+      <no>70</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>DONGB</orgname>
+      <fullname>Dongbu Securities Co Ltd</fullname>
+      <shortname>DBSE</shortname>
+      <NDA_TC>DONGBU SEC</NDA_TC>
+      <NDA_Issuer_ORGID>40562</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>동부</DSPLY_NMLL>
+      <no>67</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>DEUTS</orgname>
+      <fullname>DEUTSCHE SECURITIES KOREA CO.</fullname>
+      <shortname>DSKC</shortname>
+      <NDA_TC>DEUTSCHE SEC</NDA_TC>
+      <NDA_Issuer_ORGID>107312926</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>도이치</DSPLY_NMLL>
+      <no>71</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>STAND</orgname>
+      <fullname>STANDARDCHARTERED SECURITIES CO., LTD</fullname>
+      <shortname>SCSE</shortname>
+      <NDA_TC>STANDARDCHARTERED</NDA_TC>
+      <NDA_Issuer_ORGID>107354714</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>스탠차</DSPLY_NMLL>
+      <no>74</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>IBK S</orgname>
+      <fullname>IBK SECURITIES CO., LTD</fullname>
+      <shortname>IBKS</shortname>
+      <NDA_TC>IBK SEC</NDA_TC>
+      <NDA_Issuer_ORGID>106032632</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>IBK</DSPLY_NMLL>
+      <no>72</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>NOMUR</orgname>
+      <fullname>NOMURA FINANCIAL INVESTMENT (KOREA) CO., LTD.</fullname>
+      <shortname>NFIK</shortname>
+      <NDA_TC>NOMURA FINANCE INV</NDA_TC>
+      <NDA_Issuer_ORGID>107647724</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>노무라</DSPLY_NMLL>
+      <no>75</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>HMC I</orgname>
+      <fullname>HMC INVESTMENT SECURITIES CO., LTD.</fullname>
+      <shortname>HMCI</shortname>
+      <NDA_TC>HMC INV SEC</NDA_TC>
+      <NDA_Issuer_ORGID>59228</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>HMC</DSPLY_NMLL>
+      <no>73</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>KIWOO</orgname>
+      <fullname>KIWOOM Securities Co.,Ltd.</fullname>
+      <shortname>KWSE</shortname>
+      <NDA_TC>KIWOOM SEC</NDA_TC>
+      <NDA_Issuer_ORGID>100254408</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>키움</DSPLY_NMLL>
+      <no>76</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>KB IN</orgname>
+      <fullname>KB INVESTMENT @ SECURITIES</fullname>
+      <shortname>KBIS</shortname>
+      <NDA_TC>KB INV SEC</NDA_TC>
+      <NDA_Issuer_ORGID>123707</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>KB</DSPLY_NMLL>
+      <no>77</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>SK SE</orgname>
+      <fullname>SK SECURITIES</fullname>
+      <shortname>SKSS</shortname>
+      <NDA_TC>SK SEC</NDA_TC>
+      <NDA_Issuer_ORGID>40451</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>SK</DSPLY_NMLL>
+      <no>68</no>
+    </IssuerCodeConversion>
+    <IssuerCodeConversion>
+      <orgname>BNP P</orgname>
+      <fullname>BNP PARIBAS SECURITIES KOREA</fullname>
+      <shortname>BPSK</shortname>
+      <NDA_TC>BNP SEC KR</NDA_TC>
+      <NDA_Issuer_ORGID>105998234</NDA_Issuer_ORGID>
+      <DSPLY_NMLL>비엔피</DSPLY_NMLL>
+      <no>78</no>
+    </IssuerCodeConversion>
+  </IssuerCodeMap>
+
+  <!-- split line -->
+
+  <UnderlyingCodeMap>    
+    <UnderlyingCodeConversion>
+      <KoreaName>기아자동차</KoreaName>
+      <KoreaName_ForFM2>기아자동차</KoreaName_ForFM2>
+      <UnderlyingRic>000270.KS</UnderlyingRic>
+      <QACommonName>KIA MOTOR</QACommonName>
+      <IDNDisplayName>KIAMT</IDNDisplayName>
+      <DSPLY_NMLL>기아차</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>기아차</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KIA MOTORS</NDA_TC>
+      <BDN_Underlying>kr;27</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>에스케이하이닉스</KoreaName>
+      <KoreaName_ForFM2>SK하이닉스</KoreaName_ForFM2>
+      <UnderlyingRic>000660.KS</UnderlyingRic>
+      <QACommonName>SKH</QACommonName>
+      <IDNDisplayName>SKH</IDNDisplayName>
+      <DSPLY_NMLL>SK하이</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>SK하이닉</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HYNIX SEMICONDUCTOR</NDA_TC>
+      <BDN_Underlying>kr;66</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>한진해운홀딩스</KoreaName>
+      <KoreaName_ForFM2>한진해운홀딩스</KoreaName_ForFM2>
+      <UnderlyingRic>000700.KS</UnderlyingRic>
+      <QACommonName>HANJIN SHIP HOLDINGS</QACommonName>
+      <IDNDisplayName>HJS</IDNDisplayName>
+      <DSPLY_NMLL>한진해운</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>한진SH</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HANJIN SHIPPING HOLDINGS</NDA_TC>
+      <BDN_Underlying>kr;70</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>현대건설</KoreaName>
+      <KoreaName_ForFM2>현대건설</KoreaName_ForFM2>
+      <UnderlyingRic>000720.KS</UnderlyingRic>
+      <QACommonName>HYUNDAI ENG</QACommonName>
+      <IDNDisplayName>HDEC</IDNDisplayName>
+      <DSPLY_NMLL>현대건설</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>현대건설</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HYUNDAI ENGINEERING @ CONSTRUCTION</NDA_TC>
+      <BDN_Underlying>kr;72</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>삼성화재해상보험</KoreaName>
+      <KoreaName_ForFM2>삼성화재해상보험</KoreaName_ForFM2>
+      <UnderlyingRic>000810.KS</UnderlyingRic>
+      <QACommonName>SAMSUNG FIRE INS</QACommonName>
+      <IDNDisplayName>SFM</IDNDisplayName>
+      <DSPLY_NMLL>삼성화재</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>삼성화재</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SAMSUNG FIRE @ MARINE INSURANCE</NDA_TC>
+      <BDN_Underlying>kr;81</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>삼성물산</KoreaName>
+      <KoreaName_ForFM2>삼성물산</KoreaName_ForFM2>
+      <UnderlyingRic>000830.KS</UnderlyingRic>
+      <QACommonName>SAMSUNG C@T</QACommonName>
+      <IDNDisplayName>SSCT</IDNDisplayName>
+      <DSPLY_NMLL>삼성물산</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>삼성물산</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SAMSUNG C@T</NDA_TC>
+      <BDN_Underlying>kr;83</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>동국제강</KoreaName>
+      <KoreaName_ForFM2>동국제강</KoreaName_ForFM2>
+      <UnderlyingRic>001230.KS</UnderlyingRic>
+      <QACommonName>DONGKUK STEEL</QACommonName>
+      <IDNDisplayName>DGKUK</IDNDisplayName>
+      <DSPLY_NMLL>동국제강</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>동국제강</DSPLY_NMLL_ForDrop>
+      <NDA_TC>DONGKUK STEEL</NDA_TC>
+      <BDN_Underlying>kr;123</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>제일모직</KoreaName>
+      <KoreaName_ForFM2>제일모직</KoreaName_ForFM2>
+      <UnderlyingRic>001300.KS</UnderlyingRic>
+      <QACommonName>CHEIL IND</QACommonName>
+      <IDNDisplayName>SCI</IDNDisplayName>
+      <DSPLY_NMLL>제일모직</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>제일모직</DSPLY_NMLL_ForDrop>
+      <NDA_TC>CHEIL IND</NDA_TC>
+      <BDN_Underlying>kr;130</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>대한항공</KoreaName>
+      <KoreaName_ForFM2>대한항공</KoreaName_ForFM2>
+      <UnderlyingRic>003490.KS</UnderlyingRic>
+      <QACommonName>KOREAN AIR</QACommonName>
+      <IDNDisplayName>KAL</IDNDisplayName>
+      <DSPLY_NMLL>대한항공</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>대한항공</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KOREAN AIR</NDA_TC>
+      <BDN_Underlying>kr;349</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>코리안리재보험</KoreaName>
+      <KoreaName_ForFM2>코리안리재보험</KoreaName_ForFM2>
+      <UnderlyingRic>003690.KS</UnderlyingRic>
+      <QACommonName>KOREAN REINSU</QACommonName>
+      <IDNDisplayName>KRRE</IDNDisplayName>
+      <DSPLY_NMLL>코리안리</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>코리안리</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KOREAN REINSU</NDA_TC>
+      <BDN_Underlying>kr;369</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>현대제철</KoreaName>
+      <KoreaName_ForFM2>현대제철</KoreaName_ForFM2>
+      <UnderlyingRic>004020.KS</UnderlyingRic>
+      <QACommonName>HYUNDAI STEEL</QACommonName>
+      <IDNDisplayName>HDSTL</IDNDisplayName>
+      <DSPLY_NMLL>현대제철</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>현대제철</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HYUNDAI STEEL</NDA_TC>
+      <BDN_Underlying>kr;402</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>한솔제지</KoreaName>
+      <KoreaName_ForFM2>한솔제지</KoreaName_ForFM2>
+      <UnderlyingRic>004150.KS</UnderlyingRic>
+      <QACommonName>HANSOL PAPER</QACommonName>
+      <IDNDisplayName>HANSP</IDNDisplayName>
+      <DSPLY_NMLL>한솔제지</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>한솔제지</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HANSOL PAPER</NDA_TC>
+      <BDN_Underlying>kr;415</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>신세계</KoreaName>
+      <KoreaName_ForFM2>신세계</KoreaName_ForFM2>
+      <UnderlyingRic>004170.KS</UnderlyingRic>
+      <QACommonName>SHINSEGAE</QACommonName>
+      <IDNDisplayName>SSG</IDNDisplayName>
+      <DSPLY_NMLL>신세계</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>신세계</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SHINSEGAE</NDA_TC>
+      <BDN_Underlying>kr;417</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>현대자동차</KoreaName>
+      <KoreaName_ForFM2>현대자동차</KoreaName_ForFM2>
+      <UnderlyingRic>005380.KS</UnderlyingRic>
+      <QACommonName>HYUNDAI MOTOR</QACommonName>
+      <IDNDisplayName>HDMT</IDNDisplayName>
+      <DSPLY_NMLL>현대차</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>현대차</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HYUNDAI MOTOR</NDA_TC>
+      <BDN_Underlying>kr;538</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>포스코</KoreaName>
+      <KoreaName_ForFM2>포스코</KoreaName_ForFM2>
+      <UnderlyingRic>005490.KS</UnderlyingRic>
+      <QACommonName>POSCO</QACommonName>
+      <IDNDisplayName>POSCO</IDNDisplayName>
+      <DSPLY_NMLL>포스코</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>POSCO</DSPLY_NMLL_ForDrop>
+      <NDA_TC>POSCO</NDA_TC>
+      <BDN_Underlying>kr;549</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>삼성전자</KoreaName>
+      <KoreaName_ForFM2>삼성전자</KoreaName_ForFM2>
+      <UnderlyingRic>005930.KS</UnderlyingRic>
+      <QACommonName>SAMSUNG ELEC</QACommonName>
+      <IDNDisplayName>SEC</IDNDisplayName>
+      <DSPLY_NMLL>삼성전자</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>삼성전자</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SAMSUNG ELECTRONICS</NDA_TC>
+      <BDN_Underlying>kr;593</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>우리투자증권</KoreaName>
+      <KoreaName_ForFM2>우리투자증권</KoreaName_ForFM2>
+      <UnderlyingRic>005940.KS</UnderlyingRic>
+      <QACommonName>WOORI SEC</QACommonName>
+      <IDNDisplayName>WRSEC</IDNDisplayName>
+      <DSPLY_NMLL>우리투증</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>우리투증</DSPLY_NMLL_ForDrop>
+      <NDA_TC>WOORI INVESTMENT SECURITIES</NDA_TC>
+      <BDN_Underlying>kr;594</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>지에스건설</KoreaName>
+      <KoreaName_ForFM2>GS건설</KoreaName_ForFM2>
+      <UnderlyingRic>006360.KS</UnderlyingRic>
+      <QACommonName>GS CONST</QACommonName>
+      <IDNDisplayName>GSEC</IDNDisplayName>
+      <DSPLY_NMLL>GS건설</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>GS건설</DSPLY_NMLL_ForDrop>
+      <NDA_TC>GS ENGINEERING CONSTRUCTION</NDA_TC>
+      <BDN_Underlying>kr;636</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>삼성SDI</KoreaName>
+      <KoreaName_ForFM2>삼성SDI</KoreaName_ForFM2>
+      <UnderlyingRic>006400.KS</UnderlyingRic>
+      <QACommonName>SAMSUNG SDI</QACommonName>
+      <IDNDisplayName>SDI</IDNDisplayName>
+      <DSPLY_NMLL>SDI</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>삼성SDI</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SAMSUNG SDI</NDA_TC>
+      <BDN_Underlying>kr;640</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>대우증권</KoreaName>
+      <KoreaName_ForFM2>대우증권</KoreaName_ForFM2>
+      <UnderlyingRic>006800.KS</UnderlyingRic>
+      <QACommonName>DAEWOO SEC</QACommonName>
+      <IDNDisplayName>DWSEC</IDNDisplayName>
+      <DSPLY_NMLL>대우증권</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>대우증권</DSPLY_NMLL_ForDrop>
+      <NDA_TC>DAEWOO SEC</NDA_TC>
+      <BDN_Underlying>kr;680</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>현대중공업</KoreaName>
+      <KoreaName_ForFM2>현대중공업</KoreaName_ForFM2>
+      <UnderlyingRic>009540.KS</UnderlyingRic>
+      <QACommonName>HYUNDAI HEAVY</QACommonName>
+      <IDNDisplayName>HHI</IDNDisplayName>
+      <DSPLY_NMLL>현대중공</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>현대중</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HYUNDAI HEAVY INDUSTRIES</NDA_TC>
+      <BDN_Underlying>kr;954</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>삼성중공업</KoreaName>
+      <KoreaName_ForFM2>삼성중공업</KoreaName_ForFM2>
+      <UnderlyingRic>010140.KS</UnderlyingRic>
+      <QACommonName>SAMSUNG HEAVY</QACommonName>
+      <IDNDisplayName>SHI</IDNDisplayName>
+      <DSPLY_NMLL>삼성중공</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>삼성중</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SAMSUNG HEAVY INDUSTRIES</NDA_TC>
+      <BDN_Underlying>kr;1014</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>S-Oil</KoreaName>
+      <KoreaName_ForFM2>S-Oil</KoreaName_ForFM2>
+      <UnderlyingRic>010950.KS</UnderlyingRic>
+      <QACommonName>SOIL</QACommonName>
+      <IDNDisplayName>SOIL</IDNDisplayName>
+      <DSPLY_NMLL>SOIL</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>SOIL</DSPLY_NMLL_ForDrop>
+      <NDA_TC>S-OIL</NDA_TC>
+      <BDN_Underlying>kr;1095</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>삼성테크윈</KoreaName>
+      <KoreaName_ForFM2>삼성테크윈</KoreaName_ForFM2>
+      <UnderlyingRic>012450.KS</UnderlyingRic>
+      <QACommonName>SAMSUNG TECHWIN</QACommonName>
+      <IDNDisplayName>STW</IDNDisplayName>
+      <DSPLY_NMLL>삼성테크</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>삼성테크</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SAMSUNG TECHWIN</NDA_TC>
+      <BDN_Underlying>kr;1245</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>현대산업개발</KoreaName>
+      <KoreaName_ForFM2>현대산업개발</KoreaName_ForFM2>
+      <UnderlyingRic>012630.KS</UnderlyingRic>
+      <QACommonName>HYUNDAI DVLP</QACommonName>
+      <IDNDisplayName>HDD</IDNDisplayName>
+      <DSPLY_NMLL>현대산업</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>현대산업</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HYUNDAI DEVELOPMENT</NDA_TC>
+      <BDN_Underlying>kr;1263</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>한국전력공사</KoreaName>
+      <KoreaName_ForFM2>한국전력공사</KoreaName_ForFM2>
+      <UnderlyingRic>015760.KS</UnderlyingRic>
+      <QACommonName>KEPCO</QACommonName>
+      <IDNDisplayName>KEPCO</IDNDisplayName>
+      <DSPLY_NMLL>한국전력</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>한국전력</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KOREA ELECTRIC POWER</NDA_TC>
+      <BDN_Underlying>kr;1576</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>삼성증권</KoreaName>
+      <KoreaName_ForFM2>삼성증권</KoreaName_ForFM2>
+      <UnderlyingRic>016360.KS</UnderlyingRic>
+      <QACommonName>SAMSUNG SEC</QACommonName>
+      <IDNDisplayName>SSSEC</IDNDisplayName>
+      <DSPLY_NMLL>삼성증권</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>삼성증권</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SAMSUNG SECURITIES</NDA_TC>
+      <BDN_Underlying>kr;1636</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>SK텔레콤</KoreaName>
+      <KoreaName_ForFM2>SK텔레콤</KoreaName_ForFM2>
+      <UnderlyingRic>017670.KS</UnderlyingRic>
+      <QACommonName>SK TELECOM</QACommonName>
+      <IDNDisplayName>SKT</IDNDisplayName>
+      <DSPLY_NMLL>SK텔레</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>SK텔레콤</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SK TELECOM</NDA_TC>
+      <BDN_Underlying>kr;1767</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>중소기업은행</KoreaName>
+      <KoreaName_ForFM2>중소기업은행</KoreaName_ForFM2>
+      <UnderlyingRic>024110.KS</UnderlyingRic>
+      <QACommonName>IBK</QACommonName>
+      <IDNDisplayName>IBK</IDNDisplayName>
+      <DSPLY_NMLL>기업은행</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>기업은행</DSPLY_NMLL_ForDrop>
+      <NDA_TC>INDUSTRIAL BANK OF KOREA</NDA_TC>
+      <BDN_Underlying>kr;2411</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>케이티</KoreaName>
+      <KoreaName_ForFM2>케이티</KoreaName_ForFM2>
+      <UnderlyingRic>030200.KS</UnderlyingRic>
+      <QACommonName>KT</QACommonName>
+      <IDNDisplayName>KT</IDNDisplayName>
+      <DSPLY_NMLL>케이티</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>케이티</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KT</NDA_TC>
+      <BDN_Underlying>kr;3020</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>케이티앤지</KoreaName>
+      <KoreaName_ForFM2>케이티앤지</KoreaName_ForFM2>
+      <UnderlyingRic>033780.KS</UnderlyingRic>
+      <QACommonName>KTG</QACommonName>
+      <IDNDisplayName>KTG</IDNDisplayName>
+      <DSPLY_NMLL>KTG</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>KTG</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KT@G</NDA_TC>
+      <BDN_Underlying>kr;3378</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>LG디스플레이</KoreaName>
+      <KoreaName_ForFM2>LG디스플레이</KoreaName_ForFM2>
+      <UnderlyingRic>034220.KS</UnderlyingRic>
+      <QACommonName>LG DISPLAY</QACommonName>
+      <IDNDisplayName>LGDP</IDNDisplayName>
+      <DSPLY_NMLL>엘지디스</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>엘지디스</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LG DISPLAY</NDA_TC>
+      <BDN_Underlying>kr;3422</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>대우조선해양</KoreaName>
+      <KoreaName_ForFM2>대우조선해양</KoreaName_ForFM2>
+      <UnderlyingRic>042660.KS</UnderlyingRic>
+      <QACommonName>DAEWOO SHIP</QACommonName>
+      <IDNDisplayName>DAEWSME</IDNDisplayName>
+      <DSPLY_NMLL>대우조선</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>대우조선</DSPLY_NMLL_ForDrop>
+      <NDA_TC>DAEWOO SHIPBUILD</NDA_TC>
+      <BDN_Underlying>kr;4266</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>대우건설</KoreaName>
+      <KoreaName_ForFM2>대우건설</KoreaName_ForFM2>
+      <UnderlyingRic>047040.KS</UnderlyingRic>
+      <QACommonName>DAEWOO CONST</QACommonName>
+      <IDNDisplayName>DWEC</IDNDisplayName>
+      <DSPLY_NMLL>대우건설</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>대우건설</DSPLY_NMLL_ForDrop>
+      <NDA_TC>DAEWOO CONST</NDA_TC>
+      <BDN_Underlying>kr;4704</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>LG화학</KoreaName>
+      <KoreaName_ForFM2>LG화학</KoreaName_ForFM2>
+      <UnderlyingRic>051910.KS</UnderlyingRic>
+      <QACommonName>LG CHEM</QACommonName>
+      <IDNDisplayName>LGCH</IDNDisplayName>
+      <DSPLY_NMLL>LG화학</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>LG화학</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LG CHEM</NDA_TC>
+      <BDN_Underlying>kr;5191</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>우리금융지주</KoreaName>
+      <KoreaName_ForFM2>우리금융지주</KoreaName_ForFM2>
+      <UnderlyingRic>053000.KS</UnderlyingRic>
+      <QACommonName>WOORI FINANCE</QACommonName>
+      <IDNDisplayName>WRFH</IDNDisplayName>
+      <DSPLY_NMLL>우리금융</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>우리금융</DSPLY_NMLL_ForDrop>
+      <NDA_TC>WOORI FINANCE HOLDINGS</NDA_TC>
+      <BDN_Underlying>kr;5300</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>신한금융지주회사</KoreaName>
+      <KoreaName_ForFM2>신한지주</KoreaName_ForFM2>
+      <UnderlyingRic>055550.KS</UnderlyingRic>
+      <QACommonName>SHINHAN FINANCE</QACommonName>
+      <IDNDisplayName>SHFG</IDNDisplayName>
+      <DSPLY_NMLL>신한지주</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>신한지주</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SHINHAN FINANCIAL GROUP</NDA_TC>
+      <BDN_Underlying>kr;5555</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>KB금융지주</KoreaName>
+      <KoreaName_ForFM2>KB금융</KoreaName_ForFM2>
+      <UnderlyingRic>105560.KS</UnderlyingRic>
+      <QACommonName>KB FINANCIAL GROUP</QACommonName>
+      <IDNDisplayName>KB FGI</IDNDisplayName>
+      <DSPLY_NMLL>KB금융</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>KB금융</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KB FINANCIAL GROUP</NDA_TC>
+      <BDN_Underlying>kr;10556</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>LG전자</KoreaName>
+      <KoreaName_ForFM2>LG전자</KoreaName_ForFM2>
+      <UnderlyingRic>066570.KS</UnderlyingRic>
+      <QACommonName>LG ELEC</QACommonName>
+      <IDNDisplayName>LGE</IDNDisplayName>
+      <DSPLY_NMLL>엘지전자</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>엘지전자</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LG ELECTRONICS</NDA_TC>
+      <BDN_Underlying>kr;6657</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>하나금융지주</KoreaName>
+      <KoreaName_ForFM2>하나금융지주</KoreaName_ForFM2>
+      <UnderlyingRic>086790.KS</UnderlyingRic>
+      <QACommonName>HANA FINANCE</QACommonName>
+      <IDNDisplayName>HFG</IDNDisplayName>
+      <DSPLY_NMLL>하나금융</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>하나금융</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HANA FINANCIAL GROUP</NDA_TC>
+      <BDN_Underlying>kr;8679</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>대림산업</KoreaName>
+      <KoreaName_ForFM2>대림산업</KoreaName_ForFM2>
+      <UnderlyingRic>000210.KS</UnderlyingRic>
+      <QACommonName>DAELIM IND</QACommonName>
+      <IDNDisplayName>DAELIM</IDNDisplayName>
+      <DSPLY_NMLL>대림산업</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>대림산업</DSPLY_NMLL_ForDrop>
+      <NDA_TC>DAELIM IND</NDA_TC>
+      <BDN_Underlying>kr;21</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>강원랜드</KoreaName>
+      <KoreaName_ForFM2>강원랜드</KoreaName_ForFM2>
+      <UnderlyingRic>035250.KS</UnderlyingRic>
+      <QACommonName>KANGWONLAND</QACommonName>
+      <IDNDisplayName>KLND</IDNDisplayName>
+      <DSPLY_NMLL>강원랜드</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>강원랜드</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KANGWON LAND</NDA_TC>
+      <BDN_Underlying>kr;3525</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>현대모비스</KoreaName>
+      <KoreaName_ForFM2>현대모비스</KoreaName_ForFM2>
+      <UnderlyingRic>012330.KS</UnderlyingRic>
+      <QACommonName>HYUNDAI MOBIS</QACommonName>
+      <IDNDisplayName>MOBIS</IDNDisplayName>
+      <DSPLY_NMLL>모비스</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>모비스</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HYUNDAI MOBIS</NDA_TC>
+      <BDN_Underlying>kr;1233</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>현대증권</KoreaName>
+      <KoreaName_ForFM2>현대증권</KoreaName_ForFM2>
+      <UnderlyingRic>003450.KS</UnderlyingRic>
+      <QACommonName>HYUNDAI SEC</QACommonName>
+      <IDNDisplayName>HDSEC</IDNDisplayName>
+      <DSPLY_NMLL>현대증권</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>현대증권</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HYUNDAI SECURITIES</NDA_TC>
+      <BDN_Underlying>kr;345</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>KOSPI200</KoreaName>
+      <KoreaName_ForFM2>KOSPI200</KoreaName_ForFM2>
+      <UnderlyingRic>.KS200</UnderlyingRic>
+      <QACommonName>KSPI</QACommonName>
+      <IDNDisplayName>KOSPI</IDNDisplayName>
+      <DSPLY_NMLL>코스피</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>코스피</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KOSPI 200</NDA_TC>
+      <BDN_Underlying>kr;kfpi</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>NIK225</KoreaName>
+      <KoreaName_ForFM2>NIK225</KoreaName_ForFM2>
+      <UnderlyingRic>.N225</UnderlyingRic>
+      <QACommonName>NIK225</QACommonName>
+      <IDNDisplayName>NIK225</IDNDisplayName>
+      <DSPLY_NMLL>N225</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>N225</DSPLY_NMLL_ForDrop>
+      <NDA_TC>NIKKEI 225</NDA_TC>
+      <BDN_Underlying>jp;N225</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>HangSeng</KoreaName>
+      <KoreaName_ForFM2>HangSeng</KoreaName_ForFM2>
+      <UnderlyingRic>.HSI</UnderlyingRic>
+      <QACommonName>HANGSENG</QACommonName>
+      <IDNDisplayName>HANGSENG</IDNDisplayName>
+      <DSPLY_NMLL>HS</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>HS</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HANG SENG</NDA_TC>
+      <BDN_Underlying>hk;HIS</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>두산인프라코어</KoreaName>
+      <KoreaName_ForFM2>두산인프라코어</KoreaName_ForFM2>
+      <UnderlyingRic>042670.KS</UnderlyingRic>
+      <QACommonName>DOOSAN INFRACORE</QACommonName>
+      <IDNDisplayName>DOOSINF</IDNDisplayName>
+      <DSPLY_NMLL>두산인프</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>두산인프</DSPLY_NMLL_ForDrop>
+      <NDA_TC>DOOSAN INFRACORE</NDA_TC>
+      <BDN_Underlying>kr;4267</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>두산중공업</KoreaName>
+      <KoreaName_ForFM2>두산중공업</KoreaName_ForFM2>
+      <UnderlyingRic>034020.KS</UnderlyingRic>
+      <QACommonName>DOOSAN HEAVY</QACommonName>
+      <IDNDisplayName>DOOSHIC</IDNDisplayName>
+      <DSPLY_NMLL>두산중공</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>두산중공</DSPLY_NMLL_ForDrop>
+      <NDA_TC>DOOSAN HEAVY INDUSTRIES</NDA_TC>
+      <BDN_Underlying>kr;3402</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>롯데쇼핑</KoreaName>
+      <KoreaName_ForFM2>롯데쇼핑</KoreaName_ForFM2>
+      <UnderlyingRic>023530.KS</UnderlyingRic>
+      <QACommonName>LOTTE SHOPPING</QACommonName>
+      <IDNDisplayName>LOTTESH</IDNDisplayName>
+      <DSPLY_NMLL>롯데쇼핑</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>롯데쇼핑</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LOTTE SHOPPING</NDA_TC>
+      <BDN_Underlying>kr;2353</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>롯데제과</KoreaName>
+      <KoreaName_ForFM2>롯데제과</KoreaName_ForFM2>
+      <UnderlyingRic>004990.KS</UnderlyingRic>
+      <QACommonName>LOTTE CONFECTIONERY</QACommonName>
+      <IDNDisplayName>LOTTECO</IDNDisplayName>
+      <DSPLY_NMLL>롯데제과</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>롯데제과</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LOTTE CONFECTIONERY</NDA_TC>
+      <BDN_Underlying>kr;499</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>롯데관광개발</KoreaName>
+      <KoreaName_ForFM2>롯데관광개발</KoreaName_ForFM2>
+      <UnderlyingRic>032350.KS</UnderlyingRic>
+      <QACommonName>LOTTE TOUR DEVELOPMENT</QACommonName>
+      <IDNDisplayName>LOTTETD</IDNDisplayName>
+      <DSPLY_NMLL>롯데관광</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>롯데관광</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LOTTE TOUR DEVELOPMENT</NDA_TC>
+      <BDN_Underlying>kr;3235</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>롯데미도파</KoreaName>
+      <KoreaName_ForFM2>롯데미도파</KoreaName_ForFM2>
+      <UnderlyingRic>004010.KS</UnderlyingRic>
+      <QACommonName>LOTTE MIDOPA</QACommonName>
+      <IDNDisplayName>LOTTEMI</IDNDisplayName>
+      <DSPLY_NMLL>롯데미도</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>롯데미도</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LOTTE MIDOPA</NDA_TC>
+      <BDN_Underlying>kr;401</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>롯데삼강</KoreaName>
+      <KoreaName_ForFM2>롯데삼강</KoreaName_ForFM2>
+      <UnderlyingRic>002270.KS</UnderlyingRic>
+      <QACommonName>LOTTE SAMKANG</QACommonName>
+      <IDNDisplayName>LOTTESA</IDNDisplayName>
+      <DSPLY_NMLL>롯데삼강</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>롯데삼강</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LOTTE SAMKANG</NDA_TC>
+      <BDN_Underlying>kr;227</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>SK</KoreaName>
+      <KoreaName_ForFM2>SK</KoreaName_ForFM2>
+      <UnderlyingRic>003600.KS</UnderlyingRic>
+      <QACommonName>SK HOLDINGS</QACommonName>
+      <IDNDisplayName>SKHLDG</IDNDisplayName>
+      <DSPLY_NMLL>SK</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>SK</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SK</NDA_TC>
+      <BDN_Underlying>kr;360</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>SK이노베이션</KoreaName>
+      <KoreaName_ForFM2>SK이노베이션</KoreaName_ForFM2>
+      <UnderlyingRic>096770.KS</UnderlyingRic>
+      <QACommonName>SK INNOVATION</QACommonName>
+      <IDNDisplayName>SKINNOV</IDNDisplayName>
+      <DSPLY_NMLL>SK이노</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>SK이노</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SKINNOV</NDA_TC>
+      <BDN_Underlying>kr;9677</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>부산은행</KoreaName>
+      <KoreaName_ForFM2>부산은행</KoreaName_ForFM2>
+      <UnderlyingRic>005280.KS</UnderlyingRic>
+      <QACommonName>BUSAN BANK</QACommonName>
+      <IDNDisplayName>BUSANBK</IDNDisplayName>
+      <DSPLY_NMLL>부산은행</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>부산은행</DSPLY_NMLL_ForDrop>
+      <NDA_TC>BUSAN BANK</NDA_TC>
+      <BDN_Underlying>kr;528</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>삼성공조</KoreaName>
+      <KoreaName_ForFM2>삼성공조</KoreaName_ForFM2>
+      <UnderlyingRic>006660.KS</UnderlyingRic>
+      <QACommonName>SAMSUNG CLIMATE CONTROL</QACommonName>
+      <IDNDisplayName>SAMSCLC</IDNDisplayName>
+      <DSPLY_NMLL>삼성공조</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>삼성공조</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SAMSUNG CLIMATE CONTROL</NDA_TC>
+      <BDN_Underlying>kr;666</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>삼성엔지니어링</KoreaName>
+      <KoreaName_ForFM2>삼성엔지니어링</KoreaName_ForFM2>
+      <UnderlyingRic>028050.KS</UnderlyingRic>
+      <QACommonName>SAMSUNG ENGINEERING</QACommonName>
+      <IDNDisplayName>SAMSENG</IDNDisplayName>
+      <DSPLY_NMLL>삼성엔지</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>삼성엔지</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SAMSUNG ENGINEERING</NDA_TC>
+      <BDN_Underlying>kr;2805</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>삼성전기</KoreaName>
+      <KoreaName_ForFM2>삼성전기</KoreaName_ForFM2>
+      <UnderlyingRic>009150.KS</UnderlyingRic>
+      <QACommonName>SAMSUNG ELECTRO-MECHANICS</QACommonName>
+      <IDNDisplayName>SAMSEMC</IDNDisplayName>
+      <DSPLY_NMLL>삼성전기</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>삼성전기</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SAMSUNG ELECTRO-MECHANICS</NDA_TC>
+      <BDN_Underlying>kr;915</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>삼성정밀화학</KoreaName>
+      <KoreaName_ForFM2>삼성정밀화학</KoreaName_ForFM2>
+      <UnderlyingRic>004000.KS</UnderlyingRic>
+      <QACommonName>SAMSUNG FINE CHEMICALS</QACommonName>
+      <IDNDisplayName>SAMSFCH</IDNDisplayName>
+      <DSPLY_NMLL>삼성정밀</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>삼성정밀</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SAMSUNG FINE CHEMICALS</NDA_TC>
+      <BDN_Underlying>kr;400</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>삼성제약공업</KoreaName>
+      <KoreaName_ForFM2>삼성제약공업</KoreaName_ForFM2>
+      <UnderlyingRic>001360.KS</UnderlyingRic>
+      <QACommonName>SAMSUNG PHARMACEUTICAL IND</QACommonName>
+      <IDNDisplayName>SAMSPHI</IDNDisplayName>
+      <DSPLY_NMLL>삼성제약</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>삼성제약</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SAMSUNG PHARMACEUTICAL</NDA_TC>
+      <BDN_Underlying>kr;136</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>삼성출판사</KoreaName>
+      <KoreaName_ForFM2>삼성출판사</KoreaName_ForFM2>
+      <UnderlyingRic>068290.KS</UnderlyingRic>
+      <QACommonName>SAMSEONG PUBLISHING</QACommonName>
+      <IDNDisplayName>SASEPUB</IDNDisplayName>
+      <DSPLY_NMLL>삼성출판</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>삼성출판</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SAMSEONG PUBLISHING</NDA_TC>
+      <BDN_Underlying>kr;6829</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>삼성카드</KoreaName>
+      <KoreaName_ForFM2>삼성카드</KoreaName_ForFM2>
+      <UnderlyingRic>029780.KS</UnderlyingRic>
+      <QACommonName>SAMSUNG CARD</QACommonName>
+      <IDNDisplayName>SAMCARD</IDNDisplayName>
+      <DSPLY_NMLL>삼성카드</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>삼성카드</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SAMSUNG CARD</NDA_TC>
+      <BDN_Underlying>kr;2978</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>CJ</KoreaName>
+      <KoreaName_ForFM2>CJ</KoreaName_ForFM2>
+      <UnderlyingRic>001040.KS</UnderlyingRic>
+      <QACommonName>CJ</QACommonName>
+      <IDNDisplayName>CJ</IDNDisplayName>
+      <DSPLY_NMLL>CJ</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>CJ</DSPLY_NMLL_ForDrop>
+      <NDA_TC>CJ</NDA_TC>
+      <BDN_Underlying>kr;104</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>한화케미칼</KoreaName>
+      <KoreaName_ForFM2>한화케미칼</KoreaName_ForFM2>
+      <UnderlyingRic>009830.KS</UnderlyingRic>
+      <QACommonName>HANWHA CHEMICAL</QACommonName>
+      <IDNDisplayName>HANWHA</IDNDisplayName>
+      <DSPLY_NMLL>한화케미</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>한화케미</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HANWHA CHEMICAL</NDA_TC>
+      <BDN_Underlying>kr;983</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>현대상선</KoreaName>
+      <KoreaName_ForFM2>현대상선</KoreaName_ForFM2>
+      <UnderlyingRic>011200.KS</UnderlyingRic>
+      <QACommonName>HYUND MERCHANT MARINE</QACommonName>
+      <IDNDisplayName>HDMERMA</IDNDisplayName>
+      <DSPLY_NMLL>현대상선</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>현대상선</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HYUNDAI MARINE</NDA_TC>
+      <BDN_Underlying>kr;1120</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>현대미포조선</KoreaName>
+      <KoreaName_ForFM2>현대미포조선</KoreaName_ForFM2>
+      <UnderlyingRic>010620.KS</UnderlyingRic>
+      <QACommonName>HYUNDAI MIPO DOCKYARD</QACommonName>
+      <IDNDisplayName>HDMPDY</IDNDisplayName>
+      <DSPLY_NMLL>현대미포</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>현대미포</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HYUNDAI MIPO DK</NDA_TC>
+      <BDN_Underlying>kr;1062</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>현대백화점</KoreaName>
+      <KoreaName_ForFM2>현대백화점</KoreaName_ForFM2>
+      <UnderlyingRic>069960.KS</UnderlyingRic>
+      <QACommonName>HYUNDAI DEPARTMENT STORE</QACommonName>
+      <IDNDisplayName>HDDS</IDNDisplayName>
+      <DSPLY_NMLL>현대백화</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>현대백</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HYUNDAI DEPARTMENT STORE</NDA_TC>
+      <BDN_Underlying>kr;6996</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>한화</KoreaName>
+      <KoreaName_ForFM2>한화</KoreaName_ForFM2>
+      <UnderlyingRic>000880.KS</UnderlyingRic>
+      <QACommonName>HANWHA CORP</QACommonName>
+      <IDNDisplayName>HWCORP</IDNDisplayName>
+      <DSPLY_NMLL>한화</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>한화</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HANWHA</NDA_TC>
+      <BDN_Underlying>kr;88</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>고려아연</KoreaName>
+      <KoreaName_ForFM2>고려아연</KoreaName_ForFM2>
+      <UnderlyingRic>010130.KS</UnderlyingRic>
+      <QACommonName>KOREA ZINC</QACommonName>
+      <IDNDisplayName>KOZINC</IDNDisplayName>
+      <DSPLY_NMLL>고려아연</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>고려아연</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KOREA ZINC</NDA_TC>
+      <BDN_Underlying>kr;1013</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>한국가스공사</KoreaName>
+      <KoreaName_ForFM2>한국가스공사</KoreaName_ForFM2>
+      <UnderlyingRic>036460.KS</UnderlyingRic>
+      <QACommonName>KOREA GAS</QACommonName>
+      <IDNDisplayName>KG</IDNDisplayName>
+      <DSPLY_NMLL>한국가스</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>한국가스</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KOREA GAS</NDA_TC>
+      <BDN_Underlying>kr;3646</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>케이씨씨</KoreaName>
+      <KoreaName_ForFM2>케이씨씨</KoreaName_ForFM2>
+      <UnderlyingRic>002380.KS</UnderlyingRic>
+      <QACommonName>KCC CORPORATION</QACommonName>
+      <IDNDisplayName>KCC</IDNDisplayName>
+      <DSPLY_NMLL>케이씨씨</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>케이씨씨</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KCC CORPORATION</NDA_TC>
+      <BDN_Underlying>kr;238</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>대한전선</KoreaName>
+      <KoreaName_ForFM2>대한전선</KoreaName_ForFM2>
+      <UnderlyingRic>001440.KS</UnderlyingRic>
+      <QACommonName>TAIHAN ELECTRIC WIRE</QACommonName>
+      <IDNDisplayName>THEW</IDNDisplayName>
+      <DSPLY_NMLL>대한전선</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>대한전선</DSPLY_NMLL_ForDrop>
+      <NDA_TC>TAIHAN ELECTRIC WIRE</NDA_TC>
+      <BDN_Underlying>kr;144</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>한국외환은행</KoreaName>
+      <KoreaName_ForFM2>한국외환은행</KoreaName_ForFM2>
+      <UnderlyingRic>004940.KS</UnderlyingRic>
+      <QACommonName>KOREA EXCHANGE BANK</QACommonName>
+      <IDNDisplayName>KEBANK</IDNDisplayName>
+      <DSPLY_NMLL>외환은행</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>외환은행</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KOREA EXCHANGE BANK</NDA_TC>
+      <BDN_Underlying>kr;494</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>한국타이어</KoreaName>
+      <KoreaName_ForFM2>한국타이어</KoreaName_ForFM2>
+      <UnderlyingRic>000240.KS</UnderlyingRic>
+      <QACommonName>HANKOOK TIRE</QACommonName>
+      <IDNDisplayName>HKTIRE</IDNDisplayName>
+      <DSPLY_NMLL>한국타이</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>한국타이</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HANKOOK TIRE</NDA_TC>
+      <BDN_Underlying>kr;24</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>대우인터내셔널</KoreaName>
+      <KoreaName_ForFM2>대우인터내셔널</KoreaName_ForFM2>
+      <UnderlyingRic>047050.KS</UnderlyingRic>
+      <QACommonName>DAEWOO INTERNATIONAL</QACommonName>
+      <IDNDisplayName>DWINTER</IDNDisplayName>
+      <DSPLY_NMLL>대우인터</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>대우인터</DSPLY_NMLL_ForDrop>
+      <NDA_TC>DAEWOO INTERNATIONAL</NDA_TC>
+      <BDN_Underlying>kr;4705</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>GS</KoreaName>
+      <KoreaName_ForFM2>GS</KoreaName_ForFM2>
+      <UnderlyingRic>078930.KS</UnderlyingRic>
+      <QACommonName>GS HOLDINGS</QACommonName>
+      <IDNDisplayName>GS</IDNDisplayName>
+      <DSPLY_NMLL>GS</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>GS</DSPLY_NMLL_ForDrop>
+      <NDA_TC>GS HOLDINGS</NDA_TC>
+      <BDN_Underlying>kr;7893</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>한국투자금융지주</KoreaName>
+      <KoreaName_ForFM2>한국투자금융지주</KoreaName_ForFM2>
+      <UnderlyingRic>071050.KS</UnderlyingRic>
+      <QACommonName>KOREA INVESTMENT HOLDINGS</QACommonName>
+      <IDNDisplayName>KIH</IDNDisplayName>
+      <DSPLY_NMLL>한국투자</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>한국투자</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KOREA INVESTMENT HOLDINGS</NDA_TC>
+      <BDN_Underlying>kr;7105</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>대구은행</KoreaName>
+      <KoreaName_ForFM2>대구은행</KoreaName_ForFM2>
+      <UnderlyingRic>005270.KS</UnderlyingRic>
+      <QACommonName>DAEGU BANK</QACommonName>
+      <IDNDisplayName>DGBANK</IDNDisplayName>
+      <DSPLY_NMLL>대구은행</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>대구은행</DSPLY_NMLL_ForDrop>
+      <NDA_TC>DAEGU BANK</NDA_TC>
+      <BDN_Underlying>kr;527</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>미래에셋증권</KoreaName>
+      <KoreaName_ForFM2>미래에셋증권</KoreaName_ForFM2>
+      <UnderlyingRic>037620.KS</UnderlyingRic>
+      <QACommonName>MIRAE ASSET SECURITIES</QACommonName>
+      <IDNDisplayName>MIRAE</IDNDisplayName>
+      <DSPLY_NMLL>미래에셋</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>미래에셋</DSPLY_NMLL_ForDrop>
+      <NDA_TC>MIRAE ASSET SECURITIES</NDA_TC>
+      <BDN_Underlying>kr;3762</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>LG</KoreaName>
+      <KoreaName_ForFM2>LG</KoreaName_ForFM2>
+      <UnderlyingRic>003550.KS</UnderlyingRic>
+      <QACommonName>LG CORP</QACommonName>
+      <IDNDisplayName>LGCORP</IDNDisplayName>
+      <DSPLY_NMLL>LG</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>LG</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LG</NDA_TC>
+      <BDN_Underlying>kr;355</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>효성</KoreaName>
+      <KoreaName_ForFM2>효성</KoreaName_ForFM2>
+      <UnderlyingRic>004800.KS</UnderlyingRic>
+      <QACommonName>HYOSUNG CORP</QACommonName>
+      <IDNDisplayName>HYOSUNG</IDNDisplayName>
+      <DSPLY_NMLL>효성</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>효성</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HYOSUNG CORP</NDA_TC>
+      <BDN_Underlying>kr;480</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>LG생명과학</KoreaName>
+      <KoreaName_ForFM2>LG생명과학</KoreaName_ForFM2>
+      <UnderlyingRic>068870.KS</UnderlyingRic>
+      <QACommonName>LG LIFE SCIENCES</QACommonName>
+      <IDNDisplayName>LG LIFE</IDNDisplayName>
+      <DSPLY_NMLL>LG생명</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>LG생명</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LG LIFE SCIENCES</NDA_TC>
+      <BDN_Underlying>kr;6887</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>LS</KoreaName>
+      <KoreaName_ForFM2>LS</KoreaName_ForFM2>
+      <UnderlyingRic>006260.KS</UnderlyingRic>
+      <QACommonName>LS CORP</QACommonName>
+      <IDNDisplayName>LS</IDNDisplayName>
+      <DSPLY_NMLL>LS</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>LS</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LS CABLE</NDA_TC>
+      <BDN_Underlying>kr;626</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>아모레퍼시픽</KoreaName>
+      <KoreaName_ForFM2>아모레퍼시픽</KoreaName_ForFM2>
+      <UnderlyingRic>090430.KS</UnderlyingRic>
+      <QACommonName>AMOREPACIFIC</QACommonName>
+      <IDNDisplayName>AMORE</IDNDisplayName>
+      <DSPLY_NMLL>아모레</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>아모레</DSPLY_NMLL_ForDrop>
+      <NDA_TC>AMOREPACIFIC</NDA_TC>
+      <BDN_Underlying>kr;9043</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>두산</KoreaName>
+      <KoreaName_ForFM2>두산</KoreaName_ForFM2>
+      <UnderlyingRic>000150.KS</UnderlyingRic>
+      <QACommonName>DOOSAN</QACommonName>
+      <IDNDisplayName>DOOSAN</IDNDisplayName>
+      <DSPLY_NMLL>두산</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>두산</DSPLY_NMLL_ForDrop>
+      <NDA_TC>DOOSAN</NDA_TC>
+      <BDN_Underlying>kr;15</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>엔에이치엔</KoreaName>
+      <KoreaName_ForFM2>엔에이치엔</KoreaName_ForFM2>
+      <UnderlyingRic>035420.KS</UnderlyingRic>
+      <QACommonName>NHN CORPORATION</QACommonName>
+      <IDNDisplayName>NHN</IDNDisplayName>
+      <DSPLY_NMLL>NHN</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>NHN</DSPLY_NMLL_ForDrop>
+      <NDA_TC>NHN</NDA_TC>
+      <BDN_Underlying>kr;3542</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>OCI</KoreaName>
+      <KoreaName_ForFM2>OCI</KoreaName_ForFM2>
+      <UnderlyingRic>010060.KS</UnderlyingRic>
+      <QACommonName>OCI</QACommonName>
+      <IDNDisplayName>OCI</IDNDisplayName>
+      <DSPLY_NMLL>OCI</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>OCI</DSPLY_NMLL_ForDrop>
+      <NDA_TC>OCI</NDA_TC>
+      <BDN_Underlying>kr;1006</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>엔씨소프트</KoreaName>
+      <KoreaName_ForFM2>엔씨소프트</KoreaName_ForFM2>
+      <UnderlyingRic>036570.KS</UnderlyingRic>
+      <QACommonName>NCSOFT CORPORATION</QACommonName>
+      <IDNDisplayName>NCSOFT</IDNDisplayName>
+      <DSPLY_NMLL>NCSOFT</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>NC소프트</DSPLY_NMLL_ForDrop>
+      <NDA_TC>NCSOFT</NDA_TC>
+      <BDN_Underlying>kr;3657</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>서울반도체</KoreaName>
+      <KoreaName_ForFM2>서울반도체</KoreaName_ForFM2>
+      <UnderlyingRic>046890.KQ</UnderlyingRic>
+      <QACommonName>SEOUL SEMICONDUCTOR</QACommonName>
+      <IDNDisplayName>SSEMI</IDNDisplayName>
+      <DSPLY_NMLL>서울반도</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>서울반도</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SEOUL SEMICONDUCTOR</NDA_TC>
+      <BDN_Underlying>kr;4689K</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>메가스터디</KoreaName>
+      <KoreaName_ForFM2>메가스터디</KoreaName_ForFM2>
+      <UnderlyingRic>072870.KQ</UnderlyingRic>
+      <QACommonName>MEGASTUDY</QACommonName>
+      <IDNDisplayName>MEGA</IDNDisplayName>
+      <DSPLY_NMLL>메가스터</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>메가스터</DSPLY_NMLL_ForDrop>
+      <NDA_TC>MEGASTUDY</NDA_TC>
+      <BDN_Underlying>kr;7287K</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>태웅</KoreaName>
+      <KoreaName_ForFM2>태웅</KoreaName_ForFM2>
+      <UnderlyingRic>044490.KQ</UnderlyingRic>
+      <QACommonName>TAEWOONG</QACommonName>
+      <IDNDisplayName>TAEWG</IDNDisplayName>
+      <DSPLY_NMLL>태웅</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>태웅</DSPLY_NMLL_ForDrop>
+      <NDA_TC>TAEWOONG</NDA_TC>
+      <BDN_Underlying>kr;4449K</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>평산</KoreaName>
+      <KoreaName_ForFM2>평산</KoreaName_ForFM2>
+      <UnderlyingRic>089480.KQ</UnderlyingRic>
+      <QACommonName>PYEONGSAN</QACommonName>
+      <IDNDisplayName>PS</IDNDisplayName>
+      <DSPLY_NMLL>평산</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>평산</DSPLY_NMLL_ForDrop>
+      <NDA_TC>PYEONG SAN</NDA_TC>
+      <BDN_Underlying>kr;8948K</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>에스케이브로드밴드</KoreaName>
+      <KoreaName_ForFM2>에스케이브로드밴드</KoreaName_ForFM2>
+      <UnderlyingRic>033630.KQ</UnderlyingRic>
+      <QACommonName>SK BROADBAND</QACommonName>
+      <IDNDisplayName>SKBROAD</IDNDisplayName>
+      <DSPLY_NMLL>SK브밴</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>SK브밴</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SK BROADBAND</NDA_TC>
+      <BDN_Underlying>kr;3363K</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>키움증권</KoreaName>
+      <KoreaName_ForFM2>키움증권</KoreaName_ForFM2>
+      <UnderlyingRic>039490.KS</UnderlyingRic>
+      <QACommonName>KIWOOM SECURITIES</QACommonName>
+      <IDNDisplayName>KIWOOM</IDNDisplayName>
+      <DSPLY_NMLL>키움증권</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>키움증권</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KIWOOM</NDA_TC>
+      <BDN_Underlying>kr;3949</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>SK네트웍스</KoreaName>
+      <KoreaName_ForFM2>SK네트웍스</KoreaName_ForFM2>
+      <UnderlyingRic>001740.KS</UnderlyingRic>
+      <QACommonName>SK NETWORKS</QACommonName>
+      <IDNDisplayName>SKNETW</IDNDisplayName>
+      <DSPLY_NMLL>SK넷웍</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>SKN</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SK NETWORKS</NDA_TC>
+      <BDN_Underlying>kr;174</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>유한양행</KoreaName>
+      <KoreaName_ForFM2>유한양행</KoreaName_ForFM2>
+      <UnderlyingRic>000100.KS</UnderlyingRic>
+      <QACommonName>YUHAN</QACommonName>
+      <IDNDisplayName>YUHAN</IDNDisplayName>
+      <DSPLY_NMLL>유한양행</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>유한양행</DSPLY_NMLL_ForDrop>
+      <NDA_TC>YUHAN CORP</NDA_TC>
+      <BDN_Underlying>kr;10</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>셀트리온</KoreaName>
+      <KoreaName_ForFM2>셀트리온</KoreaName_ForFM2>
+      <UnderlyingRic>068270.KQ</UnderlyingRic>
+      <QACommonName>CELLTRION</QACommonName>
+      <IDNDisplayName>CELTRIO</IDNDisplayName>
+      <DSPLY_NMLL>셀트리온</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>셀트리온</DSPLY_NMLL_ForDrop>
+      <NDA_TC>CELLTRION</NDA_TC>
+      <BDN_Underlying>kr;6827K</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>에스티엑스팬오션</KoreaName>
+      <KoreaName_ForFM2>에스티엑스팬오션</KoreaName_ForFM2>
+      <UnderlyingRic>028670.KS</UnderlyingRic>
+      <QACommonName>STX PAN OCEAN</QACommonName>
+      <IDNDisplayName>STX</IDNDisplayName>
+      <DSPLY_NMLL>STX</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>STX팬</DSPLY_NMLL_ForDrop>
+      <NDA_TC>STX PAN OCEAN</NDA_TC>
+      <BDN_Underlying>kr;2867</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>웅진코웨이</KoreaName>
+      <KoreaName_ForFM2>웅진코웨이</KoreaName_ForFM2>
+      <UnderlyingRic>021240.KS</UnderlyingRic>
+      <QACommonName>WOONGJIN COWAY</QACommonName>
+      <IDNDisplayName>WJCWAY</IDNDisplayName>
+      <DSPLY_NMLL>웅진코웨</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>웅진코웨</DSPLY_NMLL_ForDrop>
+      <NDA_TC>WOONGJIN COWAY</NDA_TC>
+      <BDN_Underlying>kr;2124</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>LS산전</KoreaName>
+      <KoreaName_ForFM2>LS산전</KoreaName_ForFM2>
+      <UnderlyingRic>010120.KS</UnderlyingRic>
+      <QACommonName>LS IND SYSTEM</QACommonName>
+      <IDNDisplayName>LSIS</IDNDisplayName>
+      <DSPLY_NMLL>LS산전</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>LS산전</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LS IND SYSTEM</NDA_TC>
+      <BDN_Underlying>kr;1012</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>한라공조</KoreaName>
+      <KoreaName_ForFM2>한라공조</KoreaName_ForFM2>
+      <UnderlyingRic>018880.KS</UnderlyingRic>
+      <QACommonName>HALLA CLIMATE</QACommonName>
+      <IDNDisplayName>HCC</IDNDisplayName>
+      <DSPLY_NMLL>한라공조</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>한라공조</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HALLA CLIMATE</NDA_TC>
+      <BDN_Underlying>kr;1888</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>에스원</KoreaName>
+      <KoreaName_ForFM2>에스원</KoreaName_ForFM2>
+      <UnderlyingRic>012750.KS</UnderlyingRic>
+      <QACommonName>S1</QACommonName>
+      <IDNDisplayName>S1</IDNDisplayName>
+      <DSPLY_NMLL>에스원</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>에스원</DSPLY_NMLL_ForDrop>
+      <NDA_TC>S1 CORP</NDA_TC>
+      <BDN_Underlying>kr;1275</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>LG생활건강</KoreaName>
+      <KoreaName_ForFM2>LG생활건강</KoreaName_ForFM2>
+      <UnderlyingRic>051900.KS</UnderlyingRic>
+      <QACommonName>LG HOUSEHOLD @ HEALTH CARE</QACommonName>
+      <IDNDisplayName>LG H@H</IDNDisplayName>
+      <DSPLY_NMLL>LG생건</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>LG생건</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LG HOUSEHOLD @ HEALTH CARE</NDA_TC>
+      <BDN_Underlying>kr;5190</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>메리츠증권</KoreaName>
+      <KoreaName_ForFM2>메리츠증권</KoreaName_ForFM2>
+      <UnderlyingRic>008560.KS</UnderlyingRic>
+      <QACommonName>MERITZ SECURITIES</QACommonName>
+      <IDNDisplayName>MERITZ</IDNDisplayName>
+      <DSPLY_NMLL>메리츠</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>메리츠</DSPLY_NMLL_ForDrop>
+      <NDA_TC>MERITZ SECURITIES</NDA_TC>
+      <BDN_Underlying>kr;856</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>현대하이스코</KoreaName>
+      <KoreaName_ForFM2>현대하이스코</KoreaName_ForFM2>
+      <UnderlyingRic>010520.KS</UnderlyingRic>
+      <QACommonName>HYUNDAI HYSCO</QACommonName>
+      <IDNDisplayName>HHYSCO</IDNDisplayName>
+      <DSPLY_NMLL>하이스코</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>하이스코</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HYUNDAI HYSCO</NDA_TC>
+      <BDN_Underlying>kr;1052</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>LG상사</KoreaName>
+      <KoreaName_ForFM2>LG상사</KoreaName_ForFM2>
+      <UnderlyingRic>001120.KS</UnderlyingRic>
+      <QACommonName>LG INTERNATIONAL</QACommonName>
+      <IDNDisplayName>LGI</IDNDisplayName>
+      <DSPLY_NMLL>LG상사</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>LG상사</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LG INTERNATIONAL</NDA_TC>
+      <BDN_Underlying>kr;112</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>CJ제일제당</KoreaName>
+      <KoreaName_ForFM2>CJ제일제당</KoreaName_ForFM2>
+      <UnderlyingRic>097950.KS</UnderlyingRic>
+      <QACommonName>CJ CHEILJEDANG</QACommonName>
+      <IDNDisplayName>CJCHEIL</IDNDisplayName>
+      <DSPLY_NMLL>CJ제일</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>CJ제당</DSPLY_NMLL_ForDrop>
+      <NDA_TC>CJ CHEILJEDANG CORP</NDA_TC>
+      <BDN_Underlying>kr;9795</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>롯데케미칼</KoreaName>
+      <KoreaName_ForFM2>롯데케미칼</KoreaName_ForFM2>
+      <UnderlyingRic>011170.KS</UnderlyingRic>
+      <QACommonName>LOTTE CHEMICAL</QACommonName>
+      <IDNDisplayName>LOTTECH</IDNDisplayName>
+      <DSPLY_NMLL>롯데케미</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>롯데케미</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LOTTE CHEMICAL CORPORATION</NDA_TC>
+      <BDN_Underlying>kr;1117</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>SKC</KoreaName>
+      <KoreaName_ForFM2>SKC</KoreaName_ForFM2>
+      <UnderlyingRic>011790.KS</UnderlyingRic>
+      <QACommonName>SKC</QACommonName>
+      <IDNDisplayName>SKC</IDNDisplayName>
+      <DSPLY_NMLL>SKC</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>SKC</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SKC</NDA_TC>
+      <BDN_Underlying>kr;1179</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>농심</KoreaName>
+      <KoreaName_ForFM2>농심</KoreaName_ForFM2>
+      <UnderlyingRic>004370.KS</UnderlyingRic>
+      <QACommonName>NONG SHIM</QACommonName>
+      <IDNDisplayName>NS</IDNDisplayName>
+      <DSPLY_NMLL>농심</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>농심</DSPLY_NMLL_ForDrop>
+      <NDA_TC>NONGSHIM</NDA_TC>
+      <BDN_Underlying>kr;437</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>대한통운</KoreaName>
+      <KoreaName_ForFM2>대한통운</KoreaName_ForFM2>
+      <UnderlyingRic>000120.KS</UnderlyingRic>
+      <QACommonName>KOREA EXPRESS</QACommonName>
+      <IDNDisplayName>KR EXP</IDNDisplayName>
+      <DSPLY_NMLL>대한통운</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>대한통운</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KOREA EXPRESS</NDA_TC>
+      <BDN_Underlying>kr;12</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>롯데칠성음료</KoreaName>
+      <KoreaName_ForFM2>롯데칠성음료</KoreaName_ForFM2>
+      <UnderlyingRic>005300.KS</UnderlyingRic>
+      <QACommonName>LOTTE CHILSUNG BEVERAGE</QACommonName>
+      <IDNDisplayName>LTCS</IDNDisplayName>
+      <DSPLY_NMLL>롯데칠성</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>롯데칠성</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LOTTE CHILSUNG BEVERAGE</NDA_TC>
+      <BDN_Underlying>kr;530</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>오리온</KoreaName>
+      <KoreaName_ForFM2>오리온</KoreaName_ForFM2>
+      <UnderlyingRic>001800.KS</UnderlyingRic>
+      <QACommonName>ORION CORP</QACommonName>
+      <IDNDisplayName>ORION</IDNDisplayName>
+      <DSPLY_NMLL>오리온</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>오리온</DSPLY_NMLL_ForDrop>
+      <NDA_TC>ORION CORP</NDA_TC>
+      <BDN_Underlying>kr;180</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>제일기획</KoreaName>
+      <KoreaName_ForFM2>제일기획</KoreaName_ForFM2>
+      <UnderlyingRic>030000.KS</UnderlyingRic>
+      <QACommonName>CHEIL WORLDWIDE</QACommonName>
+      <IDNDisplayName>CHEILWW</IDNDisplayName>
+      <DSPLY_NMLL>제일기획</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>제일기획</DSPLY_NMLL_ForDrop>
+      <NDA_TC>CHEIL WORLDWIDE INC</NDA_TC>
+      <BDN_Underlying>kr;3000</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>태평양</KoreaName>
+      <KoreaName_ForFM2>태평양</KoreaName_ForFM2>
+      <UnderlyingRic>002790.KS</UnderlyingRic>
+      <QACommonName>PACIFIC</QACommonName>
+      <IDNDisplayName>PACIFIC</IDNDisplayName>
+      <DSPLY_NMLL>태평양</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>태평양</DSPLY_NMLL_ForDrop>
+      <NDA_TC>PACIFIC CORP</NDA_TC>
+      <BDN_Underlying>kr;279</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>하이트홀딩스</KoreaName>
+      <KoreaName_ForFM2>하이트홀딩스</KoreaName_ForFM2>
+      <UnderlyingRic>000140.KS</UnderlyingRic>
+      <QACommonName>HITE HOLDINGS</QACommonName>
+      <IDNDisplayName>HITE</IDNDisplayName>
+      <DSPLY_NMLL>하이트</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>하이트</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HITE HOLDINGS</NDA_TC>
+      <BDN_Underlying>kr;14</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>SBS</KoreaName>
+      <KoreaName_ForFM2>SBS</KoreaName_ForFM2>
+      <UnderlyingRic>034120.KS</UnderlyingRic>
+      <QACommonName>SEOUL BROADCASTING SYSTEM</QACommonName>
+      <IDNDisplayName>SBS</IDNDisplayName>
+      <DSPLY_NMLL>SBS</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>SBS</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SEOUL BROADCASTING SYSTEM</NDA_TC>
+      <BDN_Underlying>kr;3412</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>포스코아이씨티</KoreaName>
+      <KoreaName_ForFM2>포스코아이씨티</KoreaName_ForFM2>
+      <UnderlyingRic>022100.KQ</UnderlyingRic>
+      <QACommonName>POSCO ICT</QACommonName>
+      <IDNDisplayName>POSICT</IDNDisplayName>
+      <DSPLY_NMLL>포스ICT</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>포스ICT</DSPLY_NMLL_ForDrop>
+      <NDA_TC>POSCO ICT</NDA_TC>
+      <BDN_Underlying>kr;2210K</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>엘지하우시스</KoreaName>
+      <KoreaName_ForFM2>엘지하우시스</KoreaName_ForFM2>
+      <UnderlyingRic>108670.KS</UnderlyingRic>
+      <QACommonName>LG HAUSYS</QACommonName>
+      <IDNDisplayName>LGHS</IDNDisplayName>
+      <DSPLY_NMLL>LG하우</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>LG하우</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LG HAUSYS</NDA_TC>
+      <BDN_Underlying>kr;10867</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>오씨아이 머티리얼즈</KoreaName>
+      <KoreaName_ForFM2>오씨아이 머티리얼즈</KoreaName_ForFM2>
+      <UnderlyingRic>036490.KQ</UnderlyingRic>
+      <QACommonName>OCI MATERIALS</QACommonName>
+      <IDNDisplayName>OCIMTRL</IDNDisplayName>
+      <DSPLY_NMLL>OCI머티</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>OCI머티</DSPLY_NMLL_ForDrop>
+      <NDA_TC>OCI MATERIALS</NDA_TC>
+      <BDN_Underlying>kr;3649K</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>다음커뮤니케이션</KoreaName>
+      <KoreaName_ForFM2>다음커뮤니케이션</KoreaName_ForFM2>
+      <UnderlyingRic>035720.KQ</UnderlyingRic>
+      <QACommonName>DAUM COMMUNICATIONS</QACommonName>
+      <IDNDisplayName>DAUM</IDNDisplayName>
+      <DSPLY_NMLL>다음</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>다음</DSPLY_NMLL_ForDrop>
+      <NDA_TC>DAUM COMMUNICATIONS</NDA_TC>
+      <BDN_Underlying>kr;3572K</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>현대글로비스</KoreaName>
+      <KoreaName_ForFM2>현대글로비스</KoreaName_ForFM2>
+      <UnderlyingRic>086280.KS</UnderlyingRic>
+      <QACommonName>HYUNDAI GLOVIS</QACommonName>
+      <IDNDisplayName>GLOVIS</IDNDisplayName>
+      <DSPLY_NMLL>글로비스</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>글로비스</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HYUNDAI GLOVIS</NDA_TC>
+      <BDN_Underlying>kr;8628</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>LG유플러스</KoreaName>
+      <KoreaName_ForFM2>LG유플러스</KoreaName_ForFM2>
+      <UnderlyingRic>032640.KS</UnderlyingRic>
+      <QACommonName>LG UPLUS</QACommonName>
+      <IDNDisplayName>LGUPLUS</IDNDisplayName>
+      <DSPLY_NMLL>LG유플</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>LG유플</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LG UPLUS</NDA_TC>
+      <BDN_Underlying>kr;3264</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>씨제이오쇼핑</KoreaName>
+      <KoreaName_ForFM2>씨제이오쇼핑</KoreaName_ForFM2>
+      <UnderlyingRic>035760.KQ</UnderlyingRic>
+      <QACommonName>CJ O SHOPPING</QACommonName>
+      <IDNDisplayName>CJOSHOP</IDNDisplayName>
+      <DSPLY_NMLL>CJO쇼핑</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>CJO쇼핑</DSPLY_NMLL_ForDrop>
+      <NDA_TC>CJ O SHOPPING</NDA_TC>
+      <BDN_Underlying>kr;3576K</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>삼성생명보험</KoreaName>
+      <KoreaName_ForFM2>삼성생명</KoreaName_ForFM2>
+      <UnderlyingRic>032830.KS</UnderlyingRic>
+      <QACommonName>SAMSUNG LIFE INSURANCE</QACommonName>
+      <IDNDisplayName>SMSLIFE</IDNDisplayName>
+      <DSPLY_NMLL>삼성생명</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>삼성생명</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SAMSUNG LIFE INSURANCE</NDA_TC>
+      <BDN_Underlying>kr;3283</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>엘지이노텍</KoreaName>
+      <KoreaName_ForFM2>엘지이노텍</KoreaName_ForFM2>
+      <UnderlyingRic>011070.KS</UnderlyingRic>
+      <QACommonName>LG INNOTEK</QACommonName>
+      <IDNDisplayName>LGINNOT</IDNDisplayName>
+      <DSPLY_NMLL>이노텍</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>이노텍</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LG INNOTEK</NDA_TC>
+      <BDN_Underlying>kr;1107</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>신영증권</KoreaName>
+      <KoreaName_ForFM2>신영증권</KoreaName_ForFM2>
+      <UnderlyingRic>001720.KS</UnderlyingRic>
+      <QACommonName>SHINYOUNG SECURITIES</QACommonName>
+      <IDNDisplayName>SHINYOU</IDNDisplayName>
+      <DSPLY_NMLL>신영증권</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>신영증권</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SHINYOUNG SECURITIES</NDA_TC>
+      <BDN_Underlying>kr;172</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>STX조선해양</KoreaName>
+      <KoreaName_ForFM2>STX조선해양</KoreaName_ForFM2>
+      <UnderlyingRic>067250.KS</UnderlyingRic>
+      <QACommonName>STX OFFSHORE @ SHIPBUILDING</QACommonName>
+      <IDNDisplayName>STXOS</IDNDisplayName>
+      <DSPLY_NMLL>STX조선</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>STX조선</DSPLY_NMLL_ForDrop>
+      <NDA_TC>STX OFFSHORE @ SHIPBUILDING</NDA_TC>
+      <BDN_Underlying>kr:6725</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>STX엔진</KoreaName>
+      <KoreaName_ForFM2>STX엔진</KoreaName_ForFM2>
+      <UnderlyingRic>077970.KS</UnderlyingRic>
+      <QACommonName>STX ENGINE</QACommonName>
+      <IDNDisplayName>STXENGI</IDNDisplayName>
+      <DSPLY_NMLL>STX엔진</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>STX엔진</DSPLY_NMLL_ForDrop>
+      <NDA_TC>STX ENGINE</NDA_TC>
+      <BDN_Underlying>kr:7797</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>남해화학</KoreaName>
+      <KoreaName_ForFM2>남해화학</KoreaName_ForFM2>
+      <UnderlyingRic>025860.KS</UnderlyingRic>
+      <QACommonName>NAMHAECHEMICAL</QACommonName>
+      <IDNDisplayName>NAMHEAC</IDNDisplayName>
+      <DSPLY_NMLL>남해화학</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>남해화학</DSPLY_NMLL_ForDrop>
+      <NDA_TC>NAMHAECHEMICAL</NDA_TC>
+      <BDN_Underlying>kr;2586</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>한진중공업</KoreaName>
+      <KoreaName_ForFM2>한진중공업</KoreaName_ForFM2>
+      <UnderlyingRic>097230.KS</UnderlyingRic>
+      <QACommonName>HANJIN HVY IND</QACommonName>
+      <IDNDisplayName>HANJINH</IDNDisplayName>
+      <DSPLY_NMLL>한진중공</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>한진중공</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HANJIN HVY IND</NDA_TC>
+      <BDN_Underlying>kr:9723</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>풍산</KoreaName>
+      <KoreaName_ForFM2>풍산</KoreaName_ForFM2>
+      <UnderlyingRic>103140.KS</UnderlyingRic>
+      <QACommonName>POONGSAN</QACommonName>
+      <IDNDisplayName>POONGSA</IDNDisplayName>
+      <DSPLY_NMLL>풍산</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>풍산</DSPLY_NMLL_ForDrop>
+      <NDA_TC>POONGSAN</NDA_TC>
+      <BDN_Underlying>kr:10314</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>SK케미칼</KoreaName>
+      <KoreaName_ForFM2>SK케미칼</KoreaName_ForFM2>
+      <UnderlyingRic>006120.KS</UnderlyingRic>
+      <QACommonName>SKCHEMICALS</QACommonName>
+      <IDNDisplayName>SKCHEMI</IDNDisplayName>
+      <DSPLY_NMLL>SK케미칼</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>SK케미칼</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SKCHEMICALS</NDA_TC>
+      <BDN_Underlying>kr:612</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>금호석유화학</KoreaName>
+      <KoreaName_ForFM2>금호석유화학</KoreaName_ForFM2>
+      <UnderlyingRic>011780.KS</UnderlyingRic>
+      <QACommonName>KUMHO PETROCHEM</QACommonName>
+      <IDNDisplayName>KUMHO</IDNDisplayName>
+      <DSPLY_NMLL>금호석유</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>금호석유</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KUMHO PETROCHEM</NDA_TC>
+      <BDN_Underlying>kr:1178</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>한솔테크닉스</KoreaName>
+      <KoreaName_ForFM2>한솔테크닉스</KoreaName_ForFM2>
+      <UnderlyingRic>004710.KS</UnderlyingRic>
+      <QACommonName>HANSOL TECHNICS</QACommonName>
+      <IDNDisplayName>HANSOL</IDNDisplayName>
+      <DSPLY_NMLL>한솔테크</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>한솔테크</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HANSOL TECHNICS</NDA_TC>
+      <BDN_Underlying>kr:471</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>케이피케미칼</KoreaName>
+      <KoreaName_ForFM2>케이피케미칼</KoreaName_ForFM2>
+      <UnderlyingRic>064420.KS</UnderlyingRic>
+      <QACommonName>KP CHEMICAL</QACommonName>
+      <IDNDisplayName>KPCHEMI</IDNDisplayName>
+      <DSPLY_NMLL>KP케미칼</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>KP케미칼</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KP CHEMICAL</NDA_TC>
+      <BDN_Underlying>kr:6442</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>한진중공업홀딩스</KoreaName>
+      <KoreaName_ForFM2>한진중공업홀딩스</KoreaName_ForFM2>
+      <UnderlyingRic>003480.KS</UnderlyingRic>
+      <QACommonName>HANJIN HVY HOLDG</QACommonName>
+      <IDNDisplayName>HHICHOL</IDNDisplayName>
+      <DSPLY_NMLL>한진홀딩</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>한진홀딩</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HANJIN HVY HOLDG</NDA_TC>
+      <BDN_Underlying>kr:348</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>대신증권</KoreaName>
+      <KoreaName_ForFM2>대신증권</KoreaName_ForFM2>
+      <UnderlyingRic>003540.KS</UnderlyingRic>
+      <QACommonName>DAISHIN SEC</QACommonName>
+      <IDNDisplayName>DAISHIN</IDNDisplayName>
+      <DSPLY_NMLL>대신증권</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>대신증권</DSPLY_NMLL_ForDrop>
+      <NDA_TC>DAISHIN SEC</NDA_TC>
+      <BDN_Underlying>kr:354</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>풍산홀딩스</KoreaName>
+      <KoreaName_ForFM2>풍산홀딩스</KoreaName_ForFM2>
+      <UnderlyingRic>005810.KS</UnderlyingRic>
+      <QACommonName>POONGSAN HOLDING</QACommonName>
+      <IDNDisplayName>POONGSA</IDNDisplayName>
+      <DSPLY_NMLL>풍산홀딩스</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>풍산홀딩스</DSPLY_NMLL_ForDrop>
+      <NDA_TC>POONGSAN HOLDING</NDA_TC>
+      <BDN_Underlying>kr:5810</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>한진해운</KoreaName>
+      <KoreaName_ForFM2>한진해운</KoreaName_ForFM2>
+      <UnderlyingRic>117930.KS</UnderlyingRic>
+      <QACommonName>HANJIN SHIPPING</QACommonName>
+      <IDNDisplayName>HANJINS</IDNDisplayName>
+      <DSPLY_NMLL>한진해운</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>한진해운</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HANJIN SHIPPING</NDA_TC>
+      <BDN_Underlying>kr:11793</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>STX</KoreaName>
+      <KoreaName_ForFM2>STX</KoreaName_ForFM2>
+      <UnderlyingRic>011810.KS</UnderlyingRic>
+      <QACommonName>STX</QACommonName>
+      <IDNDisplayName>STX</IDNDisplayName>
+      <DSPLY_NMLL>STX</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>STX</DSPLY_NMLL_ForDrop>
+      <NDA_TC>STX</NDA_TC>
+      <BDN_Underlying>kr:1181</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>에스에프에이</KoreaName>
+      <KoreaName_ForFM2>에스에프에이</KoreaName_ForFM2>
+      <UnderlyingRic>056190.KQ</UnderlyingRic>
+      <QACommonName>SFA ENGINEERING</QACommonName>
+      <IDNDisplayName>SFA</IDNDisplayName>
+      <DSPLY_NMLL>에스에프</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>에스에프</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SFA ENGINEERING</NDA_TC>
+      <BDN_Underlying>kr:5619K</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>씨제이이앤엠</KoreaName>
+      <KoreaName_ForFM2>씨제이이앤엠</KoreaName_ForFM2>
+      <UnderlyingRic>130960.KQ</UnderlyingRic>
+      <QACommonName>CJ E@M CORPORATION</QACommonName>
+      <IDNDisplayName>CJ E@M</IDNDisplayName>
+      <DSPLY_NMLL>씨제이이</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>씨제이이</DSPLY_NMLL_ForDrop>
+      <NDA_TC>CJ E@M CORPORATION</NDA_TC>
+      <BDN_Underlying>kr:13096K</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>에스케이씨앤씨</KoreaName>
+      <KoreaName_ForFM2>에스케이씨앤씨</KoreaName_ForFM2>
+      <UnderlyingRic>034730.KS</UnderlyingRic>
+      <QACommonName>SK C@C COMPANY LIMITED</QACommonName>
+      <IDNDisplayName>SK C@C</IDNDisplayName>
+      <DSPLY_NMLL>SK씨앤씨</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>SK씨앤씨</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SK C@C COMPANY LIMITED</NDA_TC>
+      <BDN_Underlying>kr.3473</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>코오롱인더스트리</KoreaName>
+      <KoreaName_ForFM2>코오롱인더스트리</KoreaName_ForFM2>
+      <UnderlyingRic>120110.KS</UnderlyingRic>
+      <QACommonName>KOLON INDUSTRIES</QACommonName>
+      <IDNDisplayName>KOLON</IDNDisplayName>
+      <DSPLY_NMLL>코오롱</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>코오롱인</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KOLON INDUSTRIES</NDA_TC>
+      <BDN_Underlying>kr.12011</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>한국전력기술</KoreaName>
+      <KoreaName_ForFM2>한국전력기술</KoreaName_ForFM2>
+      <UnderlyingRic>052690.KS</UnderlyingRic>
+      <QACommonName>KEPCO ENGINEERING @ CONSTRUCTION</QACommonName>
+      <IDNDisplayName>KEPCO</IDNDisplayName>
+      <DSPLY_NMLL>한국전력</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>한전기술</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KEPCO ENGINEERING @ CONSTRUCTION</NDA_TC>
+      <BDN_Underlying>kr.5269</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>BS금융지주</KoreaName>
+      <KoreaName_ForFM2>BS금융지주</KoreaName_ForFM2>
+      <UnderlyingRic>138930.KS</UnderlyingRic>
+      <QACommonName>BS FINANCIAL GROUP INC.</QACommonName>
+      <IDNDisplayName>BS</IDNDisplayName>
+      <DSPLY_NMLL>BS금융</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>BS금융</DSPLY_NMLL_ForDrop>
+      <NDA_TC>BS FINANCIAL GROUP INC.</NDA_TC>
+      <BDN_Underlying>kr.13893</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>락앤락</KoreaName>
+      <KoreaName_ForFM2>락앤락</KoreaName_ForFM2>
+      <UnderlyingRic>115390.KS</UnderlyingRic>
+      <QACommonName>LOCK@LOCK</QACommonName>
+      <IDNDisplayName>L@L</IDNDisplayName>
+      <DSPLY_NMLL>락앤락</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>락앤락</DSPLY_NMLL_ForDrop>
+      <NDA_TC>LOCK@LOCK</NDA_TC>
+      <BDN_Underlying>kr.11539</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>네오위즈게임즈</KoreaName>
+      <KoreaName_ForFM2>네오위즈게임즈</KoreaName_ForFM2>
+      <UnderlyingRic>095660.KQ</UnderlyingRic>
+      <QACommonName>NEOWIZGAMES</QACommonName>
+      <IDNDisplayName>NEOWIZ</IDNDisplayName>
+      <DSPLY_NMLL>네오위즈</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>네오위즈</DSPLY_NMLL_ForDrop>
+      <NDA_TC>NEOWIZGAMES</NDA_TC>
+      <BDN_Underlying>kr.9566K</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>파라다이스</KoreaName>
+      <KoreaName_ForFM2>파라다이스</KoreaName_ForFM2>
+      <UnderlyingRic>034230.KQ</UnderlyingRic>
+      <QACommonName>PARADISE</QACommonName>
+      <IDNDisplayName>PARADI</IDNDisplayName>
+      <DSPLY_NMLL>파라다</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>파라다이</DSPLY_NMLL_ForDrop>
+      <NDA_TC>PARADISE</NDA_TC>
+      <BDN_Underlying>kr;3423K</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>안랩</KoreaName>
+      <KoreaName_ForFM2>안랩</KoreaName_ForFM2>
+      <UnderlyingRic>053800.KQ</UnderlyingRic>
+      <QACommonName>AHNLAB</QACommonName>
+      <IDNDisplayName>AHNLAB</IDNDisplayName>
+      <DSPLY_NMLL>안랩</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>안랩</DSPLY_NMLL_ForDrop>
+      <NDA_TC>AHNLAB</NDA_TC>
+      <BDN_Underlying>kr;5380K</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>현대위아</KoreaName>
+      <KoreaName_ForFM2>현대위아</KoreaName_ForFM2>
+      <UnderlyingRic>011210.KS</UnderlyingRic>
+      <QACommonName>HYUNDAI WIA</QACommonName>
+      <IDNDisplayName>WIA</IDNDisplayName>
+      <DSPLY_NMLL>현대위아</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>현대위아</DSPLY_NMLL_ForDrop>
+      <NDA_TC>HYUNDAI WIA</NDA_TC>
+      <BDN_Underlying>kr;1121</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>에스.엠.엔터테인먼트</KoreaName>
+      <KoreaName_ForFM2>에스.엠.엔터테인먼트</KoreaName_ForFM2>
+      <UnderlyingRic>041510.KQ</UnderlyingRic>
+      <QACommonName>SM ENTERTAIN</QACommonName>
+      <IDNDisplayName>SM ENT</IDNDisplayName>
+      <DSPLY_NMLL>에스엠</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>에스엠</DSPLY_NMLL_ForDrop>
+      <NDA_TC>SM ENTERTAIN</NDA_TC>
+      <BDN_Underlying>kr;4151K</BDN_Underlying>
+    </UnderlyingCodeConversion>
+    <UnderlyingCodeConversion>
+      <KoreaName>KOSPI100</KoreaName>
+      <KoreaName_ForFM2>KOSPI100</KoreaName_ForFM2>
+      <UnderlyingRic>.KS100</UnderlyingRic>
+      <QACommonName>KSPI100</QACommonName>
+      <IDNDisplayName>KSPI100</IDNDisplayName>
+      <DSPLY_NMLL>코스피100</DSPLY_NMLL>
+      <DSPLY_NMLL_ForDrop>코스피100</DSPLY_NMLL_ForDrop>
+      <NDA_TC>KOSPI 100</NDA_TC>
+      <BDN_Underlying>kr;KS100</BDN_Underlying>
+    </UnderlyingCodeConversion>
+  </UnderlyingCodeMap>
+</ClassCodeMap>

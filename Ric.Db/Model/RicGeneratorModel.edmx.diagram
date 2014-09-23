@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aec109979e5846eca8535e8f7cfc446d" Name="Diagram1" ZoomLevel="83" ShowGrid="false" SnapToGrid="true" DisplayType="false">
+        <EntityTypeShape EntityType="EtiRicModel.Config" Width="1.5" PointX="2.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EtiRicModel.Market" Width="1.5" PointX="6.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EtiRicModel.Run" Width="1.5" PointX="2.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EtiRicModel.Schedule" Width="1.5" PointX="6.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EtiRicModel.Task" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" FillColor="255, 128, 0" />
+        <EntityTypeShape EntityType="EtiRicModel.User" Width="1.5" PointX="4.625" PointY="4.75" IsExpanded="true" FillColor="Red" />
+        <AssociationConnector Association="EtiRicModel.MarketTask" />
+        <AssociationConnector Association="EtiRicModel.MarketUser" />
+        <AssociationConnector Association="EtiRicModel.TaskOwner" />
+        <AssociationConnector Association="EtiRicModel.UserMainMarket" />
+        <AssociationConnector Association="EtiRicModel.UserManager" />
+        <AssociationConnector Association="EtiRicModel.UserSchedule" />
+        <AssociationConnector Association="EtiRicModel.TaskSchedule" />
+        <AssociationConnector Association="EtiRicModel.TaskRun" />
+        <AssociationConnector Association="EtiRicModel.UserRun" />
+        <AssociationConnector Association="EtiRicModel.UserConfig" />
+        <AssociationConnector Association="EtiRicModel.TaskConfig" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

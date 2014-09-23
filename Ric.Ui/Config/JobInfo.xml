@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<ArrayOfJobInfo>
+  <JobInfo>
+    <JobId>1</JobId>
+    <JobName>HK FMAndBulkFileGenerator</JobName>
+    <MarketId>1</MarketId>
+    <MarketName>HK</MarketName>
+    <JobSequence>27|28</JobSequence>
+  </JobInfo>  
+</ArrayOfJobInfo>

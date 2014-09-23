@@ -1,0 +1,203 @@
+# ------------------------------------------------------------
+#
+# Title         : market_holidays.skt
+# Author        : Simon Chudley
+# Creation Date : Fed 2007
+#
+# Description
+# -----------
+# Fetches market holiday information from the Reuters HOLIDAY
+# pages on IDN.
+#
+# Change History
+# --------------
+# 22-Feb-2007  S.R. Chudley      1.0.1.0 : Created
+# 25-Sep-2007  S.R. Chudley      1.0.3.1 : Use no_xml_encode when fetching XML record data
+
+# Version
+my $l_version = "1.0.4.0";
+
+# Uses
+use POSIX qw(strftime);
+use Time::Local;
+use SKitLet;
+
+# Read in parameters
+my $g_op = uc($ARGV[0]);
+my $g_format = uc($ARGV[1]);
+if ($g_op eq "" or $g_op eq "-VERSION")
+{
+   print "MarketHolidays v$l_version: Developed by S. Chudley\n\n";
+   print "Usage:\n\n   market_holiday <ALL|TODAY|DD-MM|COUNTRY> <CSV>\n";
+   exit(1);
+}
+
+# Configuration
+my $g_holiday_pages = 5;
+my %g_countries = ();
+my %g_events = ();
+my %g_countries_rev = ();
+my @g_months = ("january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december");
+
+# Create SKitLet on IDN
+my $l_skitlet = new SKitLet("feed" => "IDN") or die "Can't create SKitLet on IDN!";
+$l_skitlet->set_option("no_xml_encode");
+print STDERR "Fetching holiday information..."; STDERR->flush();
+
+# Fetch holiday index pages
+my %l_result = ();
+my @l_rics = ("HOLIDAY");
+for (my $i = 1; $i != $g_holiday_pages; $i++) { push(@l_rics, "HOLIDAY".$i); }
+if ($l_skitlet->snapshot_rics(\%l_result, \@l_rics))
+{
+   foreach my $l_ric (keys %l_result)
+   {
+      my %l_fids = %{$l_result{$l_ric}};
+      foreach my $l_fid (keys %l_fids)
+      {
+         my $l_text = $l_fids{$l_fid};
+         while ($l_text =~ m/^(.+?)\.\.\.\.\.\..+?<(.+?)>(.*)$/)
+         {
+            my $l_country = $1;
+            my $l_page = $2;
+            $l_text = $3;
+            $l_text =~ s/^\s+//;
+            $g_countries{$l_country} = $l_page;
+            $g_countries_rev{$l_page} = $l_country;
+         }
+      }
+   }
+}
+else
+{
+   print STDERR "\nUnable to fetch holiday pages from IDN!\n";
+   exit(1); 
+}
+
+# What RICs to fetch for actual holiday information
+@l_rics = ();
+foreach my $l_country (keys %g_countries)
+   { push(@l_rics, $g_countries{$l_country}); }
+
+# Fetch all the actual holiday information
+if ($l_skitlet->snapshot_rics(\%l_result, \@l_rics))
+{
+   foreach my $l_ric (keys %l_result)
+   {
+      my %l_fids = %{$l_result{$l_ric}};
+      foreach my $l_fid (keys %l_fids)
+      {
+         my $l_text = $l_fids{$l_fid};
+         if ($l_text !~ m/^\s+$/ and $l_text =~ m/^(...)\s+([0-9]+)\s+(\w+)\s+(.+?)$/)
+         {
+            my $l_day = $1;
+            my $l_date = $2;
+            my $l_mon = $3; $l_mon =~ s/[0-9 ]//g;
+            my $l_what = $4; $l_what =~ s/^[0-9]+\s+//; $l_what =~ s/\s+$//;
+            if ($l_what =~ m/^(.+?)\s\s\s+(.+?)$/)
+            {
+               my $l_ev = $1;
+               my $l_de = $2;
+               $l_ev =~ s/\s+$//;
+               $l_what = $l_ev.":".$l_de;
+            }
+            @l_time = gmtime();
+            my $l_id = 0;
+            for ($l_id = 0; $l_id < @g_months; $l_id++)
+               { if ($g_months[$l_id] =~ m/^$l_mon/i) { last; } }
+
+            # If valid
+            if ($l_id != 12)
+            {
+               $l_time[0] = 0;  
+               $l_time[1] = 0;  
+               $l_time[2] = 0;  
+               $l_time[3] = $l_date;  
+               $l_time[4] = $l_id;
+
+               $l_what =~ s/=//g;
+               $l_what =~ s/\*//g;
+               $l_what =~ s/%//g;
+               $l_ts = timelocal(@l_time);
+
+               # Store these holidays
+               my $l_country = $g_countries_rev{$l_ric};
+               push(@{$g_events{$l_ts}}, $l_country.":".$l_what);
+            }
+         }
+      }
+   }
+}
+
+print STDERR " Done.\n\n";
+
+# List holidays for a given date
+if ($g_op eq "TODAY" or $g_op =~ m/[0-9]+-[0-9]+/)
+{
+   # Work out date
+   my @l_date = gmtime();
+   $l_date[0] = 0;
+   $l_date[1] = 0;
+   $l_date[2] = 0;
+
+   # Specific date?
+   if ($g_op =~ m/([0-9]+)-([0-9]+)/)
+   {
+      $l_date[3] = $1;
+      $l_date[4] = ($2 - 1);
+   }
+
+   my $l_time = timelocal(@l_date);
+   if ($g_format ne "CSV") 
+   { 
+      print "Market Holidays (".strftime("%d-%b", @l_date)."):\n\n";
+      print sprintf("  %-19s %-80s\n", "Country", "Holiday Details");
+      print sprintf("  %-19s %-80s\n", "-------------------", "------------------------------------------------------------------------------");
+   }
+
+   # Output all events today
+   if (defined $g_events{$l_time})
+   {
+      my @l_hols = @{$g_events{$l_time}};
+      foreach my $l_event (@l_hols)
+      {
+         my ($l_country, $l_ev, $l_de) = split(/:/, $l_event);
+         if ($l_de ne "") { $l_ev .= " (".$l_de.")"; }
+         if ($g_format ne "CSV") { print sprintf("  %-19s %-80s\n", $l_country, $l_ev); }
+         else { print $l_country.",".$l_ev."\n"; }
+      }
+   }
+}
+# All holidays in text format
+elsif ($g_op eq "ALL" or $g_op =~ m/^[A-Z]+$/)
+{
+   if ($g_format ne "CSV") 
+   {
+      print sprintf("  %-6s %-19s %-80s\n", "Date", "Country", "Holiday Details");
+      print sprintf("  %-6s %-19s %-80s\n", "------", "-------------------", "------------------------------------------------------------------------------");
+   }
+
+   # Country filter?
+   my $l_cou = "";
+   if ($g_op =~ m/^[A-Z]+$/ and $g_op !~ m/ALL/) { $l_cou = $g_op; }
+
+   # Output all events in date order
+   foreach my $l_ts (sort keys %g_events)
+   {
+      my $l_matched = 0;
+      my $l_date = strftime("%d-%b", localtime($l_ts));
+      my @l_hols = @{$g_events{$l_ts}};
+      foreach my $l_event (@l_hols)
+      {
+         my ($l_country, $l_ev, $l_de) = split(/:/, $l_event);
+         if ($l_cou eq "" or $l_country =~ m/$l_cou/i)
+         {
+            if ($l_de ne "") { $l_ev .= " (".$l_de.")"; }
+            if ($g_format ne "CSV") { print sprintf("  %-6s %-19s %-80s\n", $l_date, $l_country, $l_ev); $l_date = ""; }
+            else { print $l_date.",".$l_country.",".$l_ev."\n"; }
+            $l_matched = 1;
+         }
+      }
+      if ($l_matched == 1 and $g_format ne "CSV") { print "\n"; }
+   }
+}

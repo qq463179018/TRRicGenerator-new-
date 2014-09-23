@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ClassUnderlyCodeMap>
+  <UnderlyCodeMap>
+    <UnderlyingCodeConversion>
+      <ClassName>A50</ClassName>
+      <UnderlyCode>2823</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>ABC</ClassName>
+      <UnderlyCode>1288</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>ALC</ClassName>
+      <UnderlyCode>2600</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>BCL</ClassName>
+      <UnderlyCode>3988</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>BCM</ClassName>
+      <UnderlyCode>3328</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>BEA</ClassName>
+      <UnderlyCode>0023</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>BOC</ClassName>
+      <UnderlyCode>2388</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>BYD</ClassName>
+      <UnderlyCode>1211</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CCB</ClassName>
+      <UnderlyCode>0939</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CCC</ClassName>
+      <UnderlyCode>1800</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CCE</ClassName>
+      <UnderlyCode>1898</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CCS</ClassName>
+      <UnderlyCode>1919</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CHT</ClassName>
+      <UnderlyCode>0941</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CHU</ClassName>
+      <UnderlyCode>0762</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CIT</ClassName>
+      <UnderlyCode>0267</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CKH</ClassName>
+      <UnderlyCode>0001</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CLI</ClassName>
+      <UnderlyCode>2628</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CLP</ClassName>
+      <UnderlyCode>0002</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CMB</ClassName>
+      <UnderlyCode>3968</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CNC</ClassName>
+      <UnderlyCode>0883</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>COL</ClassName>
+      <UnderlyCode>0688</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CPA</ClassName>
+      <UnderlyCode>0293</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CPC</ClassName>
+      <UnderlyCode>0386</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CRC</ClassName>
+      <UnderlyCode>1186</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CRG</ClassName>
+      <UnderlyCode>0390</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CS3</ClassName>
+      <UnderlyCode>2827</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CSE</ClassName>
+      <UnderlyCode>1088</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CTB</ClassName>
+      <UnderlyCode>0998</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CTC</ClassName>
+      <UnderlyCode>0728</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>ESP</ClassName>
+      <UnderlyCode>0330</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>FIH</ClassName>
+      <UnderlyCode>2038</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>HEH</ClassName>
+      <UnderlyCode>0006</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>HEX</ClassName>
+      <UnderlyCode>0388</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>HKB</ClassName>
+      <UnderlyCode>0005</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>HKG</ClassName>
+      <UnderlyCode>0003</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>HLD</ClassName>
+      <UnderlyCode>0012</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>HSB</ClassName>
+      <UnderlyCode>0011</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>HNP</ClassName>
+      <UnderlyCode>0902</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>HWL</ClassName>
+      <UnderlyCode>0013</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>ICB</ClassName>
+      <UnderlyCode>1398</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>JXC</ClassName>
+      <UnderlyCode>0358</UnderlyCode>
+    </UnderlyingCodeConversion>
+    
+    <UnderlyingCodeConversion>
+      <ClassName>LIF</ClassName>
+      <UnderlyCode>0494</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>MTR</ClassName>
+      <UnderlyCode>0066</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>NWD</ClassName>
+      <UnderlyCode>0017</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>PAI</ClassName>
+      <UnderlyCode>2318</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>PEC</ClassName>
+      <UnderlyCode>0857</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>PIC</ClassName>
+      <UnderlyCode>2328</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>RFP</ClassName>
+      <UnderlyCode>2777</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>SHK</ClassName>
+      <UnderlyCode>0016</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>SWA</ClassName>
+      <UnderlyCode>0019</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>TCH</ClassName>
+      <UnderlyCode>0700</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>TRF</ClassName>
+      <UnderlyCode>2800</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>WHL</ClassName>
+      <UnderlyCode>0004</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>ZJM</ClassName>
+      <UnderlyCode>2899</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>AIA</ClassName>
+      <UnderlyCode>1299</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>CPI</ClassName>
+      <UnderlyCode>2601</UnderlyCode>
+    </UnderlyingCodeConversion>
+
+    <UnderlyingCodeConversion>
+      <ClassName>YZC</ClassName>
+      <UnderlyCode>1171</UnderlyCode>
+    </UnderlyingCodeConversion>
+  </UnderlyCodeMap>
+</ClassUnderlyCodeMap>

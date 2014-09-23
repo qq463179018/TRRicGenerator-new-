@@ -1,0 +1,22 @@
+﻿<Window x:Class="Ric.Ui.View.LoadingScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LoadingScreen" Height="372" Width="553.5"
+        Background="Transparent" Loaded="LoadingScreen_OnLoaded"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Icon="..\Images\application-sidebar-list.png"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Image Margin="10,0,15.5,10" Source="../Images/splash.png" Stretch="Fill"/>
+        <TextBlock HorizontalAlignment="Left" Margin="67,251,0,49" TextWrapping="Wrap" FontSize="14" FontWeight="SemiBold" Width="249" x:Name="LoadingBlock"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="215,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" 
+                 Name="LoginBox"
+                 Visibility="{Binding LoginVisibility}"
+                 Text=""/>
+        <Button Content="login" Margin="374,220,122,126" IsDefault="True"
+                Visibility="{Binding LoginVisibility}" 
+                Command="{Binding LoginCommand}" />
+    </Grid>
+</Window>

@@ -1,0 +1,480 @@
+;=================================================================================================================
+
+;Start on Primary Menu
+;Make sure DLIVE06 is already running to avoid password issues
+
+;DESCRIPTION: For Common Type of Creation
+
+;=================================================================================================================
+
+LOOP:
+IF &ENDOFDATA=FALSE THEN
+INPUT MNEM,SEDOL,NAME1,NAME2,BDATE,DEF_MKT,MNEM2,ISIN,CNAME,GEOG,DCUR,REMK,SECTY,GRPI,FNAME1,MIC,FNAME2,CUSIP,QCI,PARENT_RIC
+
+SET NOSH TO "1"
+
+IF (mid$(BDATE,3,1)="/") THEN
+	SET CODE3 TO "   "
+ELSE
+	SET CODE3 TO BDATE
+	SET BDATE TO "[TAB]"
+ENDIF
+
+;=================================================================================================================
+
+;SEQUENCE NUMBER (SEQN)
+
+Send( "[CLEAR]" )
+
+SET DIRCHECK TO mid$(NAME1,2,1)
+IF (DIRCHECK <"9") AND (DIRCHECK<>" ") THEN
+	SET DIRCHECK TO "Z"
+ENDIF	
+IF (DIRCHECK<"M") THEN
+	SET DIR TO "BEGIN"
+	SET DIR2 TO "[PF8]"
+	SET DIR3 TO "FORWARD"
+ELSE
+	SET DIR TO "END"
+	SET DIR2 TO "[PF7]"
+	SET DIR3 TO "BACKWARD"
+ENDIF
+
+
+	SET TYPE TO "FAMER"
+	SET WHAT TO "PAGE"	
+
+PREP:
+
+	IF (TYPE="FAMER")AND (WHAT="PAGE") THEN
+		SET NameStr TO left$(NAME1,1)
+		Send ("15")
+		Send ("7")
+		Send ("FAMER"+NameStr+"[TAB]"+DIR)
+
+		SET NameStr TO left$(NAME1,7)
+		IF ((right$(NAME1,1)<>" ")AND(left$(NAME2,1)<>" ")) THEN
+			SET str to NAME1+" "+NAME2
+		ELSE 
+			SET str to NAME1+NAME2
+		ENDIF
+	
+	ENDIF
+	
+	IF (WHAT="LINE") THEN
+		SET nl TO 0
+		SET CNT TO 1 
+				
+		LOOPORDERLINE:
+		IF (CNT>15) THEN
+			SET nl TO 0
+			IF TYPE="FAMER" THEN
+				SET PREVIOUS TO mid$(&screen,1602,6)
+			ELSE
+				;TYPE="ALLEQ
+				SET PREVIOUS TO mid$(&screen,1674,7)				
+			ENDIF
+				CHECKBOTTOM:
+				IF left$(PREVIOUS,1)=" " THEN
+					SET nl TO nl+1
+					IF TYPE="FAMER" THEN
+						SET PREVIOUS TO mid$(&screen,1602-(80*nl),6)
+					ELSE
+						;TYPE="ALLEQ
+						SET PREVIOUS TO mid$(&screen,1674-(80*nl),7)				
+					ENDIF
+				
+					GOTO CHECKBOTTOM
+				ENDIF
+			
+			SET DIR3 TO "FORWARD"
+			SET DIR2 TO "[PF8]"								
+			
+			GOTO ENDPAGECHECK
+		ENDIF
+
+		SET str2 TO mid$(&screen,489+(80*nl),26)
+		IF (left$(str,1)<>left$(str2,1)) AND (left$(str,1)>left$(str2,1)) THEN
+			GOTO GETNEXT1
+		ENDIF
+			
+		GOTO CHARCHECK
+	ENDIF
+	
+	IF (TYPE="ALLEQ") AND (WHAT="PAGE") THEN
+		Send ("15")
+		Send ("7")
+		Send ("ALLEQ[TAB]"+SEQN_BASE)
+	ENDIF
+
+	IF (WHAT="PAGE") THEN
+		PAGECHECK1:
+	
+			IF (DIR3="FORWARD") THEN
+				SET str2 TO mid$(&screen,1609,50)
+			ELSE
+				;DIR3="BAcKWARD"
+				SET str2 TO mid$(&screen,489,50)
+			ENDIF
+		
+			GOTO CHARCHECK
+	ENDIF
+
+CHARCHECK:
+
+			SET xx TO 1
+			LOOPCHAR1:
+				SET char1 TO mid$(str,xx,1)
+				SET char2 TO mid$(str2,xx,1)
+				
+				;==CHECK FOR NUMBER AND SYMBOL
+
+					IF ((char1>"9") AND (char2>"9")) OR (char1=" " OR char2=" " OR char1="" OR char2="" OR char1="-" OR char2="-" OR char1="&" OR char2="&" OR char1="." OR char2="." OR char1="+" OR char2="+" OR char1="/" OR char2="/" OR char1="'" OR char2="'") THEN
+						GOTO EXITCHECK1
+					ENDIF
+
+					IF ((char1<="9") AND (char1<>" ") AND (char2<="9") AND (char2<>" ")) THEN
+						;NOTHING
+						
+					ELSE 
+						IF (char1<="9") THEN		
+							SET char1 TO "ZZ"
+						ENDIF	
+
+						IF (char2<="9") THEN							
+							SET char2 TO "ZZ"
+						ENDIF	
+	
+					ENDIF
+
+					EXITCHECK1:
+				;==END CHECK FOR NUMBER AND SYMBOL
+				
+
+EVAL:
+
+			IF (WHAT="PAGE") AND (DIR3="FORWARD") THEN
+					IF (char1<char2) THEN
+						GOTO ENDLOOPCHAR1
+
+					ELSE 
+						IF (char1=char2) THEN
+							SET xx TO xx +1
+							GOTO LOOPCHAR1
+						ELSE
+							IF (TYPE="FAMER") THEN
+								SET PREVIOUS TO mid$(&screen,1602,6)				
+							ELSE
+								;TYPE ALLEQ
+								SET PREVIOUS TO mid$(&screen,1674,7)
+							ENDIF
+							
+							Send (DIR2)
+							GOTO PAGECHECK1
+						ENDIF
+					ENDIF
+			ENDIF
+
+			IF (WHAT="PAGE") AND (DIR3="BACKWARD") THEN
+					IF (char1>char2) THEN
+						GOTO ENDLOOPCHAR1
+
+					ELSE 
+						IF (char1=char2) THEN
+							SET xx TO xx +1
+							GOTO LOOPCHAR1
+						ELSE
+							IF (TYPE="FAMER") THEN
+								SET PREVIOUS TO mid$(&screen,482,6)
+							ELSE
+								;TYPE ALLEQ
+								SET PREVIOUS TO mid$(&screen,554,7)
+							ENDIF
+							Send (DIR2)
+							GOTO PAGECHECK1
+						ENDIF
+					ENDIF
+				ENDLOOPCHAR1:
+				SET WHAT TO "LINE"
+				GOTO PREP
+			ENDIF
+		
+			IF (WHAT="LINE") THEN
+				IF (char1<char2) THEN
+					SET DIR3 TO "FORWARD"
+					SET DIR2 TO "[PF8]"
+
+					CHECKTOP:
+					IF (nl <> 0) THEN
+						SET nl TO nl-1	
+						IF (TYPE="FAMER") THEN
+							SET PREVIOUS TO mid$(&screen,482+80*nl,6)
+						ELSE
+							;TYPE="ALLEQ"
+							SET PREVIOUS TO mid$(&screen,554+80*nl,7)
+
+						ENDIF
+					ENDIF
+	
+					IF left$(PREVIOUS,1)=" " THEN
+						SET nl TO nl+2
+						SET DIR3 TO "BACKWARD"
+						SET DIR2 TO "[PF7]"
+						GOTO CHECKTOP
+					ENDIF
+
+					GOTO ENDLOOPLINE
+				ELSE 
+					IF (char1=char2) THEN
+						SET xx TO xx +1
+						GOTO LOOPCHAR1
+					ELSE						
+						GOTO GETNEXT1
+					ENDIF
+				ENDIF
+					GETNEXT1:
+					SET CNT TO CNT+1
+					SET nl TO nl+1
+					GOTO LOOPORDERLINE
+
+			ENDIF
+			ENDLOOPLINE:
+			ENDPAGECHECK:
+			
+			IF (TYPE="FAMER") AND (WHAT="LINE") THEN
+				SET SEQN_BASE TO PREVIOUS
+				Send ("[CLEAR]")
+				SET TYPE TO "ALLEQ"
+				SET WHAT TO "PAGE"
+				GOTO PREP
+			ENDIF
+
+			IF (TYPE="ALLEQ") AND (WHAT="LINE") THEN
+				SET GET_SEQN TO PREVIOUS
+				SET K TO 0
+				SET LAST TO ""
+
+				LOOP_SEQNX:
+				IF (K=7) THEN
+					MESSAGE("Sequence number has exceeded 7 digits")
+					GOTO END
+				ENDIF
+
+
+				SET DIGIT TO val(mid$(GET_SEQN,7-K,1))+1
+				IF (DIGIT<=9) THEN
+					IF (K=0) THEN
+						SET LAST TO DIGIT
+						SET SEQN TO left$(GET_SEQN,6+K)+str$(LAST)
+						GOTO ENDLOOPSEQNX
+					ELSE
+						SET SEQN TO left$(GET_SEQN,6-K)+str$(DIGIT)+LAST
+						GOTO ENDLOOPSEQNX
+					ENDIF
+				ELSE	
+					SET ENDDIGIT TO "0"		
+					SET LAST TO ENDDIGIT+LAST
+					SET K TO K+1
+
+					GOTO LOOP_SEQNX
+				ENDIF
+
+				ENDLOOPSEQNX:
+				Send("[CLEAR]")
+			ENDIF
+
+;END GET SEQN
+
+;=================================================================================================================
+;COMMON STOCK, NORMAL STOCK
+
+COMMON:
+
+	Send( "[CLEAR]" )
+	Send ("14")
+	Send ("S")  
+	
+	IF (DEF_MKT="HK") THEN
+		Send ("[DOWN][DOWN][DOWN]048YR")
+	ELSE
+		Send ("[DOWN][DOWN][DOWN]"+GEOG+"YR")
+	ENDIF
+	
+	Send ("[ENTER]")
+	SET DSCD TO mid$(&screen,183,6)
+	
+	IF (DEF_MKT="HK") AND (GEOG="048") AND (DCUR="079") THEN
+		Send (SEQN+MNEM+"            "+REMK+"[TAB]"+NAME1+NAME2+"[DOWN]"+DCUR+"[TAB]*[DOWN]"+DEF_MKT+"[DOWN]D"+BDATE)
+	ELSE
+		Send (SEQN+MNEM+"            "+REMK+"[TAB]"+NAME1+NAME2+"[DOWN][DOWN][DOWN]"+DEF_MKT+"[DOWN]D"+BDATE)
+
+	ENDIF
+	Send ("[ENTER]")
+
+
+
+	LOOP_SEQN3:
+	IF (mid$(&screen,1761,8) = "DC955092") THEN
+		SET GET_SEQN TO mid$(&screen,223,7)
+		SET K TO 0
+		SET LAST TO ""
+
+		LOOP_SEQN1:
+		IF (K=7) THEN
+			MESSAGE("Sequence number has exceeded 7 digits")
+			GOTO END
+		ENDIF
+
+
+		SET DIGIT TO val(mid$(GET_SEQN,7-K,1))+1
+		IF (DIGIT<=9) THEN
+			IF (K=0) THEN
+				SET LAST TO DIGIT
+				SET SEQN TO left$(GET_SEQN,6+K)+str$(LAST)
+				GOTO ENDLOOPSEQN1
+			ELSE
+				SET SEQN TO left$(GET_SEQN,6-K)+str$(DIGIT)+LAST
+				GOTO ENDLOOPSEQN1
+			ENDIF
+		ELSE
+			SET ENDDIGIT TO "0"		
+			SET LAST TO ENDDIGIT+LAST
+			SET K TO K+1
+
+			GOTO LOOP_SEQN1
+		ENDIF
+		ENDLOOPSEQN1:
+		SEND (SEQN)
+		GOTO LOOP_SEQN3
+	ENDIF
+	ENDLOOP_SEQN3:
+
+
+	Send ("C")
+	
+	IF (DEF_MKT="HK") AND (GEOG="048") AND (DCUR="079") THEN
+		Send ("[TAB][TAB]"+DCUR+"[TAB]*")
+	ELSE
+		Send ("[ENTER]")
+	ENDIF
+
+	Send (NOSH+"[ENTER]")
+	Send ("C")
+	Send (CNAME+"[DOWN]116[ENTER]")
+	Send ("Y")
+
+	Send ("[HOME]QFLAG")
+	Send ( MNEM )
+	Send ("YY")
+
+	Send ("[HOME]MAJOR")
+	Send ( MNEM )
+	Send ("Y")
+	Send ("S")
+	Send ("Y")
+
+	Send ("[PF3]")
+	Send ("[TAB][TAB]"+MNEM)
+	Send ("Y")
+	Send ("S")
+	Send ("S")
+	Send ("Y")
+
+	Send ("[PF3]")
+	Send ("[PF3]")
+	Send ("[HOME]CTREE")
+	Send ( MNEM+"[DOWN]Y" )
+	Send ("Y")
+
+
+	IF (DEF_MKT="HK") OR (SECTY ="ET") OR (left$(REMK,1)<>" ") THEN
+	;==ONLY FOR H-SHARES, DUAL CURRENCY, ETF AND REMK
+
+		IF (DEF_MKT="HK") AND (GEOG="051") AND (DCUR="079") THEN
+			;H-share whether ETF or not
+				Send ("[HOME]BASIC") 
+				Send ( MNEM )
+				Send ( GEOG+"[DOWN][DOWN][DOWN]"+REMK+REMK+" [DOWN]"+DEF_MKT+DCUR+"[DOWN][DOWN][DOWN][RIGHT][RIGHT][RIGHT]"+SECTY )
+				Send ("[Enter]")
+				Send ("Y")
+				Send ("[Enter]")
+				GOTO ENDBASICCHECK
+		ENDIF
+		IF (DEF_MKT="HK") AND (GEOG="048") AND (DCUR="079") THEN
+			;Dual currency whether ETF or not
+				Send ("[HOME]BASIC") 
+				Send ( MNEM )
+				Send ( GEOG+"[DOWN][DOWN][DOWN]"+REMK+REMK+" [DOWN]"+DEF_MKT+DCUR+"[TAB]"+DCUR+"[TAB]"+DCUR+"[DOWN][RIGHT][RIGHT][RIGHT]"+SECTY )
+				Send ("[Enter]")
+				Send ("Y")
+				Send ("[Enter]")
+				GOTO ENDBASICCHECK
+		ENDIF
+			;ETF or with REMK that are not HK stocks
+	
+		IF (SECTY ="ET") OR (left$(REMK,1)<>" ") THEN
+				Send ("[HOME]BASIC") 
+				Send ( MNEM )
+				Send ( GEOG+"[DOWN][DOWN][DOWN]"+REMK+REMK+" [DOWN]"+DEF_MKT+DCUR+"[DOWN][DOWN][DOWN][RIGHT][RIGHT][RIGHT]"+SECTY )
+				Send ("[Enter]")
+				Send ("Y")
+				Send ("[Enter]")
+				GOTO ENDBASICCHECK	
+		ENDIF
+
+	ENDIF
+	ENDBASICCHECK:
+
+
+ENDIF
+ENDER:
+
+	IF left$(SEDOL,1)<>" " THEN
+		SET PUT_SEDOL TO 'I'+SEDOL+'E'
+	ELSE
+		SET PUT_SEDOL TO '[DOWN]'
+	ENDIF
+
+	IF left$(ISIN,1)<>" " THEN
+		SET PUT_ISIN TO 'I'+ISIN+'V E'
+	ELSE
+		SET PUT_ISIN TO '[DOWN]'
+	ENDIF
+
+	IF left$(CUSIP,1)<>" " THEN
+		SET PUT_CUSIP TO 'I'+CUSIP+'E'
+	ELSE	
+		SET PUT_CUSIP TO '[DOWN]'
+	ENDIF
+
+	IF left$(MNEM2,1)<>" " THEN
+		SET PUT_MNEM2 TO 'I'+MNEM2+'E'
+	ELSE
+		SET PUT_MNEM2 TO '[DOWN]'
+	ENDIF
+
+	IF left$(CODE3,1)<>" " THEN
+		SET PUT_CODE3 TO 'I'+CODE3+'M E'
+	ELSE
+		SET PUT_CODE3 TO '[DOWN]'
+	ENDIF
+
+	SET INDEX tO '[DOWN][DOWN]'+PUT_SEDOL+PUT_MNEM2+PUT_CUSIP+'[TAB][TAB][TAB][TAB][TAB][TAB]'+PUT_CODE3+PUT_ISIN
+
+
+
+	Send ("[HOME]INDEX")
+	Send ( DSCD )
+	Send (INDEX)
+	Send ( "Y" )
+
+;=================================================================================================================
+
+Send ("[CLEAR]")
+GOTO LOOP
+ENDIF
+END:
+
+LIST:
+DATA
+{0}ENDDATA

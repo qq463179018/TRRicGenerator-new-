@@ -1,0 +1,10 @@
+﻿<Window x:Class="Ric.Ui.View.TipsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TipsWindow" Height="300" WindowStyle="None" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" BorderThickness="1">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Height="29" Margin="19,8,0,0" TextWrapping="Wrap" Text="Tips" VerticalAlignment="Top" Width="88"/>
+        <Button Content="Next Tip" HorizontalAlignment="Left" Height="23" Margin="120,263,0,0" VerticalAlignment="Top" Width="76" Command="{Binding NextTipCommand}" />
+        <Button Content="Close" HorizontalAlignment="Left" Height="23" Margin="206,263,0,0" VerticalAlignment="Top" Width="76" Click="CloseButton_OnClick" />  
+    </Grid>
+</Window>

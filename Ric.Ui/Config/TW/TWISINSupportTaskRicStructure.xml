@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RicStructureSummary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--OffclCodeIndexes split by "," and the index starts with 0-->
+  <!--For 每周到期期货， PreMonthCodeStr can be configured as MTX[1]W, in which <1> should be replaced by the first digit number-->
+  <FutureRicStructureList>
+    <FutureRicStructure>
+      <FutureType>股票期貨</FutureType>
+      <OffclCodeIndexes>0,1,2</OffclCodeIndexes>
+      <PreMonthCodeStr>tm</PreMonthCodeStr>      
+    </FutureRicStructure>
+
+    <FutureRicStructure>
+      <FutureType>臺股期貨 </FutureType>
+      <OffclCodeIndexes>0,1</OffclCodeIndexes>
+      <PreMonthCodeStr></PreMonthCodeStr>
+    </FutureRicStructure>
+
+    <FutureRicStructure>
+      <FutureType>金融期貨</FutureType>
+      <OffclCodeIndexes></OffclCodeIndexes>
+      <PreMonthCodeStr>TXFI</PreMonthCodeStr>
+    </FutureRicStructure>
+
+    <FutureRicStructure>
+      <FutureType>電子期貨 </FutureType>
+      <OffclCodeIndexes></OffclCodeIndexes>
+      <PreMonthCodeStr>TXEL</PreMonthCodeStr>
+    </FutureRicStructure>
+
+    <FutureRicStructure>
+      <FutureType>小型臺指期貨</FutureType>
+      <OffclCodeIndexes></OffclCodeIndexes>
+      <PreMonthCodeStr>MTX</PreMonthCodeStr>
+    </FutureRicStructure>
+
+    <FutureRicStructure>
+      <FutureType>黃金期貨</FutureType>
+      <OffclCodeIndexes></OffclCodeIndexes>
+      <PreMonthCodeStr>GOLDF</PreMonthCodeStr>
+    </FutureRicStructure>
+
+    <FutureRicStructure>
+      <FutureType>非金電期貨</FutureType>
+      <OffclCodeIndexes>0,1,2</OffclCodeIndexes>
+      <PreMonthCodeStr></PreMonthCodeStr>
+    </FutureRicStructure>
+
+    <FutureRicStructure>
+      <FutureType>櫃買期貨</FutureType>
+      <OffclCodeIndexes>0,1,2</OffclCodeIndexes>
+      <PreMonthCodeStr></PreMonthCodeStr>
+    </FutureRicStructure>
+
+    <FutureRicStructure>
+      <FutureType>臺灣50指數期貨</FutureType>
+      <OffclCodeIndexes>0,1,2</OffclCodeIndexes>
+      <PreMonthCodeStr></PreMonthCodeStr>
+    </FutureRicStructure>
+
+    <FutureRicStructure>
+      <FutureType>十年期政府公債期貨</FutureType>
+      <OffclCodeIndexes>0,1,2</OffclCodeIndexes>
+      <PreMonthCodeStr></PreMonthCodeStr>
+    </FutureRicStructure>
+
+    <FutureRicStructure>
+      <FutureType>三十天期利率期貨</FutureType>
+      <OffclCodeIndexes>0,1,2</OffclCodeIndexes>
+      <PreMonthCodeStr></PreMonthCodeStr>
+    </FutureRicStructure>
+
+    <FutureRicStructure>
+      <FutureType>臺幣黃金期貨</FutureType>
+      <OffclCodeIndexes>0,1,2</OffclCodeIndexes>
+      <PreMonthCodeStr></PreMonthCodeStr>
+    </FutureRicStructure>
+
+    <FutureRicStructure>
+      <FutureType>每周到期期貨</FutureType>
+      <OffclCodeIndexes></OffclCodeIndexes>
+      <PreMonthCodeStr>MTX[1]W</PreMonthCodeStr>
+    </FutureRicStructure>
+    
+  </FutureRicStructureList>
+
+  <!--Structure of 股票選擇權買權/股票選擇權賣權 will be hard code in program -->
+  <!--For 臺指選擇權買權/臺指選擇權賣權, SourcePrefix value is "TXO"-->
+  <!--For 臺指選擇權買權/臺指選擇權賣權, ReplacedPrefix value is "TX"-->
+  <OptionRicStructureList>
+    <OptionRicStructure>
+      <OptionType>臺指選擇權買權</OptionType>
+      <SourcePrefix>TXO</SourcePrefix>
+      <ReplacedPrefix>TX</ReplacedPrefix>
+      <Suffix>.TM</Suffix>
+    </OptionRicStructure>
+
+    <OptionRicStructure>
+      <OptionType>臺指選擇權賣權</OptionType>
+      <SourcePrefix>TXO</SourcePrefix>
+      <ReplacedPrefix>TX</ReplacedPrefix>
+      <Suffix>.TM</Suffix>
+    </OptionRicStructure>
+
+    <OptionRicStructure>
+      <OptionType>金融選擇權買權</OptionType>
+      <SourcePrefix>TFO</SourcePrefix>
+      <ReplacedPrefix>TF</ReplacedPrefix>
+      <Suffix>.TM</Suffix>
+    </OptionRicStructure>
+
+    <OptionRicStructure>
+      <OptionType>金融選擇權賣權</OptionType>
+      <SourcePrefix>TFO</SourcePrefix>
+      <ReplacedPrefix>TF</ReplacedPrefix>
+      <Suffix>.TM</Suffix>
+    </OptionRicStructure>
+
+    <OptionRicStructure>
+      <OptionType>電子選擇權買權</OptionType>
+      <SourcePrefix>TEO</SourcePrefix>
+      <ReplacedPrefix>TE</ReplacedPrefix>
+      <Suffix>.TM</Suffix>
+    </OptionRicStructure>
+
+    <OptionRicStructure>
+      <OptionType>電子選擇權賣權</OptionType>
+      <SourcePrefix>TEO</SourcePrefix>
+      <ReplacedPrefix>TE</ReplacedPrefix>
+      <Suffix>.TM</Suffix>
+    </OptionRicStructure>
+
+    <OptionRicStructure>
+      <OptionType>櫃買選擇權買權</OptionType>
+      <SourcePrefix>GTO</SourcePrefix>
+      <ReplacedPrefix>GT</ReplacedPrefix>
+      <Suffix>.TM</Suffix>
+    </OptionRicStructure>
+
+    <OptionRicStructure>
+      <OptionType>櫃買選擇權賣權</OptionType>
+      <SourcePrefix>GTO</SourcePrefix>
+      <ReplacedPrefix>GT</ReplacedPrefix>
+      <Suffix>.TM</Suffix>
+    </OptionRicStructure>
+
+    <OptionRicStructure>
+      <OptionType>黃金選擇權買權</OptionType>
+      <SourcePrefix>TGO</SourcePrefix>
+      <ReplacedPrefix>TG</ReplacedPrefix>
+      <Suffix>.TM</Suffix>
+    </OptionRicStructure>
+
+    <OptionRicStructure>
+      <OptionType>黃金選擇權賣權 </OptionType>
+      <SourcePrefix>TGO</SourcePrefix>
+      <ReplacedPrefix>TG</ReplacedPrefix>
+      <Suffix>.TM</Suffix>
+    </OptionRicStructure>
+
+    <OptionRicStructure>
+      <OptionType>非金電選擇權買權</OptionType>
+      <SourcePrefix>XIO</SourcePrefix>
+      <ReplacedPrefix>XI</ReplacedPrefix>
+      <Suffix>.TM</Suffix>
+    </OptionRicStructure>
+
+    <OptionRicStructure>
+      <OptionType>非金電選擇權賣權 </OptionType>
+      <SourcePrefix>XIO</SourcePrefix>
+      <ReplacedPrefix>XI</ReplacedPrefix>
+      <Suffix>.TM</Suffix>
+    </OptionRicStructure>
+  </OptionRicStructureList>
+</RicStructureSummary>

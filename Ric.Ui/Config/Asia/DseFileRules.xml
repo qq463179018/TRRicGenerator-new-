@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ArrayOfDseFileRule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<DseFileRule>
+		<Field>1</Field>
+		<Description>Record Type</Description>
+		<MaxLength>2</MaxLength>
+		<PositionFrom>1</PositionFrom>
+		<PositionTo>2</PositionTo>
+		<PropertyName>RecordType</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>2</Field>
+		<Description>RIC</Description>
+		<MaxLength>20</MaxLength>
+		<PositionFrom>3</PositionFrom>
+		<PositionTo>22</PositionTo>
+		<PropertyName>RIC</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>3</Field>
+		<Description>Security Description</Description>
+		<MaxLength>36</MaxLength>
+		<PositionFrom>23</PositionFrom>
+		<PositionTo>58</PositionTo>
+		<PropertyName>SecurityDescription</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>4</Field>
+		<Description>CUSIP</Description>
+		<MaxLength>9</MaxLength>
+		<PositionFrom>59</PositionFrom>
+		<PositionTo>67</PositionTo>
+		<PropertyName>CUSIP</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>5</Field>
+		<Description>SEDOL</Description>
+		<MaxLength>7</MaxLength>
+		<PositionFrom>68</PositionFrom>
+		<PositionTo>74</PositionTo>
+		<PropertyName>SEDOL</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>6</Field>
+		<Description>Common Code</Description>
+		<MaxLength>9</MaxLength>
+		<PositionFrom>75</PositionFrom>
+		<PositionTo>83</PositionTo>
+		<PropertyName>CommonCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>7</Field>
+		<Description>ISIN</Description>
+		<MaxLength>12</MaxLength>
+		<PositionFrom>84</PositionFrom>
+		<PositionTo>95</PositionTo>
+		<PropertyName>ISIN</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>8</Field>
+		<Description>Issue Classification (Trunc)</Description>
+		<MaxLength>2</MaxLength>
+		<PositionFrom>96</PositionFrom>
+		<PositionTo>97</PositionTo>
+		<PropertyName>IssueClassification</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>9</Field>
+		<Description>Exchange Code</Description>
+		<MaxLength>3</MaxLength>
+		<PositionFrom>98</PositionFrom>
+		<PositionTo>100</PositionTo>
+		<PropertyName>ExchangeCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>10</Field>
+		<Description>Currency Code</Description>
+		<MaxLength>3</MaxLength>
+		<PositionFrom>101</PositionFrom>
+		<PositionTo>103</PositionTo>
+		<PropertyName>CurrencyCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>11</Field>
+		<Description>Trading Status</Description>
+		<MaxLength>1</MaxLength>
+		<PositionFrom>104</PositionFrom>
+		<PositionTo>104</PositionTo>
+		<PropertyName>TradingStatus</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>12</Field>
+		<Description>Company Name</Description>
+		<MaxLength>80</MaxLength>
+		<PositionFrom>105</PositionFrom>
+		<PositionTo>184</PositionTo>
+		<PropertyName>CompanyName</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>13</Field>
+		<Description>MSCI Industrial Classification Code</Description>
+		<MaxLength>3</MaxLength>
+		<PositionFrom>185</PositionFrom>
+		<PositionTo>187</PositionTo>
+		<PropertyName>MSCIIndustrialClassificationCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>14</Field>
+		<Description>Issuer ORGID</Description>
+		<MaxLength>10</MaxLength>
+		<PositionFrom>188</PositionFrom>
+		<PositionTo>197</PositionTo>
+		<PropertyName>IssuerORGID</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>15</Field>
+		<Description>Company Short Name</Description>
+		<MaxLength>16</MaxLength>
+		<PositionFrom>198</PositionFrom>
+		<PositionTo>213</PositionTo>
+		<PropertyName>CompanyShortName</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>16</Field>
+		<Description>Company Legal Domicile</Description>
+		<MaxLength>3</MaxLength>
+		<PositionFrom>214</PositionFrom>
+		<PositionTo>216</PositionTo>
+		<PropertyName>CompanyLegalDomicile</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>17</Field>
+		<Description>Australia Code</Description>
+		<MaxLength>6</MaxLength>
+		<PositionFrom>217</PositionFrom>
+		<PositionTo>222</PositionTo>
+		<PropertyName>AustraliaCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>18</Field>
+		<Description>Austria Code</Description>
+		<MaxLength>6</MaxLength>
+		<PositionFrom>223</PositionFrom>
+		<PositionTo>228</PositionTo>
+		<PropertyName>AustriaCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>19</Field>
+		<Description>Belgium Code (Trunc)</Description>
+		<MaxLength>8</MaxLength>
+		<PositionFrom>229</PositionFrom>
+		<PositionTo>236</PositionTo>
+		<PropertyName>BelgiumCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>20</Field>
+		<Description>France Code (Sicovam)</Description>
+		<MaxLength>6</MaxLength>
+		<PositionFrom>237</PositionFrom>
+		<PositionTo>242</PositionTo>
+		<PropertyName>FranceCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>21</Field>
+		<Description>Wertpapier</Description>
+		<MaxLength>6</MaxLength>
+		<PositionFrom>243</PositionFrom>
+		<PositionTo>248</PositionTo>
+		<PropertyName>Wertpapier</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>22</Field>
+		<Description>SICC</Description>
+		<MaxLength>12</MaxLength>
+		<PositionFrom>249</PositionFrom>
+		<PositionTo>260</PositionTo>
+		<PropertyName>SICC</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>23</Field>
+		<Description>Netherlands Code (Trunc)</Description>
+		<MaxLength>5</MaxLength>
+		<PositionFrom>261</PositionFrom>
+		<PositionTo>265</PositionTo>
+		<PropertyName>NetherlandsCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>24</Field>
+		<Description>No longer in used</Description>
+		<MaxLength>12</MaxLength>
+		<PositionFrom>266</PositionFrom>
+		<PositionTo>277</PositionTo>
+		<PropertyName>Nolongerinused</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>25</Field>
+		<Description>Sao Paulo Code</Description>
+		<MaxLength>5</MaxLength>
+		<PositionFrom>278</PositionFrom>
+		<PositionTo>282</PositionTo>
+		<PropertyName>SaoPauloCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>26</Field>
+		<Description>Valoren</Description>
+		<MaxLength>9</MaxLength>
+		<PositionFrom>283</PositionFrom>
+		<PositionTo>291</PositionTo>
+		<PropertyName>Valoren</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>27</Field>
+		<Description>Taiwan Code</Description>
+		<MaxLength>5</MaxLength>
+		<PositionFrom>292</PositionFrom>
+		<PositionTo>296</PositionTo>
+		<PropertyName>TaiwanCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>28</Field>
+		<Description>Hong Kong Code (Trunc)</Description>
+		<MaxLength>4</MaxLength>
+		<PositionFrom>297</PositionFrom>
+		<PositionTo>300</PositionTo>
+		<PropertyName>HongKongCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>29</Field>
+		<Description>Malaysia Code</Description>
+		<MaxLength>10</MaxLength>
+		<PositionFrom>301</PositionFrom>
+		<PositionTo>310</PositionTo>
+		<PropertyName>MalaysiaCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>30</Field>
+		<Description>Singapore Code</Description>
+		<MaxLength>6</MaxLength>
+		<PositionFrom>311</PositionFrom>
+		<PositionTo>316</PositionTo>
+		<PropertyName>SingaporeCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>31</Field>
+		<Description>PILC</Description>
+		<MaxLength>15</MaxLength>
+		<PositionFrom>317</PositionFrom>
+		<PositionTo>331</PositionTo>
+		<PropertyName>PILC</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>32</Field>
+		<Description>Finsbury Company Code</Description>
+		<MaxLength>8</MaxLength>
+		<PositionFrom>332</PositionFrom>
+		<PositionTo>339</PositionTo>
+		<PropertyName>FinsburyCompanyCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>33</Field>
+		<Description>ISO CFI Code</Description>
+		<MaxLength>7</MaxLength>
+		<PositionFrom>340</PositionFrom>
+		<PositionTo>346</PositionTo>
+		<PropertyName>ISOCFICode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>34</Field>
+		<Description>Reuters Editorial RIC</Description>
+		<MaxLength>17</MaxLength>
+		<PositionFrom>347</PositionFrom>
+		<PositionTo>363</PositionTo>
+		<PropertyName>ReutersEditorialRIC</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>35</Field>
+		<Description>GICS Industry Code</Description>
+		<MaxLength>8</MaxLength>
+		<PositionFrom>364</PositionFrom>
+		<PositionTo>371</PositionTo>
+		<PropertyName>GICSIndustryCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>36</Field>
+		<Description>No Longer used</Description>
+		<MaxLength>3</MaxLength>
+		<PositionFrom>372</PositionFrom>
+		<PositionTo>374</PositionTo>
+		<PropertyName>NoLongerused1</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>37</Field>
+		<Description>No Longer used</Description>
+		<MaxLength>3</MaxLength>
+		<PositionFrom>375</PositionFrom>
+		<PositionTo>377</PositionTo>
+		<PropertyName>NoLongerused2</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>38</Field>
+		<Description>PE code</Description>
+		<MaxLength>4</MaxLength>
+		<PositionFrom>378</PositionFrom>
+		<PositionTo>381</PositionTo>
+		<PropertyName>PEcode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>39</Field>
+		<Description>Quotron Symbol</Description>
+		<MaxLength>8</MaxLength>
+		<PositionFrom>382</PositionFrom>
+		<PositionTo>389</PositionTo>
+		<PropertyName>QuotronSymbol</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>40</Field>
+		<Description>Belgian Code</Description>
+		<MaxLength>9</MaxLength>
+		<PositionFrom>390</PositionFrom>
+		<PositionTo>398</PositionTo>
+		<PropertyName>BelgianCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>41</Field>
+		<Description>Market Identifier Code (MIC)</Description>
+		<MaxLength>4</MaxLength>
+		<PositionFrom>399</PositionFrom>
+		<PositionTo>402</PositionTo>
+		<PropertyName>MarketIdentifierCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>42</Field>
+		<Description>OPOL</Description>
+		<MaxLength>4</MaxLength>
+		<PositionFrom>403</PositionFrom>
+		<PositionTo>406</PositionTo>
+		<PropertyName>OPOL</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>43</Field>
+		<Description>Asset Category (Trunc)</Description>
+		<MaxLength>4</MaxLength>
+		<PositionFrom>407</PositionFrom>
+		<PositionTo>410</PositionTo>
+		<PropertyName>AssetCategory</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>44</Field>
+		<Description>Primary Listed RIC</Description>
+		<MaxLength>1</MaxLength>
+		<PositionFrom>411</PositionFrom>
+		<PositionTo>411</PositionTo>
+		<PropertyName>PrimaryListedRIC</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>45</Field>
+		<Description>Ticker</Description>
+		<MaxLength>25</MaxLength>
+		<PositionFrom>412</PositionFrom>
+		<PositionTo>436</PositionTo>
+		<PropertyName>Ticker</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>46</Field>
+		<Description>Security Long Description</Description>
+		<MaxLength>110</MaxLength>
+		<PositionFrom>437</PositionFrom>
+		<PositionTo>546</PositionTo>
+		<PropertyName>SecurityLongDescription</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>47</Field>
+		<Description>TRBC Industry Code</Description>
+		<MaxLength>4</MaxLength>
+		<PositionFrom>547</PositionFrom>
+		<PositionTo>550</PositionTo>
+		<PropertyName>TRBCIndustryCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>48</Field>
+		<Description>MiFID Indicator</Description>
+		<MaxLength>8</MaxLength>
+		<PositionFrom>551</PositionFrom>
+		<PositionTo>558</PositionTo>
+		<PropertyName>MiFIDIndicator</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>49</Field>
+		<Description>CFI Code</Description>
+		<MaxLength>6</MaxLength>
+		<PositionFrom>559</PositionFrom>
+		<PositionTo>564</PositionTo>
+		<PropertyName>CFICode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>50</Field>
+		<Description>Place of Listing Flag</Description>
+		<MaxLength>1</MaxLength>
+		<PositionFrom>565</PositionFrom>
+		<PositionTo>565</PositionTo>
+		<PropertyName>PlaceofListingFlag</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>51</Field>
+		<Description>Primary Reference Market Quote</Description>
+		<MaxLength>20</MaxLength>
+		<PositionFrom>566</PositionFrom>
+		<PositionTo>585</PositionTo>
+		<PropertyName>PrimaryReferenceMarketQuote</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>52</Field>
+		<Description>Primary Execution Venue</Description>
+		<MaxLength>4</MaxLength>
+		<PositionFrom>586</PositionFrom>
+		<PositionTo>589</PositionTo>
+		<PropertyName>PrimaryExecutionVenue</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>53</Field>
+		<Description>Market Segment Name</Description>
+		<MaxLength>20</MaxLength>
+		<PositionFrom>590</PositionFrom>
+		<PositionTo>609</PositionTo>
+		<PropertyName>MarketSegmentName</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>54</Field>
+		<Description>Market MIC</Description>
+		<MaxLength>4</MaxLength>
+		<PositionFrom>610</PositionFrom>
+		<PositionTo>613</PositionTo>
+		<PropertyName>MarketMIC</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>55</Field>
+		<Description>CRA ORGID</Description>
+		<MaxLength>10</MaxLength>
+		<PositionFrom>614</PositionFrom>
+		<PositionTo>623</PositionTo>
+		<PropertyName>CRAORGID</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>56</Field>
+		<Description>CESR EEA Regulated</Description>
+		<MaxLength>1</MaxLength>
+		<PositionFrom>624</PositionFrom>
+		<PositionTo>624</PositionTo>
+		<PropertyName>CESREEARegulated</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>57</Field>
+		<Description>CESR Most Relevant Market</Description>
+		<MaxLength>3</MaxLength>
+		<PositionFrom>625</PositionFrom>
+		<PositionTo>627</PositionTo>
+		<PropertyName>CESRMostRelevantMarket</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>58</Field>
+		<Description>CESR Avearge Daily Turnover</Description>
+		<MaxLength>18</MaxLength>
+		<Decimal>2</Decimal>
+		<PositionFrom>628</PositionFrom>
+		<PositionTo>647</PositionTo>
+		<PropertyName>CESRAveargeDailyTurnover</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>59</Field>
+		<Description>CESR Average Daily Turnover Currency Code</Description>
+		<MaxLength>3</MaxLength>
+		<PositionFrom>648</PositionFrom>
+		<PositionTo>650</PositionTo>
+		<PropertyName>CESRAverageDailyTurnoverCurrencyCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>60</Field>
+		<Description>CRA Average Daily Turnover</Description>
+		<MaxLength>18</MaxLength>
+		<Decimal>2</Decimal>
+		<PositionFrom>651</PositionFrom>
+		<PositionTo>670</PositionTo>
+		<PropertyName>CRAAverageDailyTurnover</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>61</Field>
+		<Description>CRA Average Daily Turnover Currency Code</Description>
+		<MaxLength>3</MaxLength>
+		<PositionFrom>671</PositionFrom>
+		<PositionTo>673</PositionTo>
+		<PropertyName>CRAAverageDailyTurnoverCurrencyCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>62</Field>
+		<Description>CESR Average Value of Orders Executed</Description>
+		<MaxLength>18</MaxLength>
+		<PositionFrom>674</PositionFrom>
+		<PositionTo>693</PositionTo>
+		<PropertyName>CESRAverageValueofOrdersExecuted</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>63</Field>
+		<Description>CESR Average Value of Orders Executed Currency Code</Description>
+		<MaxLength>3</MaxLength>
+		<PositionFrom>694</PositionFrom>
+		<PositionTo>696</PositionTo>
+		<PropertyName>CESRAverageValueofOrdersExecutedCurrencyCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>64</Field>
+		<Description>CRA Average Value of Orders Executed</Description>
+		<MaxLength>18</MaxLength>
+		<Decimal>2</Decimal>
+		<PositionFrom>697</PositionFrom>
+		<PositionTo>716</PositionTo>
+		<PropertyName>CRAAverageValueofOrdersExecuted</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>65</Field>
+		<Description>CRA Average Value of Orders Executed Currency Code</Description>
+		<MaxLength>3</MaxLength>
+		<PositionFrom>717</PositionFrom>
+		<PositionTo>719</PositionTo>
+		<PropertyName>CRAAverageValueofOrdersExecutedCurrencyCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>66</Field>
+		<Description>CESR Free Float</Description>
+		<MaxLength>20</MaxLength>
+		<PositionFrom>720</PositionFrom>
+		<PositionTo>739</PositionTo>
+		<PropertyName>CESRFreeFloat</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>67</Field>
+		<Description>CESR Free Float currency Code</Description>
+		<MaxLength>3</MaxLength>
+		<PositionFrom>740</PositionFrom>
+		<PositionTo>742</PositionTo>
+		<PropertyName>CESRFreeFloatcurrencyCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>68</Field>
+		<Description>CRA Free Float</Description>
+		<MaxLength>20</MaxLength>
+		<PositionFrom>743</PositionFrom>
+		<PositionTo>762</PositionTo>
+		<PropertyName>CRAFreeFloat</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>69</Field>
+		<Description>CRA Free Float currency Code</Description>
+		<MaxLength>3</MaxLength>
+		<PositionFrom>763</PositionFrom>
+		<PositionTo>765</PositionTo>
+		<PropertyName>CRAFreeFloatcurrencyCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>70</Field>
+		<Description>CESR Standard Market Size</Description>
+		<MaxLength>10</MaxLength>
+		<PositionFrom>766</PositionFrom>
+		<PositionTo>775</PositionTo>
+		<PropertyName>CESRStandardMarketSize</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>71</Field>
+		<Description>CESR Standard Market Size Currency Code</Description>
+		<MaxLength>3</MaxLength>
+		<PositionFrom>776</PositionFrom>
+		<PositionTo>778</PositionTo>
+		<PropertyName>CESRStandardMarketSizeCurrencyCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>72</Field>
+		<Description>Netherland Code</Description>
+		<MaxLength>7</MaxLength>
+		<PositionFrom>779</PositionFrom>
+		<PositionTo>785</PositionTo>
+		<PropertyName>NetherlandCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>73</Field>
+		<Description>Round Lot Size</Description>
+		<MaxLength>18</MaxLength>
+		<Decimal>2</Decimal>
+		<PositionFrom>786</PositionFrom>
+		<PositionTo>805</PositionTo>
+		<PropertyName>RoundLotSize</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>74</Field>
+		<Description>Thomson Reuters Classification Scheme</Description>
+		<MaxLength>10</MaxLength>
+		<PositionFrom>806</PositionFrom>
+		<PositionTo>815</PositionTo>
+		<PropertyName>ThomsonReutersClassificationScheme</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>75</Field>
+		<Description>Suspend Flag</Description>
+		<MaxLength>1</MaxLength>
+		<PositionFrom>816</PositionFrom>
+		<PositionTo>816</PositionTo>
+		<PropertyName>SuspendFlag</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>76</Field>
+		<Description>Depository Asset Underlying</Description>
+		<MaxLength>20</MaxLength>
+		<PositionFrom>817</PositionFrom>
+		<PositionTo>836</PositionTo>
+		<PropertyName>DepositoryAssetUnderlying</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>77</Field>
+		<Description>ILX Code</Description>
+		<MaxLength>30</MaxLength>
+		<PositionFrom>837</PositionFrom>
+		<PositionTo>866</PositionTo>
+		<PropertyName>ILXCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>78</Field>
+		<Description>Trading Symbol</Description>
+		<MaxLength>40</MaxLength>
+		<PositionFrom>867</PositionFrom>
+		<PositionTo>906</PositionTo>
+		<PropertyName>TradingSymbol</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>79</Field>
+		<Description>When Issued Flag</Description>
+		<MaxLength>1</MaxLength>
+		<PositionFrom>907</PositionFrom>
+		<PositionTo>907</PositionTo>
+		<PropertyName>WhenIssuedFlag</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>80</Field>
+		<Description>144A Registered Flag</Description>
+		<MaxLength>1</MaxLength>
+		<PositionFrom>908</PositionFrom>
+		<PositionTo>908</PositionTo>
+		<PropertyName>RegisteredFlag144A</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>81</Field>
+		<Description>Asset Ratio For</Description>
+		<MaxLength>20</MaxLength>
+		<Decimal>8</Decimal>
+		<PositionFrom>909</PositionFrom>
+		<PositionTo>936</PositionTo>
+		<PropertyName>AssetRatioFor</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>82</Field>
+		<Description>Asset Ratio Against</Description>
+		<MaxLength>20</MaxLength>
+		<Decimal>8</Decimal>
+		<PositionFrom>937</PositionFrom>
+		<PositionTo>964</PositionTo>
+		<PropertyName>AssetRatioAgainst</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>83</Field>
+		<Description>Euronext Trading Group</Description>
+		<MaxLength>2</MaxLength>
+		<PositionFrom>965</PositionFrom>
+		<PositionTo>966</PositionTo>
+		<PropertyName>EuronextTradingGroup</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>84</Field>
+		<Description>Kazakhstan Code</Description>
+		<MaxLength>16</MaxLength>
+		<PositionFrom>967</PositionFrom>
+		<PositionTo>982</PositionTo>
+		<PropertyName>KazakhstanCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>85</Field>
+		<Description>Country of Incorporation</Description>
+		<MaxLength>2</MaxLength>
+		<PositionFrom>983</PositionFrom>
+		<PositionTo>984</PositionTo>
+		<PropertyName>CountryofIncorporation</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>86</Field>
+		<Description>Quote ID</Description>
+		<MaxLength>18</MaxLength>
+		<PositionFrom>985</PositionFrom>
+		<PositionTo>1002</PositionTo>
+		<PropertyName>QuoteID</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>87</Field>
+		<Description>Asset ID</Description>
+		<MaxLength>18</MaxLength>
+		<PositionFrom>1003</PositionFrom>
+		<PositionTo>1020</PositionTo>
+		<PropertyName>AssetID</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>88</Field>
+		<Description>Stamp Duty Flag</Description>
+		<MaxLength>1</MaxLength>
+		<PositionFrom>1021</PositionFrom>
+		<PositionTo>1021</PositionTo>
+		<PropertyName>StampDutyFlag</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>89</Field>
+		<Description>First Trade Date</Description>
+		<MaxLength>8</MaxLength>
+		<PositionFrom>1022</PositionFrom>
+		<PositionTo>1029</PositionTo>
+		<PropertyName>FirstTradeDate</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>90</Field>
+		<Description>INAV RIC</Description>
+		<MaxLength>30</MaxLength>
+		<PositionFrom>1030</PositionFrom>
+		<PositionTo>1059</PositionTo>
+		<PropertyName>INAVRIC</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>91</Field>
+		<Description>CIN Code</Description>
+		<MaxLength>9</MaxLength>
+		<PositionFrom>1060</PositionFrom>
+		<PositionTo>1068</PositionTo>
+		<PropertyName>CINCode</PropertyName>
+	</DseFileRule>
+	<DseFileRule>
+		<Field>92</Field>
+		<Description>Country of Taxation</Description>
+		<MaxLength>3</MaxLength>
+		<PositionFrom>1069</PositionFrom>
+		<PositionTo>1071</PositionTo>
+		<PropertyName>CountryofTaxation</PropertyName>
+	</DseFileRule>
+</ArrayOfDseFileRule>

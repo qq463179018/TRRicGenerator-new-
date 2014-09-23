@@ -1,0 +1,44 @@
+﻿ %{
+ open Finance.Ast
+ %}
+
+
+ %start start
+ %token <string> VAL
+ %token <System.Int32> INT
+ %token <System.Double> FLOAT
+ %token LPAREN RPAREN LSCOPE RSCOPE LBRACKET RBRACKET IF THEN ELSE EOF PERCENT COMMA EQUALS STARTSWITH ENDSWITH LENGTH OR AND
+ %left PERCENT EQUALS ENDSWITH STARTSWITH
+ %type < Finance.Ast.ParsedLine > start
+
+
+ %%
+
+
+ start: ParsedLine { $1 }
+
+ ParsedLine: ExprList { ParsedLine($1) }
+
+
+ Expr: VAL							{ Val($1) }
+	 | INT							{ Int($1) }
+	 | FLOAT						{ Float($1) }
+	 | Expr PERCENT INT				{ SubVal($1, 0, $3) }
+	 | Expr PERCENT INT COMMA INT	{ SubVal($1, $3 - 1, $5 - $3 + 1) }
+	 | LSCOPE Expr RSCOPE			{ Var($2) }
+	 | LBRACKET Expr RBRACKET		{ Parent($2) }
+	 | Expr OR Expr					{ Or($1, $3) }
+	 | Expr AND Expr				{ And($1, $3) }
+	 | IF Expr THEN Expr			{ IfThen($2,$4) }
+	 | IF Expr THEN Expr ELSE Expr	{ IfThenElse($2,$4,$6) }
+	 | Expr EQUALS LPAREN Expr RPAREN { Function("Equals", $1, $4) }
+	 | Expr LENGTH LPAREN Expr RPAREN { Function("Length", $1, $4) }
+	 | Expr ENDSWITH LPAREN Expr RPAREN { Function("Endswith", $1, $4) }
+	 | Expr STARTSWITH LPAREN Expr RPAREN { Function("Startswith", $1, $4) }
+	 | PERCENT						{ Val("%") }
+	 | COMMA						{ Val(",") }
+	 | Expr Expr					{ Concat($1, $2) }
+	 | Expr VAL						{ Concat($1, Val($2)) }
+
+ExprList: Expr { [$1] }
+		| ExprList Expr { $2 :: $1  }

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<HKBrokerPageShortName>
+  
+  <EnglishShortNameRule>
+    <topPriorityList>
+    <NameExchange>
+    <originalName>LIMITED</originalName>
+    <newName>LTD</newName>
+    </NameExchange>
+    
+    <NameExchange>
+      <originalName>Co., </originalName>
+      <newName>CO</newName>
+    </NameExchange>
+  </topPriorityList>
+  
+    <lowPriorityList>
+    <NameExchange>
+    <originalName>CORPORATION</originalName>
+    <newName>CORP</newName>
+    </NameExchange>
+    
+    <NameExchange>
+    <originalName>HONG KONG</originalName>
+    <newName>HK</newName>
+    </NameExchange>
+
+    <NameExchange>
+      <originalName>HONGKONG</originalName>
+      <newName>HK</newName>
+    </NameExchange>
+    
+    <NameExchange>
+    <originalName>SECURITIES</originalName>
+    <newName>SEC</newName>
+    </NameExchange>
+
+    <NameExchange>
+      <originalName>COMPANY</originalName>
+      <newName>CO</newName>
+    </NameExchange>
+
+    <NameExchange>
+      <originalName>CAPITAL</originalName>
+      <newName>CAP</newName>
+    </NameExchange>
+
+    <NameExchange>
+      <originalName>INTERNATIONAL</originalName>
+      <newName>INT</newName>
+    </NameExchange>
+
+  </lowPriorityList>
+  </EnglishShortNameRule>
+
+  <ChineseShortNameRule>
+    <topPriorityList></topPriorityList>
+    <lowPriorityList>
+      <NameExchange>
+        <originalName>有限公司</originalName>
+        <newName>有限公司</newName>
+      </NameExchange>
+
+      <NameExchange>
+        <originalName>證券</originalName>
+        <newName>證券</newName>
+      </NameExchange>
+    </lowPriorityList>
+  </ChineseShortNameRule>
+  
+</HKBrokerPageShortName>

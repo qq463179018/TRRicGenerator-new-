@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfDateTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <!--<dateTime>2012-01-01</dateTime>-->
+    <dateTime>2012-01-01</dateTime>
+    <dateTime>2012-01-02</dateTime>
+    <dateTime>2012-01-03</dateTime>
+    <dateTime>2012-01-09</dateTime>
+    <dateTime>2012-02-11</dateTime>
+    <dateTime>2012-03-20</dateTime>
+    <dateTime>2012-04-29</dateTime>
+    <dateTime>2012-04-30</dateTime>
+    <dateTime>2012-05-03</dateTime>
+    <dateTime>2012-05-04</dateTime>
+    <dateTime>2012-05-05</dateTime>
+    <dateTime>2012-07-16</dateTime>
+    <dateTime>2012-09-17</dateTime>
+    <dateTime>2012-09-22</dateTime>
+    <dateTime>2012-10-08</dateTime>
+    <dateTime>2012-11-03</dateTime>
+    <dateTime>2012-11-23</dateTime>
+    <dateTime>2012-12-23</dateTime>
+    <dateTime>2012-12-24</dateTime>
+    <dateTime>2012-12-31</dateTime>
+    <dateTime>2013-01-01</dateTime>
+    <dateTime>2013-01-02</dateTime>
+    <dateTime>2013-01-03</dateTime>
+    <dateTime>2013-01-14</dateTime>
+    <dateTime>2013-02-11</dateTime>
+    <dateTime>2013-03-20</dateTime>
+    <dateTime>2013-04-29</dateTime>
+    <dateTime>2013-05-03</dateTime>
+    <dateTime>2013-05-04</dateTime>
+    <dateTime>2013-05-05</dateTime>
+    <dateTime>2013-05-06</dateTime>
+    <dateTime>2013-07-15</dateTime>
+    <dateTime>2013-09-16</dateTime>
+    <dateTime>2013-09-23</dateTime>
+    <dateTime>2013-10-14</dateTime>
+    <dateTime>2013-11-03</dateTime>
+    <dateTime>2013-11-04</dateTime>
+    <dateTime>2013-11-23</dateTime>
+    <dateTime>2013-12-23</dateTime>
+    <dateTime>2013-12-31</dateTime>
+</ArrayOfDateTime>

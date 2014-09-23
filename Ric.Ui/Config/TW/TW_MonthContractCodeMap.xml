@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfMonthConversion>
+    <MonthConversion>
+      <Month>JAN</Month>
+      <OffclCodeMonthCode>A</OffclCodeMonthCode>
+      <RICContractMonthCode>F</RICContractMonthCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>FEB</Month>
+      <OffclCodeMonthCode>B</OffclCodeMonthCode>
+      <RICContractMonthCode>G</RICContractMonthCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>MAR</Month>
+      <OffclCodeMonthCode>C</OffclCodeMonthCode>
+      <RICContractMonthCode>H</RICContractMonthCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>APR</Month>
+      <OffclCodeMonthCode>D</OffclCodeMonthCode>
+      <RICContractMonthCode>J</RICContractMonthCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>MAY</Month>
+      <OffclCodeMonthCode>E</OffclCodeMonthCode>
+      <RICContractMonthCode>K</RICContractMonthCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>JUN</Month>
+      <OffclCodeMonthCode>F</OffclCodeMonthCode>
+      <RICContractMonthCode>M</RICContractMonthCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>JUL</Month>
+      <OffclCodeMonthCode>G</OffclCodeMonthCode>
+      <RICContractMonthCode>N</RICContractMonthCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>AUG</Month>
+      <OffclCodeMonthCode>H</OffclCodeMonthCode>
+      <RICContractMonthCode>Q</RICContractMonthCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>SEP</Month>
+      <OffclCodeMonthCode>I</OffclCodeMonthCode>
+      <RICContractMonthCode>U</RICContractMonthCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>OCT</Month>
+      <OffclCodeMonthCode>J</OffclCodeMonthCode>
+      <RICContractMonthCode>V</RICContractMonthCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>NOV</Month>
+      <OffclCodeMonthCode>K</OffclCodeMonthCode>
+      <RICContractMonthCode>X</RICContractMonthCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>DEC</Month>
+      <OffclCodeMonthCode>L</OffclCodeMonthCode>
+      <RICContractMonthCode>Z</RICContractMonthCode>
+    </MonthConversion>
+</ArrayOfMonthConversion>

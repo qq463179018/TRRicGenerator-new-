@@ -1,0 +1,6 @@
+F:\8.19(new ui staging)\Library\FinanceLib\FinanceLib.dll
+F:\8.19(new ui staging)\Library\FinanceLib\FinanceLib.pdb
+F:\8.19(new ui staging)\Library\FinanceLib\FinanceLib.XML
+F:\8.19(new ui staging)\FinanceLibrary\FinanceLib\obj\Debug\FinanceLib.fsprojResolveAssemblyReference.cache
+F:\8.19(new ui staging)\FinanceLibrary\FinanceLib\obj\Debug\FinanceLib.dll
+F:\8.19(new ui staging)\FinanceLibrary\FinanceLib\obj\Debug\FinanceLib.pdb

@@ -1,0 +1,428 @@
+# ------------------------------------------------------------
+#
+# Title         : market_summary.skt
+# Author        : Simon Chudley
+# Creation Date : Fed 2007
+#
+# Description
+# -----------
+# This SKitLet tool provides a market summary for a specified 
+# set of RICs from a Reuters data feed. It can provide these
+# statistics from both static and real-time updating data.
+#
+# This tool shows total number of moves, total volume, number
+# of new highs/lows, total turnover, total update count and
+# message rate over all RICs.
+#
+# It then displays RICs ranked by moves, volume, activity,
+# net and percentage gain/loss.
+#
+# This tool is part of SKit, and uses the SKitLet library to
+# interact with core SKit tools.
+#
+# Change History
+# --------------
+# 03-Feb-2007  S.R. Chudley      1.0.1.0 : Created
+# 14-Feb-2007  S.R. Chudley      1.0.1.1 : Support for field highlighting
+
+# Version
+my $l_version = "1.0.2.0";
+
+# Uses
+use SKitLet;
+use POSIX qw(strftime);
+use Win32::Console;
+use Time::Local;
+
+# Read in parameters
+my $l_feed = $ARGV[0];
+my $l_rics = $ARGV[1];
+my $l_refresh = $ARGV[2];
+if (!defined $l_refresh) { $l_refresh = 1; }
+if ($l_feed eq "" or !(-f $l_rics))
+{
+   print "MarketSummary v$l_version: Developed by S. Chudley\n\n";
+   print "Usage:\n\n   market_summary <IDN|QDN|FEED> <ric_file> <refresh_rate_sec>\n";
+   exit(1);
+}
+
+# Read in list of RICs we want to watch from file
+if (!SKitLet::skt_parse_ric_file($l_rics, \@l_rics))
+{
+   print STERR "Unable to read RICs from file '$l_rics'!\n";
+   exit(1);
+}
+my $l_ric_c = @l_rics;
+
+# Set up WIN32 console
+my @l_rows = ();
+my $l_console = new Win32::Console(STD_OUTPUT_HANDLE);
+($l_left, $l_top, $l_right, $l_bottom) = $l_console->Window();
+my $l_max_y = $l_bottom - $l_top - 11;
+my $l_max_y_half = ($l_max_y / 2) - 2;
+$l_console->Cls();
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 100, 0, 0);
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 100, 0, ($l_bottom - $l_top));
+$l_console->WriteChar("Use Ctrl+C to exit...", 0, ($l_bottom - $l_top));
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 100, 0, 1);
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 100, 0, 2);
+my $l_str = sprintf("Market Summary %-46s %36s", "(v".$l_version.")", "Powered by SKitLets (v".SKitLet::skt_version().")");
+$l_console->WriteChar($l_str, 1, 0);
+$l_console->WriteChar("---------------------------------------------------------------------------------------------------", 0, 1);
+$l_str = sprintf("RIC Universe: %-57s %24s", $l_ric_c." (0 inactive)", "Update Rate: 0 msg/s");
+$l_console->WriteChar($l_str, 2, 2);
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 30, 2, 4);
+$l_console->WriteChar("Total Moves : 0" , 2, 4);
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 30, 2, 5);
+$l_console->WriteChar("Total Volume: 0" , 2, 5);
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 32, 66, 4);
+$l_console->WriteChar("Total Turnover: 0", 66, 4);
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 32, 66, 5);
+$l_console->WriteChar("Total Updates : 0", 66, 5);
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 28, 35, 4);
+$l_console->WriteChar("Total Highs : 0" , 35, 4);
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 28, 35, 5);
+$l_console->WriteChar("Total Lows  : 0" , 35, 5);
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 17, 2, 7);
+$l_console->WriteChar("Rank By Moves" , 4, 7);
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 21, 21, 7);
+$l_console->WriteChar("Rank By Volume" , 24, 7);
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 18, 44, 7);
+$l_console->WriteChar("Rank By Activity" , 45, 7);
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 16, 64, 7);
+$l_console->WriteChar("Net Gain" , 68, 7);
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 16, 64, 7 + $l_max_y_half + 4);
+$l_console->WriteChar("Net Loss" , 68, 7 + $l_max_y_half + 4);
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 16, 82, 7);
+$l_console->WriteChar("PCT Gain" , 86, 7);
+$l_console->FillAttr($BG_GRAY| $FG_BLACK, 16, 82, 7 + $l_max_y_half + 4);
+$l_console->WriteChar("PCT Loss" , 86, 7 + $l_max_y_half + 4);
+$l_console->Title("SKit Market Summary (v".$l_version.")");
+
+# Statistics state variables 
+my $l_total_upds = 0;
+my $l_total_trnv = 0;
+my $l_total_moves = 0;
+my $l_total_vol = 0;
+my $l_total_highs = 0;
+my $l_total_lows = 0;
+my $l_total_inactive = 0;
+my %l_ric_trnv = ();
+my %l_trnv_scale = ();
+my %l_ric_moves = ();
+my %l_ric_vols = ();
+my %l_ric_highs = ();
+my %l_ric_lows = ();
+my %l_ric_net = ();
+my %l_ric_pct = ();
+my %l_ric_act = ();
+my $l_last_update_count = 0;
+my $l_last_update_snap = timelocal(gmtime());
+
+# Create the SKitLet
+my $l_skitlet = new SKitLet("feed" => $l_feed) or die "Can't create SKitLet on $l_feed!";
+
+# Set our callback functions
+SKitLet::skt_set_callback("PCUPDATE", \&process_update);
+SKitLet::skt_set_callback("RECORDINSYNC", \&process_initial);
+SKitLet::skt_set_callback("RECORDINACTIVE", \&process_inactive);
+
+# Set Ctrl+C signal handler callback
+SKitLet::skt_signal_handler(\&app_terminate);
+sub app_terminate
+{
+   # Terminate the SKitLet
+   &SKitLet::skt_terminate();
+   $l_console->Cls();
+}
+
+# Set the FIDs and options we want
+my @l_fids = ("NUM_MOVES", "ACVOL_1", "YCHIGH_IND", "YCLOW_IND", "NETCHNG_1", "PCTCHNG", "TNOVER_SC", "TURNOVER");
+$l_skitlet->set_option("sync_images");
+$l_skitlet->set_option("raw_enum_vals");
+
+# Create a timer to clear highlighted fields
+my %l_highlights = ();
+SKitLet::skt_create_timer(1, \&clear_highlight_timer);
+sub clear_highlight_timer
+{
+   # Clear all expired highlighted fields
+   my $l_now = timelocal(gmtime());
+   foreach my $l_highlight (keys %l_highlights)
+   {
+      if ($l_highlights{$l_highlight} + 1 < $l_now)
+      {
+         my ($l_x, $l_y, $l_len) = split(/:/, $l_highlight);
+         my $l_chars = $l_console->ReadChar($l_len, $l_x, $l_y);
+         $l_console->FillAttr($ATTR_NORMAL, $l_len, $l_x, $l_y);
+         delete $l_highlights{$l_highlight};
+      }
+   }
+
+   return 1;
+}
+
+# Highlights and updates a field
+sub highlight_update
+{
+   my ($a_x, $a_y, $a_width, $a_text) = @_;
+
+   my $l_chars = $l_console->ReadChar($a_width, $a_x, $a_y);
+   if ($l_chars ne $a_text) 
+   {
+      $l_console->FillAttr($BG_CYAN | $FG_WHITE, $a_width, $a_x, $a_y);
+      $l_highlights{$a_x.":".$a_y.":".$a_width} = timelocal(gmtime());
+   }
+   $l_console->WriteChar($a_text, $a_x, $a_y);
+}
+
+# Create a timer to refresh the screen
+SKitLet::skt_create_timer($l_refresh, \&refresh_screen);
+sub refresh_screen
+{
+   # Overall counts
+   $l_console->FillAttr($BG_GRAY| $FG_BLACK, 30, 2, 4);
+   $l_console->WriteChar($l_total_moves, 16, 4);
+   $l_console->FillAttr($BG_GRAY| $FG_BLACK, 30, 2, 5);
+   $l_console->WriteChar($l_total_vol, 16, 5);
+   $l_console->FillAttr($BG_GRAY| $FG_BLACK, 28, 35, 4);
+   $l_console->WriteChar($l_total_highs, 49, 4);
+   $l_console->FillAttr($BG_GRAY| $FG_BLACK, 28, 35, 5);
+   $l_console->WriteChar($l_total_lows, 49, 5);
+   $l_console->FillAttr($BG_GRAY| $FG_BLACK, 32, 66, 4);
+   $l_console->WriteChar($l_total_trnv, 82, 4);
+   $l_console->FillAttr($BG_GRAY| $FG_BLACK, 32, 66, 5);
+   $l_console->WriteChar($l_total_upds, 82, 5);
+
+   # Rank by MOVES
+   my $l_id = 0;
+   foreach my $l_ric (sort { $l_ric_moves{$b} <=> $l_ric_moves{$a} } keys %l_ric_moves)
+   {
+      if ($l_ric_moves{$l_ric} <= 0) { last; }
+      my $l_str = sprintf("%-11s %5s", fix_ric($l_ric, 11), $l_ric_moves{$l_ric});
+      &highlight_update(2, 9 + $l_id++, 17, $l_str);
+      if ($l_id  > $l_max_y) { last; } 
+   }
+
+   # Rank by VOLUME
+   $l_id = 0;
+   foreach my $l_ric (sort { $l_ric_vols{$b} <=> $l_ric_vols{$a} } keys %l_ric_vols)
+   {
+      if ($l_ric_vols{$l_ric} <= 0) { last; }
+      my $l_str = sprintf("%-11s %9s", fix_ric($l_ric, 11), $l_ric_vols{$l_ric});
+      &highlight_update(21, 9 + $l_id++, 21, $l_str);
+      if ($l_id  > $l_max_y) { last; } 
+   }
+
+   # Rank by activity
+   $l_id = 0;
+   foreach my $l_ric (sort { $l_ric_act{$b} <=> $l_ric_act{$a} } keys %l_ric_act)
+   {
+      my $l_act = ($l_ric_act{$l_ric} / $l_total_upds) * 100;
+      $l_act =~ s/(\..).+$/$1/;
+      my $l_str = sprintf("%-11s %6s", fix_ric($l_ric, 11), $l_act."%");
+      &highlight_update(44, 9 + $l_id++, 18, $l_str);
+      if ($l_id  > $l_max_y) { last; } 
+   }
+
+   # Rank by Net gain
+   $l_id = 0;
+   foreach my $l_ric (sort { $l_ric_net{$b} <=> $l_ric_net{$a} } keys %l_ric_net)
+   {
+      if ($l_ric_net{$l_ric} <= 0) { last; }
+      my $l_str = sprintf("%-9s %6s", fix_ric($l_ric, 9), $l_ric_net{$l_ric});
+      &highlight_update(64, 9 + $l_id++, 16, $l_str);
+      if ($l_id  > $l_max_y_half) { last; } 
+   }
+
+   # Rank by Net loss
+   $l_id = 0;
+   foreach my $l_ric (reverse sort { $l_ric_net{$b} <=> $l_ric_net{$a} } keys %l_ric_net)
+   {
+      if ($l_ric_net{$l_ric} >= 0) { last; }
+      my $l_str = sprintf("%-9s %6s", fix_ric($l_ric, 9), $l_ric_net{$l_ric});
+      &highlight_update(64, 13 + $l_max_y_half + $l_id++, 16, $l_str);
+      if ($l_id  > $l_max_y_half) { last; } 
+   }
+
+   # Rank by PCT gain
+   $l_id = 0;
+   foreach my $l_ric (sort { $l_ric_pct{$b} <=> $l_ric_pct{$a} } keys %l_ric_pct)
+   {
+      if ($l_ric_pct{$l_ric} <= 0) { last; }
+      my $l_str = sprintf("%-9s %6s", fix_ric($l_ric, 9), $l_ric_pct{$l_ric});
+      &highlight_update(82, 9 + $l_id++, 16, $l_str);
+      if ($l_id  > $l_max_y_half) { last; } 
+   }
+
+   # Rank by PCT loss
+   $l_id = 0;
+   foreach my $l_ric (reverse sort { $l_ric_pct{$b} <=> $l_ric_pct{$a} } keys %l_ric_pct)
+   {
+      if ($l_ric_pct{$l_ric} >= 0) { last; }
+      my $l_str = sprintf("%-9s %6s", fix_ric($l_ric, 9), $l_ric_pct{$l_ric});
+      &highlight_update(82, 13 + $l_max_y_half + $l_id++, 16, $l_str);
+      if ($l_id  > $l_max_y_half) { last; } 
+   }
+
+   # Update message rate
+   &upd_msg_rate();
+   return 1;
+}
+
+# Update the message rate
+sub upd_msg_rate
+{
+   my $l_now = timelocal(gmtime());
+   my $l_rate = $l_last_update_count / ($l_now - $l_last_update_snap); 
+   $l_rate =~ s/(\..).+$/$1/;
+   my $l_str = sprintf("RIC Universe: %-57s %24s", $l_ric_c." (".$l_total_inactive." inactive)", "Update Rate: ".$l_rate." msg/s");
+   $l_console->WriteChar($l_str, 2, 2);
+   $l_last_update_snap = $l_now;
+   $l_last_update_count = 0;
+}
+
+# Set the SKitLet to watch these RICs
+if (!$l_skitlet->watch_rics(\@l_rics, \@l_fids))
+{
+   print STDERR "Unable to watch RICS: ".$l_skitlet->last_error()."\n";
+   exit(1);
+}
+
+# Start the SKitLet dispatcher, this won't return till we're done
+SKitLet::skt_dispatch();
+exit(0);
+
+# Process an initial snapshot for a RIC
+sub process_initial
+{
+   local ($a_feed, $a_ric, $a_attr, *a_fids) = @_;
+
+   # Fetch current state
+   my $l_moves = $a_fids{"NUM_MOVES"}; $l_moves =~ s/\+//;
+   my $l_vol = $a_fids{"ACVOL_1"}; $l_vol =~ s/\+//;
+   my $l_high = $a_fids{"YCHIGH_IND"};
+   my $l_low = $a_fids{"YCLOW_IND"};
+   my $l_net = $a_fids{"NETCHNG_1"}; $l_net =~ s/\+//; $l_net =~ s/(\...).+$/$1/; 
+   my $l_pct = $a_fids{"PCTCHNG"}; $l_pct =~ s/\+//; $l_pct =~ s/(\...).+$/$1/; 
+   my $l_trnv = $a_fids{"TURNOVER"};
+   my $l_trnvscale = $a_fids{"TNOVER_SC"};
+
+   # Update counts
+   $l_total_moves += $l_moves;
+   $l_total_vol += $l_vol;
+   $l_total_highs += $l_high;
+   $l_total_lows += $l_lows;
+   $l_total_trnv += &calc_turnover($l_trnv, $l_trnvscale);
+
+   # Remember these RIC values
+   $l_ric_moves{$a_ric} = $l_moves;
+   $l_ric_vols{$a_ric} = $l_vol;
+   $l_ric_highs{$a_ric} = $l_highs;
+   $l_ric_lows{$a_ric} = $l_lows;
+   $l_ric_net{$a_ric} = $l_net;
+   $l_ric_pct{$a_ric} = $l_pct;
+   $l_trnv_scale{$a_ric} = $l_trnvscale;
+   $l_ric_trnv{$a_ric} = $l_trnv;
+}
+
+# Called when watched RICs receive a PCUpdate message
+sub process_update
+{
+   local ($a_feed, $a_ric, $a_attr, *a_fids) = @_;
+
+   # Tick
+   $l_last_update_count++;
+   $l_total_upds++;
+   if (defined $l_ric_act{$a_ric}) { $l_ric_act{$a_ric}++; }
+   else { $l_ric_act{$a_ric} = 1; }
+
+   # Adjust moves
+   my $l_moves = $a_fids{"NUM_MOVES"}; $l_moves =~ s/\+//;
+   if (defined $l_moves)
+   {
+      my $l_mov_delta = $l_moves - $l_ric_moves{$a_ric};
+      $l_total_moves += $l_mov_delta;
+      $l_ric_moves{$a_ric} = $l_moves;
+   }
+
+   # Adjust volumes
+   my $l_vol = $a_fids{"ACVOL_1"}; $l_vol =~ s/\+//;
+   if (defined $l_vol)
+   {
+      my $l_vol_delta = $l_vol - $l_ric_vols{$a_ric};
+      $l_total_vol += $l_vol_delta;
+      $l_ric_vols{$a_ric} = $l_vol;
+   }
+
+   # Adjust highs
+   my $l_high = $a_fids{"YCHIGH_IND"};
+   if (defined $l_high)
+   {
+      my $l_high_delta = $l_high - $l_ric_highs{$a_ric};
+      $l_total_highs += $l_high_delta;
+      $l_ric_highs{$a_ric} = $l_high;
+   }
+
+   # Adjust lows
+   my $l_low = $a_fids{"YCLOW_IND"};
+   if (defined $l_low)
+   {
+      my $l_low_delta = $l_low - $l_ric_lows{$a_ric};
+      $l_total_lows += $l_low_delta;
+      $l_ric_lows{$a_ric} = $l_low;
+   }
+
+   # Adjust turnover
+   my $l_trnv = $a_fids{"TURNOVER"};
+   if (defined $l_trnv)
+   {
+      my $l_trnv_delta = $l_trnv - $l_ric_trnv{$a_ric};
+      $l_total_trnv += &calc_turnover($l_trnv_delta, $l_trnv_scale{$a_ric});
+      $l_ric_trnv{$a_ric} = $l_trnv;
+   }
+
+   # Adjust net change
+   my $l_net = $a_fids{"NETCHNG_1"}; $l_net =~ s/\+//; $l_net =~ s/(\...).+$/$1/; 
+   if (defined $l_net)
+      { $l_ric_net{$a_ric} = $l_net; }
+
+   # Adjust pct change
+   my $l_pct = $a_fids{"PCTCHNG"}; $l_pct =~ s/\+//; $l_pct =~ s/(\...).+$/$1/; 
+   if (defined $l_pct)
+      { $l_ric_pct{$a_ric} = $l_pct; }
+}
+
+# Scales turnover
+sub calc_turnover
+{
+   my ($a_trnv, $a_scale) = @_;
+   if ($a_scale == 2) { $a_trnv *= 10; }
+   elsif ($a_scale == 3) { $a_trnv *= 100; }
+   elsif ($a_scale == 4) { $a_trnv *= 1000; }
+   elsif ($a_scale == 5) { $a_trnv *= 1000000; }
+   elsif ($a_scale == 6) { $a_trnv *= 10000000; }
+   elsif ($a_scale == 7) { $a_trnv *= 100000000; }
+   elsif ($a_scale == 8) { $a_trnv *= 1000000000; }
+   elsif ($a_scale == 9) { $a_trnv *= 10000; }
+   elsif ($a_scale == 10) { $a_trnv *= 100000; }
+   return $a_trnv;
+}
+
+# Fix a RIC to a defined length
+sub fix_ric
+{
+   my ($a_ric, $a_max) = @_;
+   if (length($a_ric) > $a_max)
+   {
+      $a_ric = substr($a_ric, 0, $a_max - 2);
+      $a_ric .= "..";
+   }
+   return $a_ric;
+}
+
+# Case that a RIC is in-active (not built)
+sub process_inactive
+{
+   $l_total_inactive++;
+}

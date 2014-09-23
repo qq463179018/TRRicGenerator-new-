@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Get data from http://www.set.or.th/set/todaynews.do?language=en&country=US and http://www.setsmart.com-->
+<HK_IssuerCodeMap>
+<Map>
+    <Trans>
+    <Code>AA</Code>
+    <FullName>ABN AMRO Bank NV</FullName>
+    <ShortName>ABNP</ShortName>
+    <WarrentIssuer>16758</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>MB</Code>
+    <FullName>Macquarie Bank Ltd</FullName>
+    <ShortName>MCQA</ShortName>
+    <WarrentIssuer>49454</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>SG</Code>
+    <FullName>SGA Societe Generale Acceptance NV</FullName>
+    <ShortName>SGGX</ShortName>
+    <WarrentIssuer>69368</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>KC</Code>
+    <FullName>KBC Financial Products International Ltd</FullName>
+    <ShortName>KBCF</ShortName>
+    <WarrentIssuer>144703</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>UB</Code>
+    <FullName>UBS AG London</FullName>
+    <ShortName>UBSX</ShortName>
+    <WarrentIssuer>81993</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>RB</Code>
+    <FullName>Rabobank Netherland (Hong Kong Branch)</FullName>
+    <ShortName>RAHK</ShortName>
+    <WarrentIssuer>159286</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>CA</Code>
+    <FullName>Calyon Financial Products (Guernsey) Ltd</FullName>
+    <ShortName>CALZ</ShortName>
+    <WarrentIssuer>89822</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>DB</Code>
+    <FullName>Deutsche Bank AG</FullName>
+    <ShortName>DBKG</ShortName>
+    <WarrentIssuer>10455</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>CT</Code>
+    <FullName>Citigroup Global Markets Holdings Inc.</FullName>
+    <ShortName>CIGP</ShortName>
+    <WarrentIssuer>10803</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>CS</Code>
+    <FullName>Credit Suisse First Boston</FullName>
+    <ShortName>CSFB</ShortName>
+    <WarrentIssuer>62254</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>BP</Code>
+    <FullName>BNP Paribas Arbitrage Issuance B.V.</FullName>
+    <ShortName>BNPX</ShortName>
+    <WarrentIssuer>165052</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>BS</Code>
+    <FullName>DBS Bank (HK) Ltd</FullName>
+    <ShortName>DBSX</ShortName>
+    <WarrentIssuer>157437</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>JP</Code>
+    <FullName>JP Morgan International Derivatives Ltd</FullName>
+    <ShortName>JPMZ</ShortName>
+    <WarrentIssuer>79174</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>BI</Code>
+    <FullName>BOCI Asia Ltd</FullName>
+    <ShortName>BOCK</ShortName>
+    <WarrentIssuer>100485704</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>MS</Code>
+    <FullName>Morgan Stanley Asia Securities Products LLC</FullName>
+    <ShortName>MSHK</ShortName>
+    <WarrentIssuer>142368</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>HS</Code>
+    <FullName>HSBC Holdings PLC</FullName>
+    <ShortName>HSBX</ShortName>
+    <WarrentIssuer>13109</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>GS</Code>
+    <FullName>Goldman Sachs International Ltd</FullName>
+    <ShortName>GSHK</ShortName>
+    <WarrentIssuer>79753</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>FB</Code>
+    <FullName>Fortis Bank S.A./N.V.</FullName>
+    <ShortName>FBSA</ShortName>
+    <WarrentIssuer>68103</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>ML</Code>
+    <FullName><![CDATA[Merrill Lynch & Co., Inc.]]></FullName>
+    <ShortName>MLIC</ShortName>
+    <WarrentIssuer>10705</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>LB</Code>
+    <FullName>Lehman Brothers Holdings Inc.</FullName>
+    <ShortName>LBHI</ShortName>
+    <WarrentIssuer>67488</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>CN</Code>
+    <FullName>Bank of China (Hong Kong) Ltd.</FullName>
+    <ShortName>BOCH</ShortName>
+    <WarrentIssuer>157325</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>BC</Code>
+    <FullName>Barclays Bank plc</FullName>
+    <ShortName>BCBK</ShortName>
+    <WarrentIssuer>89565</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>SB</Code>
+    <FullName>Standard Bank plc</FullName>
+    <ShortName>SBKP</ShortName>
+    <WarrentIssuer>103091623</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>RS</Code>
+    <FullName>The Royal Bank of Scotland N.V.</FullName>
+    <ShortName>RBOS</ShortName>
+    <WarrentIssuer>16758</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>NM</Code>
+    <FullName>Nomura International plc</FullName>
+    <ShortName>NOML</ShortName>
+    <WarrentIssuer>81886</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>SC</Code>
+    <FullName>Standard Chartered Bank</FullName>
+    <ShortName>SCHB</ShortName>
+    <WarrentIssuer>105579</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>EA</Code>
+    <FullName>The Bank of East Asia Ltd</FullName>
+    <ShortName>EAHK</ShortName>
+    <WarrentIssuer>18476</WarrentIssuer>
+  </Trans>
+  <Trans>
+    <Code>DC</Code>
+    <FullName>Daiwa Capital Markets Hong Kong Ltd</FullName>
+    <ShortName>DCHK</ShortName>
+    <WarrentIssuer>102744</WarrentIssuer>
+  </Trans>
+
+  <Trans>
+    <Code>MA</Code>
+    <FullName>MSDW Asia Securities Products LLC</FullName>
+    <ShortName>MAHK</ShortName>
+    <WarrentIssuer>142368</WarrentIssuer>
+  </Trans>
+    
+  <Trans>
+    <Code>DBA</Code>
+    <FullName>Dresdner Bank AG</FullName>
+    <ShortName>DBAHK</ShortName>
+    <WarrentIssuer>10487</WarrentIssuer>
+  </Trans>
+  </Map>
+</HK_IssuerCodeMap>

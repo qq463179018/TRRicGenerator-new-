@@ -1,0 +1,41 @@
+﻿{   
+module Finance.Lexer
+open Finance.Parser
+open Finance.Ast
+open System
+open Microsoft.FSharp.Text.Lexing
+}
+
+ let digit = ['0'-'9']
+ let whitespace = [' ' '\t' ]
+ let newline = ('\n' | '\r' '\n')
+ let caracters = ['a'-'z' 'A'-'Z' '.' ',' '%' '#' '@' '/' '-' '>' '<' '_' '*' ';' '"']
+ let escapechar = [',']
+
+
+ rule token = parse
+ | whitespace     { VAL(LexBuffer<_>.LexemeString lexbuf) }
+ | "if"           { IF }
+ | "then"         { THEN }
+ | "else"         { ELSE }
+ | "{"            { LSCOPE }
+ | "}"            { RSCOPE }
+ | "["            { LBRACKET }
+ | "]"            { RBRACKET }
+ | "("            { LPAREN }
+ | ")"            { RPAREN }
+ | ","            { COMMA }
+ | "%"            { PERCENT }
+ | "||"			  { OR }
+ | "&&"			  { AND }
+ | ".FORMAT"	  { FORMAT }
+ | ".STARTSWITH"  { STARTSWITH }
+ | ".ENDSWITH"	  { ENDSWITH }
+ | ".EQUALS"	  { EQUALS }
+ | ".LENGTH"	  { LENGTH }
+ | caracters+     { VAL(LexBuffer<_>.LexemeString lexbuf) }
+ | ['A'-'Z']+     { VAL(LexBuffer<_>.LexemeString lexbuf) }
+ | ['-']?digit+   { INT (Int32.Parse(LexBuffer<_>.LexemeString lexbuf)) }
+ | ['-']?digit+('.'digit+)?(['e''E']digit+)?   { VAL(LexBuffer<_>.LexemeString lexbuf) }
+ | _			  { VAL(LexBuffer<_>.LexemeString lexbuf)}
+ | eof			  { EOF }

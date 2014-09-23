@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EtiRic" Class="RicGeneratorDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WinUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GedaUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GedaPassword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Group]" Member="Group" Type="global::Ric.Db.UserGroup" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="global::Ric.Db.UserStatus" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MainMarketId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" CanBeNull="false" />
+      <Column Name="ManagerID" Type="System.Int32" CanBeNull="false" />
+      <Column Name="Surname" Type="System.String" CanBeNull="false" />
+      <Column Name="Familyname" Type="System.String" CanBeNull="false" />
+      <Association Name="User_User" Member="Users" ThisKey="Id" OtherKey="ManagerID" Type="User" />
+      <Association Name="User_Config" Member="Configs" ThisKey="Id" OtherKey="UserId" Type="Config" />
+      <Association Name="User_Task" Member="Tasks" ThisKey="Id" OtherKey="OwnerId" Type="Task" />
+      <Association Name="User_Run" Member="Runs" ThisKey="Id" OtherKey="UserId" Type="Run" />
+      <Association Name="User_Market" Member="Markets" ThisKey="Id" OtherKey="ManagerId" Type="Market" />
+      <Association Name="User_Schedule" Member="Schedules" ThisKey="Id" OtherKey="UserId" Type="Schedule" />
+      <Association Name="Market_User" Member="Market" ThisKey="MainMarketId" OtherKey="Id" Type="Market" IsForeignKey="true" />
+      <Association Name="User_User" Member="Manager" Storage="_User1" ThisKey="ManagerID" OtherKey="Id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Config" Member="Configs">
+    <Type Name="Config">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TaskId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Key]" Member="Key" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Association Name="User_Config" Member="User" ThisKey="UserId" OtherKey="Id" Type="User" IsForeignKey="true" />
+      <Association Name="Task_Config" Member="Task" ThisKey="TaskId" OtherKey="Id" Type="Task" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Task" Member="Tasks">
+    <Type Name="Task">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="GroupName" Member="Group" Storage="_GroupName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Status" Type="global::Ric.Db.Info.TaskStatus" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MarketId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ConfigType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="GeneratorType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="OwnerId" Type="System.Int32" CanBeNull="false" />
+      <Association Name="Task_Config" Member="Configs" ThisKey="Id" OtherKey="TaskId" Type="Config" />
+      <Association Name="Task_Run" Member="Runs" ThisKey="Id" OtherKey="TaskId" Type="Run" />
+      <Association Name="Task_Schedule" Member="Schedules" ThisKey="Id" OtherKey="TaskId" Type="Schedule" />
+      <Association Name="Market_Task" Member="Market" ThisKey="MarketId" OtherKey="Id" Type="Market" IsForeignKey="true" />
+      <Association Name="User_Task" Member="Owner" Storage="_User" ThisKey="OwnerId" OtherKey="Id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Run" Member="Runs">
+    <Type Name="Run">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TaskId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Result" Type="global::Ric.Db.Info.TaskResult" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Task_Run" Member="Task" ThisKey="TaskId" OtherKey="Id" Type="Task" IsForeignKey="true" />
+      <Association Name="User_Run" Member="User" ThisKey="UserId" OtherKey="Id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Market" Member="Markets">
+    <Type Name="Market">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Abbreviation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ManagerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Market_User" Member="Users" ThisKey="Id" OtherKey="MainMarketId" Type="User" />
+      <Association Name="Market_Task" Member="Tasks" ThisKey="Id" OtherKey="MarketId" Type="Task" />
+      <Association Name="User_Market" Member="User" ThisKey="ManagerId" OtherKey="Id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Schedule" Member="Schedules">
+    <Type Name="Schedule">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TaskId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="false" />
+      <Column Name="Frequency" Storage="_Type" Type="global::Ric.Db.Manager.ScheduleType" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Count" Storage="_RetryCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Interval" Storage="_RetryInterval" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Task_Schedule" Member="Task" ThisKey="TaskId" OtherKey="Id" Type="Task" IsForeignKey="true" />
+      <Association Name="User_Schedule" Member="User" ThisKey="UserId" OtherKey="Id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

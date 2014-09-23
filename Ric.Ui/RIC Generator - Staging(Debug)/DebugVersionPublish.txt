@@ -1,0 +1,10 @@
+Application:
+Assembly name:Ric.Ui.Staging
+Default namespace:Ric.Ui.Staging
+
+
+Publish:
+Publish Folder Location:\\10.35.16.40\Publish\RIC Generator - Staging(Debug)\
+Product name:RIC Generator - Staging
+Deployment web page:RIC Generator - Staging.html
+Publish version:according last publish version

@@ -1,0 +1,125 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+	x:Class="Ric.Ui.View.ScheduleWindow"
+	x:Name="Window"
+    DataContext="{Binding Schedulevm, RelativeSource={RelativeSource Self}}"
+    WindowStyle="None"
+	AllowsTransparency="True"
+    MouseLeftButtonDown="ScheduleWindow_OnMouseLeftButtonDown"
+	ResizeMode="NoResize"
+	Title="ScheduleWindow"
+	Width="484.782"
+	Height="416" Foreground="White">
+    <Window.Resources>
+        <Color x:Key="MainBackground">#FF383838</Color>
+        <Color x:Key="MainText">#FFC9C9C9</Color>
+    </Window.Resources>
+    <Window.Background>
+        <SolidColorBrush Color="{DynamicResource MainText}"/>
+    </Window.Background>
+    <Border BorderThickness="1">
+        <Border.Background>
+            <SolidColorBrush Color="{DynamicResource MainBackground}"/>
+        </Border.Background>
+        <Border.BorderBrush>
+            <SolidColorBrush Color="{DynamicResource Border}"/>
+        </Border.BorderBrush>
+        <Grid x:Name="LayoutRoot" Height="366">
+            <Grid.Background>
+                <SolidColorBrush Color="{DynamicResource MainBackground}"/>
+            </Grid.Background>
+            <xctk:TimePicker Height="25" Margin="37,76,0,0" VerticalAlignment="Top" Value="{Binding Path=SelectedSchedule.Date}" HorizontalAlignment="Left" Width="187" >
+                <xctk:TimePicker.Foreground>
+                    <SolidColorBrush Color="{DynamicResource MainText}"/>
+                </xctk:TimePicker.Foreground>
+            </xctk:TimePicker>
+            <TextBlock Height="16" Margin="37,55,0,0" TextWrapping="Wrap" Text="Time" VerticalAlignment="Top" Width="26" HorizontalAlignment="Left">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource MainText}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Button  Height="25" Margin="264,320,0,0" VerticalAlignment="Top" Command="{Binding SaveScheduleCommand}" CommandParameter="{Binding ElementName=Window}" HorizontalAlignment="Left" Width="85" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="../Images/tick.png" Stretch="None" />
+                    <TextBlock Margin="3,0,0,0"><Run Text="Save"/></TextBlock>
+                </StackPanel>
+            </Button>
+            <TextBlock HorizontalAlignment="Left" Height="28" Margin="14,12,0,0" TextWrapping="Wrap" Text="Schedule task " VerticalAlignment="Top" Width="123" FontSize="18.667">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource MainText}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Separator Height="1.333" Margin="12.667,39,17.333,0" VerticalAlignment="Top" >
+                <Separator.Background>
+                    <SolidColorBrush Color="{DynamicResource Border}"/>
+                </Separator.Background>
+            </Separator>
+            <TextBlock Height="21" Margin="37,117,0,0" TextWrapping="Wrap" Text="Retry" VerticalAlignment="Top" HorizontalAlignment="Left" Width="32" RenderTransformOrigin="0.543,-2.493">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource MainText}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <TextBlock Height="16" Margin="140,117,0,0" TextWrapping="Wrap" Text="Interval" VerticalAlignment="Top" HorizontalAlignment="Left" Width="42">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource MainText}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <xctk:IntegerUpDown Height="25" Margin="37,138,0,0" VerticalAlignment="Top"
+			Value="{Binding Path=SelectedSchedule.Count}" HorizontalAlignment="Left" Width="89" >
+                <xctk:IntegerUpDown.Foreground>
+                    <SolidColorBrush Color="{DynamicResource MainText}"/>
+                </xctk:IntegerUpDown.Foreground>
+                <xctk:IntegerUpDown.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </xctk:IntegerUpDown.Background>
+            </xctk:IntegerUpDown>
+            <xctk:IntegerUpDown Height="25" Margin="140,138,0,0" VerticalAlignment="Top"
+			Value="{Binding Path=SelectedSchedule.Interval}" HorizontalAlignment="Left" Width="84" >
+                <xctk:IntegerUpDown.Foreground>
+                    <SolidColorBrush Color="{DynamicResource MainText}"/>
+                </xctk:IntegerUpDown.Foreground>
+                <xctk:IntegerUpDown.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </xctk:IntegerUpDown.Background>
+            </xctk:IntegerUpDown>
+            <ComboBox Height="25" Margin="265,76,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="186"
+			ItemsSource="{Binding ScheduleTypesValues}"
+			SelectedItem="{Binding Path=FrequencySchedule}">
+                <ComboBox.BorderBrush>
+                    <SolidColorBrush Color="{DynamicResource MainText}"/>
+                </ComboBox.BorderBrush>
+                <ComboBox.Foreground>
+                    <SolidColorBrush Color="#FF272727"/>
+                </ComboBox.Foreground>
+                <ComboBox.Background>
+                    <SolidColorBrush Color="Black" Opacity="0"/>
+                </ComboBox.Background>
+            </ComboBox>
+            <TextBlock Height="19" Margin="265,55,0,0" TextWrapping="Wrap" Text="Frequency" VerticalAlignment="Top" HorizontalAlignment="Left" Width="63">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{DynamicResource MainText}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Button Height="25" Margin="366,320,0,0" Click="Button_Close" VerticalAlignment="Top"  HorizontalAlignment="Left" Width="85">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="../Images/cross.png" Stretch="None" />
+                    <TextBlock Margin="3,0,0,0"><Run Text="Cancel"/></TextBlock>
+                </StackPanel>
+            </Button>
+            <Label Content="{Binding SelectedSchedule.Task.Name}" HorizontalAlignment="Left" Margin="137,16,0,0" VerticalAlignment="Top" Width="329" Height="18"/>
+            <GroupBox Header="DayOfWeek" Height="120" HorizontalAlignment="Left" Margin="37,191,0,0" Name="groupBox1" VerticalAlignment="Top" Width="414" Foreground="White">
+                <Grid>
+                    <CheckBox Content="Mon" Height="16" HorizontalAlignment="Left" Margin="15,18,0,0" Name="MoncheckBox" VerticalAlignment="Top" Foreground="White" Width="47" />
+                    <CheckBox Content="Tue" Foreground="White" Height="16" HorizontalAlignment="Right" Margin="0,18,275,0" Name="TuecheckBox" VerticalAlignment="Top" Width="47" />
+                    <CheckBox Content="Wen" Foreground="White" Height="16" HorizontalAlignment="Right" Margin="0,18,209,0" Name="WencheckBox" VerticalAlignment="Top" Width="47" />
+                    <CheckBox Content="Thu" Foreground="White" Height="16" HorizontalAlignment="Right" Margin="0,18,133,0" Name="ThucheckBox" VerticalAlignment="Top" Width="47" />
+                    <CheckBox Content="Fri" Foreground="White" Height="16" HorizontalAlignment="Right" Margin="0,18,60,0" Name="FricheckBox" VerticalAlignment="Top" Width="47" />
+                    <CheckBox Content="Sat" Foreground="White" Height="20" HorizontalAlignment="Right" Margin="0,55,340,0" Name="SatcheckBox" VerticalAlignment="Top" Width="47" />
+                    <CheckBox Content="Sun" Foreground="White" Height="20" HorizontalAlignment="Right" Margin="0,55,275,0" Name="SuncheckBox" VerticalAlignment="Top" Width="47" />
+                </Grid>
+            </GroupBox>
+        </Grid>
+    </Border>
+</Window>

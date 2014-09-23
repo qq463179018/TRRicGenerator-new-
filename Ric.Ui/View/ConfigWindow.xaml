@@ -1,0 +1,17 @@
+﻿<Window x:Class="Ric.Ui.View.ConfigWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Title="ConfigWindow" WindowStyle="ToolWindow"
+		SizeToContent="WidthAndHeight"
+		MinWidth="300">
+    <Grid Margin="0,0,0.016,1" Background="#FFBCC7D8">
+        <xctk:PropertyGrid x:Name="PropertyGrid" Margin="0,-0.125,0.156,37.175"
+                                     AutoGenerateProperties="True" RenderTransformOrigin="0.5,0.5"
+									 Height="Auto" BorderBrush="#FFBCC7D8">
+        </xctk:PropertyGrid>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="10,0,0,4.215" VerticalAlignment="Bottom" Width="84" Click="Button_Save" Height="27.96"/>
+        <Button Content="Close" HorizontalAlignment="Left" Margin="102.5,0,0,4.215" VerticalAlignment="Bottom" Width="75" Click="Button_Close" Height="27.96"/>
+        <Separator Height="1.016" Margin="0,0,0,35.925" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>

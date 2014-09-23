@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EtiRicModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ETI_UI_Config">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TaskId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="Key" Type="varchar" MaxLength="255" />
+          <Property Name="Value" Type="nvarchar" MaxLength="512" />
+        </EntityType>
+        <EntityType Name="ETI_UI_Market">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Abbreviation" Type="varchar" MaxLength="50" />
+          <Property Name="ManagerId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ETI_UI_Run">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="TaskId" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Result" Type="int" />
+          <Property Name="Duration" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ETI_UI_Schedule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TaskId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Frequency" Type="int" Nullable="false" />
+          <Property Name="Count" Type="int" />
+          <Property Name="Interval" Type="int" />
+          <Property Name="DayOfWeek" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ETI_UI_Task">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Group" Type="nvarchar" MaxLength="255" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="MarketId" Type="int" Nullable="false" />
+          <Property Name="ConfigType" Type="nvarchar" MaxLength="255" />
+          <Property Name="GeneratorType" Type="nvarchar" MaxLength="255" />
+          <Property Name="OwnerId" Type="int" Nullable="false" />
+          <Property Name="ManualTime" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ETI_UI_User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WinUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="GedaUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="GedaPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="Group" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="MainMarketId" Type="int" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+          <Property Name="ManagerId" Type="int" Nullable="false" />
+          <Property Name="Surname" Type="nvarchar" MaxLength="50" />
+          <Property Name="Familyname" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="EtiRicModelStoreContainer">
+          <EntitySet Name="ETI_UI_Config" EntityType="Self.ETI_UI_Config" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ETI_UI_Market" EntityType="Self.ETI_UI_Market" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ETI_UI_Run" EntityType="Self.ETI_UI_Run" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ETI_UI_Schedule" EntityType="Self.ETI_UI_Schedule" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ETI_UI_Task" EntityType="Self.ETI_UI_Task" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ETI_UI_User" EntityType="Self.ETI_UI_User" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EtiRicModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Config">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Key" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Value" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="User" Relationship="EtiRicModel.UserConfig" FromRole="Config" ToRole="User" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Task" Relationship="EtiRicModel.TaskConfig" FromRole="Config" ToRole="Task" />
+          <Property Name="TaskId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Market">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Abbreviation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tasks" Relationship="EtiRicModel.MarketTask" FromRole="Market" ToRole="Task" />
+          <NavigationProperty Name="Manager" Relationship="EtiRicModel.MarketUser" FromRole="Market" ToRole="User" />
+          <Property Name="ManagerId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Users" Relationship="EtiRicModel.UserMainMarket" FromRole="Market" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Run">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Precision="3" Nullable="false" />
+          <Property Name="Result" Type="EtiRicModel.TaskResult" Nullable="false" />
+          <NavigationProperty Name="Task" Relationship="EtiRicModel.TaskRun" FromRole="Run" ToRole="Task" />
+          <Property Name="TaskId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="EtiRicModel.UserRun" FromRole="Run" ToRole="User" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="Duration" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Schedule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Precision="3" Nullable="false" />
+          <Property Name="Frequency" Type="EtiRicModel.ScheduleFrequency" Nullable="false" />
+          <Property Name="Count" Type="Int32" />
+          <Property Name="Interval" Type="Int32" />
+          <NavigationProperty Name="User" Relationship="EtiRicModel.UserSchedule" FromRole="Schedule" ToRole="User" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Task" Relationship="EtiRicModel.TaskSchedule" FromRole="Schedule" ToRole="Task" />
+          <Property Name="TaskId" Type="Int32" Nullable="false" />
+          <Property Name="DayOfWeek" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Task">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Group" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="EtiRicModel.TaskStatus" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ConfigType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GeneratorType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Market" Relationship="EtiRicModel.MarketTask" FromRole="Task" ToRole="Market" />
+          <Property Name="MarketId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Owner" Relationship="EtiRicModel.TaskOwner" FromRole="Task" ToRole="User" />
+          <Property Name="OwnerId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Schedules" Relationship="EtiRicModel.TaskSchedule" FromRole="Task" ToRole="Schedule" />
+          <NavigationProperty Name="Runs" Relationship="EtiRicModel.TaskRun" FromRole="Task" ToRole="Run" />
+          <NavigationProperty Name="Configs" Relationship="EtiRicModel.TaskConfig" FromRole="Task" ToRole="Config" />
+          <Property Name="ManualTime" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WinUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GedaUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GedaPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Group" Type="EtiRicModel.UserGroup" Nullable="false" />
+          <Property Name="Status" Type="EtiRicModel.UserStatus" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Familyname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ManagingMarkets" Relationship="EtiRicModel.MarketUser" FromRole="User" ToRole="Market" />
+          <NavigationProperty Name="DevTasks" Relationship="EtiRicModel.TaskOwner" FromRole="User" ToRole="Task" />
+          <NavigationProperty Name="MainMarket" Relationship="EtiRicModel.UserMainMarket" FromRole="User" ToRole="Market" />
+          <Property Name="MainMarketId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Manager" Relationship="EtiRicModel.UserManager" FromRole="User" ToRole="User1" />
+          <NavigationProperty Name="Team" Relationship="EtiRicModel.UserManager" FromRole="User1" ToRole="User" />
+          <Property Name="ManagerId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Schedules" Relationship="EtiRicModel.UserSchedule" FromRole="User" ToRole="Schedule" />
+          <NavigationProperty Name="Runs" Relationship="EtiRicModel.UserRun" FromRole="User" ToRole="Run" />
+          <NavigationProperty Name="Configs" Relationship="EtiRicModel.UserConfig" FromRole="User" ToRole="Config" />
+        </EntityType>
+        <EntityContainer Name="EtiRicGeneratorEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Configs" EntityType="Self.Config" />
+          <EntitySet Name="Markets" EntityType="Self.Market" />
+          <EntitySet Name="Runs" EntityType="Self.Run" />
+          <EntitySet Name="Schedules" EntityType="Self.Schedule" />
+          <EntitySet Name="Tasks" EntityType="Self.Task" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="MarketTask" Association="EtiRicModel.MarketTask">
+            <End Role="Market" EntitySet="Markets" />
+            <End Role="Task" EntitySet="Tasks" />
+          </AssociationSet>
+          <AssociationSet Name="MarketUser" Association="EtiRicModel.MarketUser">
+            <End Role="Market" EntitySet="Markets" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="TaskOwner" Association="EtiRicModel.TaskOwner">
+            <End Role="Task" EntitySet="Tasks" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="UserMainMarket" Association="EtiRicModel.UserMainMarket">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Market" EntitySet="Markets" />
+          </AssociationSet>
+          <AssociationSet Name="UserManager" Association="EtiRicModel.UserManager">
+            <End Role="User" EntitySet="Users" />
+            <End Role="User1" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="UserSchedule" Association="EtiRicModel.UserSchedule">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Schedule" EntitySet="Schedules" />
+          </AssociationSet>
+          <AssociationSet Name="TaskSchedule" Association="EtiRicModel.TaskSchedule">
+            <End Role="Task" EntitySet="Tasks" />
+            <End Role="Schedule" EntitySet="Schedules" />
+          </AssociationSet>
+          <AssociationSet Name="TaskRun" Association="EtiRicModel.TaskRun">
+            <End Role="Task" EntitySet="Tasks" />
+            <End Role="Run" EntitySet="Runs" />
+          </AssociationSet>
+          <AssociationSet Name="UserRun" Association="EtiRicModel.UserRun">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Run" EntitySet="Runs" />
+          </AssociationSet>
+          <AssociationSet Name="UserConfig" Association="EtiRicModel.UserConfig">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Config" EntitySet="Configs" />
+          </AssociationSet>
+          <AssociationSet Name="TaskConfig" Association="EtiRicModel.TaskConfig">
+            <End Role="Task" EntitySet="Tasks" />
+            <End Role="Config" EntitySet="Configs" />
+          </AssociationSet>
+        </EntityContainer>
+        <EnumType Name="TaskResult" UnderlyingType="Int16">
+          <Member Name="Success" />
+          <Member Name="Fail" />
+        </EnumType>
+        <EnumType Name="TaskStatus">
+          <Member Name="Active" />
+          <Member Name="Disabled" />
+          <Member Name="InDev" />
+        </EnumType>
+        <EnumType Name="UserGroup" UnderlyingType="Int16">
+          <Member Name="User" />
+          <Member Name="Dev" />
+          <Member Name="Admin" />
+          <Member Name="Manager" />
+        </EnumType>
+        <EnumType Name="UserStatus" UnderlyingType="Int16">
+          <Member Name="Active" />
+          <Member Name="Disabled" />
+        </EnumType>
+        <EnumType Name="ScheduleFrequency" UnderlyingType="Int16">
+          <Member Name="Workday" />
+          <Member Name="Daily" />
+          <Member Name="Weekly" />
+          <Member Name="Monthly" />
+          <Member Name="Once" />
+        </EnumType>
+        <Association Name="MarketTask">
+          <End Type="EtiRicModel.Market" Role="Market" Multiplicity="1" />
+          <End Type="EtiRicModel.Task" Role="Task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Market">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Task">
+              <PropertyRef Name="MarketId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MarketUser">
+          <End Type="EtiRicModel.Market" Role="Market" Multiplicity="*" />
+          <End Type="EtiRicModel.User" Role="User" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Market">
+              <PropertyRef Name="ManagerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TaskOwner">
+          <End Type="EtiRicModel.Task" Role="Task" Multiplicity="*" />
+          <End Type="EtiRicModel.User" Role="User" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Task">
+              <PropertyRef Name="OwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserMainMarket">
+          <End Type="EtiRicModel.User" Role="User" Multiplicity="*" />
+          <End Type="EtiRicModel.Market" Role="Market" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="Market">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="MainMarketId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserManager">
+          <End Type="EtiRicModel.User" Role="User" Multiplicity="*" />
+          <End Type="EtiRicModel.User" Role="User1" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="User1">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="ManagerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserSchedule">
+          <End Type="EtiRicModel.User" Role="User" Multiplicity="1" />
+          <End Type="EtiRicModel.Schedule" Role="Schedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Schedule">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TaskSchedule">
+          <End Type="EtiRicModel.Task" Role="Task" Multiplicity="1" />
+          <End Type="EtiRicModel.Schedule" Role="Schedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Task">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Schedule">
+              <PropertyRef Name="TaskId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TaskRun">
+          <End Type="EtiRicModel.Task" Role="Task" Multiplicity="1" />
+          <End Type="EtiRicModel.Run" Role="Run" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Task">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Run">
+              <PropertyRef Name="TaskId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserRun">
+          <End Type="EtiRicModel.User" Role="User" Multiplicity="1" />
+          <End Type="EtiRicModel.Run" Role="Run" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Run">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserConfig">
+          <End Type="EtiRicModel.User" Role="User" Multiplicity="1" />
+          <End Type="EtiRicModel.Config" Role="Config" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Config">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TaskConfig">
+          <End Type="EtiRicModel.Task" Role="Task" Multiplicity="1" />
+          <End Type="EtiRicModel.Config" Role="Config" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Task">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Config">
+              <PropertyRef Name="TaskId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <!--<EntityType Name="Tip">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>-->
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EtiRicModelStoreContainer" CdmEntityContainer="EtiRicGeneratorEntities">
+    <EntitySetMapping Name="Configs">
+      <EntityTypeMapping TypeName="IsTypeOf(EtiRicModel.Config)">
+        <MappingFragment StoreEntitySet="ETI_UI_Config">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Markets">
+      <EntityTypeMapping TypeName="IsTypeOf(EtiRicModel.Market)">
+        <MappingFragment StoreEntitySet="ETI_UI_Market">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
+          <ScalarProperty Name="ManagerId" ColumnName="ManagerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Runs">
+      <EntityTypeMapping TypeName="IsTypeOf(EtiRicModel.Run)">
+        <MappingFragment StoreEntitySet="ETI_UI_Run">
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schedules">
+      <EntityTypeMapping TypeName="IsTypeOf(EtiRicModel.Schedule)">
+        <MappingFragment StoreEntitySet="ETI_UI_Schedule">
+          <ScalarProperty Name="DayOfWeek" ColumnName="DayOfWeek" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="Interval" ColumnName="Interval" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tasks">
+      <EntityTypeMapping TypeName="IsTypeOf(EtiRicModel.Task)">
+        <MappingFragment StoreEntitySet="ETI_UI_Task">
+          <ScalarProperty Name="ManualTime" ColumnName="ManualTime" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Group" ColumnName="Group" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ConfigType" ColumnName="ConfigType" />
+          <ScalarProperty Name="GeneratorType" ColumnName="GeneratorType" />
+          <ScalarProperty Name="MarketId" ColumnName="MarketId" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IsTypeOf(EtiRicModel.User)">
+        <MappingFragment StoreEntitySet="ETI_UI_User">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WinUser" ColumnName="WinUser" />
+          <ScalarProperty Name="GedaUser" ColumnName="GedaUser" />
+          <ScalarProperty Name="GedaPassword" ColumnName="GedaPassword" />
+          <ScalarProperty Name="Group" ColumnName="Group" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Familyname" ColumnName="Familyname" />
+          <ScalarProperty Name="MainMarketId" ColumnName="MainMarketId" />
+          <ScalarProperty Name="ManagerId" ColumnName="ManagerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

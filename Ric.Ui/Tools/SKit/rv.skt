@@ -1,0 +1,416 @@
+# ------------------------------------------------------------
+#
+# Title         : rv.skt
+# Author        : Simon Chudley
+# Creation Date : March 2007
+#
+# Description
+# -----------
+# This SKitLet tool allows you to view RICs on a data feed 
+# using a similar interface to the RAQ database editor.
+#
+# It allows sorting FIDs by name and update rate, highlights 
+# updating fields and filtering by FID name. 
+#
+# Change History
+# --------------
+# 26-Feb-2007  S.R. Chudley      1.0.0.0 : Created
+
+# Version
+my $l_version = "1.0.0.0";
+
+# This SKitLet requires thread support - fail if not found
+BEGIN
+{
+   if (!eval
+      {
+         require threads;
+         require threads::shared;
+      })
+   {
+      print STDERR "\nERROR: The RICView SKitLet requires Perl thread support.\n       Your Perl installation does not support threads (v".$].").\n";
+      exit(1);
+   }
+}
+
+# Uses
+use SKitLet;
+use POSIX qw(strftime);
+use Win32::Console;
+use Time::Local;
+use threads::shared;
+
+# State 
+my %g_ric_data      = ();
+my %g_fid_updated   = ();
+my $g_sort_mode     = 0;
+my $g_viewing_ric   = $ARGV[1];
+my $g_not_null      = 0;
+my $g_start_index   = 0;
+my $g_fid_regexp    = undef;
+my $g_fid_filtering = 0;
+my $g_filter_mode   = 0;
+my $g_last_upd_cnt  = 0;
+my $g_last_upd_snap = 0;
+my $g_last_upd_rate = 0;
+
+# Configuration
+my $g_field_width = 20;
+
+# Shared variables
+share($g_sort_mode);
+share($g_not_null);
+share($g_start_index);
+share(%g_ric_data);
+share(%g_fid_updated);
+share($g_fid_regexp);
+share($g_fid_filtering);
+share($g_filter_mode);
+
+# Read in parameters
+my $g_feed = $ARGV[0];
+my $g_refresh = $ARGV[2];
+if (!defined $g_refresh) { $g_refresh = 1; }
+if ($g_feed eq "" or $g_viewing_ric eq "")
+{
+   print "RICView v$l_version: Developed by S. Chudley\n\n";
+   print "Usage:\n\n   rv <IDN|QDN|FEED> <ric> <refresh_rate_sec>\n";
+   exit(1);
+}
+
+
+#######################
+# RVIEW CONFIGURATION #
+#######################
+
+# Fetch Win32 console size settings
+my $g_console       = new Win32::Console(STD_OUTPUT_HANDLE);
+my ($l_left, $l_top, $l_right, $l_bottom) = $g_console->Window();
+my $g_abs_max_y     = $l_bottom - $l_top;
+my $g_max_y         = $g_abs_max_y - 1;
+my $g_max_x         = $l_right - $l_left;
+my $g_half_x        = int($g_max_x / 2);
+my $g_thrd_x        = int($g_max_x / 3);
+my $g_fids_per_col  = int(($g_max_y - 4) / 3);
+my $g_cols_per_pag  = int(($g_max_x - 4) / ($g_field_width + 2));
+my $g_fids_per_pag  = $g_fids_per_col * $g_cols_per_pag;
+
+# Set up console static text
+$g_console->Cls();
+$g_console->FillAttr($BG_GRAY| $FG_BLACK, $g_max_x, 0, 0);
+$g_console->FillAttr($BG_GRAY| $FG_BLACK, $g_max_x, 0, ($l_bottom - $l_top));
+my $l_str = sprintf(" %-".($g_thrd_x - 1)."s %-".($g_thrd_x - 1)."s %".($g_thrd_x - 2)."s", "Sort: Alphabetically", "FID Filter: None", "Use Ctrl+C to exit...");
+$g_console->WriteChar($l_str, 0, ($l_bottom - $l_top));
+$g_console->FillAttr($BG_GRAY| $FG_BLACK, $g_max_x, 0, 1);
+$g_console->FillAttr($BG_GRAY| $FG_BLACK, $g_max_x, 0, 2);
+$l_str = sprintf(" %-".($g_half_x - 1)."s %".($g_half_x - 1)."s", "RIC Viewer (v".$l_version.")", "Powered by SKitLets (v".SKitLet::skt_version().")");
+$g_console->WriteChar($l_str, 0, 0);
+$l_str = "";
+for (my $i = 0; $i != $g_max_x; $i++) { $l_str .= "-"; }
+$g_console->WriteChar($l_str, 0, 1);
+$l_str = sprintf(" %-".($g_half_x - 2)."s %".($g_half_x - 2)."s", "RIC: -", "Update Rate: - msg/s");
+$g_console->WriteChar($l_str, 1, 2);
+$g_console->Title("SKit RICView (v".$l_version.")");
+
+# Create the SKitLet
+my $l_skitlet = new SKitLet("feed" => $g_feed) or die "Can't create SKitLet on $g_feed!";
+
+# Set our callback functions
+SKitLet::skt_set_callback("PCUPDATE", \&process_update);
+SKitLet::skt_set_callback("RESYNC", \&process_update);
+SKitLet::skt_set_callback("CLOSINGRUN", \&process_update);
+SKitLet::skt_set_callback("CORRECTION", \&process_update);
+SKitLet::skt_set_callback("RECORDINSYNC", \&process_update);
+SKitLet::skt_set_callback("RECORDINACTIVE", \&process_inactive);
+
+# Set other tool options
+$l_skitlet->set_option("sync_images");
+
+
+##########################################
+# SKITLET HANDLERS, TIMERS AND CALLBACKS #
+##########################################
+
+# Set Ctrl+C signal handler callback
+SKitLet::skt_signal_handler(\&app_terminate);
+sub app_terminate
+{
+   # Terminate the SKitLet
+   $g_console->Cls();
+   &SKitLet::skt_terminate();
+}
+
+# Create a timer to clear highlighted fields
+SKitLet::skt_create_timer(1, \&clear_highlight_timer);
+sub clear_highlight_timer
+{
+   # Clear all expired highlighted fields
+   my $l_now = timelocal(gmtime());
+   foreach my $l_fid (keys %g_fid_updated)
+      { if ($g_fid_updated{$l_fid} + 1 < $l_now) { delete $g_fid_updated{$l_fid}; } }
+
+   # Calculate update rate
+   &upd_msg_rate();
+}
+
+# Set out console input event handler
+SKitLet::skt_set_callback("KEYBOARD_EVENT", \&input_handler);
+sub input_handler
+{
+   local (*a_event) = @_;
+
+   # Keyboard events
+   if ($a_event[0] == 1)
+   {
+      my $l_key = $a_event[3]; 
+      my $l_mod = $a_event[6]; 
+
+      # Key up events
+      if ($a_event[1] == 1)
+      {
+         # If entering FID filtering text0
+         if ($g_fid_filtering)
+         {
+            # Escape
+            if ($l_key == 27) { $g_fid_regexp = undef; $g_fid_filtering = 0; }
+            # Enter
+            elsif ($l_key == 13) { $g_fid_filtering = 0; }
+            # Text
+            elsif ($l_key == 8 or chr($l_key) =~ m/[a-z0-9-_]/i)
+            {
+               # Store their filter, handle back-space
+               if ($l_key != 8) { $g_fid_regexp .= chr($l_key); }
+               elsif (length($g_fid_regexp) > 0) { $g_fid_regexp = substr($g_fid_regexp, 0, length($g_fid_regexp) - 1); }
+               else { $g_fid_regexp = undef; $g_fid_filtering = 0; }
+            }
+         }
+         # Not FID filtering
+         else
+         {
+            # Down cursor
+            if ($l_key == 40) { $g_start_index++; }
+            # Up cursor
+            elsif ($l_key == 38) { $g_start_index--; } 
+            # Left cursor
+            elsif ($l_key == 39) { $g_start_index += $g_fids_per_col; } 
+            # Right cursor
+            elsif ($l_key == 37) { $g_start_index -= $g_fids_per_col; } 
+            # Home
+            elsif ($l_key == 36) { $g_start_index = 0; }
+            # End
+            elsif ($l_key == 35) { $g_start_index = (keys %{$g_ric_data{$g_viewing_ric}}) - $g_fids_per_pag; }
+            # Shift+S
+            elsif ($l_key == 83 and $l_mod == 16) { $g_sort_mode++; if ($g_sort_mode > 2) { $g_sort_mode = 0; } }
+            # Shift+N
+            elsif ($l_key == 78 and $l_mod == 16) { $g_not_null = !$g_not_null; }
+            # /
+            elsif ($l_key == 191) { $g_fid_filtering = 1; $g_filter_mode = 1; $g_fid_regexp = ""; }
+            # \
+            elsif ($l_key == 220) { $g_fid_filtering = 1; $g_filter_mode = 2; $g_fid_regexp = ""; }
+            # Escape
+            elsif ($l_key == 27) { $g_fid_regexp = undef; $g_fid_filtering = 0; }
+         }
+
+         &refresh_screen();
+      }
+   }
+}
+
+# Create a timer to update the screen
+SKitLet::skt_create_timer($g_refresh, \&refresh_screen);
+sub refresh_screen
+{
+   # Fetch all fields for the RIC currently being viewed
+   my $l_now = timelocal(gmtime());
+   my %l_fields = %{$g_ric_data{$g_viewing_ric}};
+
+   # Update statistics
+   my $l_str = "";
+   if (!defined %l_fields or keys %l_fields == 0)
+      { $l_str = sprintf(" %-".($g_half_x - 2)."s %".($g_half_x - 2)."s", "RIC: ".$g_viewing_ric." [Record Inactive]", "Update Rate: - msg/s"); }
+   else
+      { $l_str = sprintf(" %-".($g_half_x - 2)."s %".($g_half_x - 2)."s", "RIC: ".$g_viewing_ric, "Update Rate: ".$g_last_upd_rate." msg/s"); }
+   $g_console->WriteChar($l_str, 1, 2);
+
+   # Sorting and filtering
+   my $l_sort = "Alphabetically";
+   my $l_filter = "None";
+   if ($g_sort_mode == 1) { $l_sort = "Update count"; }
+   elsif ($g_sort_mode == 2) { $l_sort = "Most recently updated"; }
+   if (defined $g_fid_regexp and $g_filter_mode == 1) { $l_filter = "/".$g_fid_regexp; }
+   elsif (defined $g_fid_regexp and $g_filter_mode == 2) { $l_filter = "\\".$g_fid_regexp; }
+   if ($g_not_null) { $l_filter .= " (Not null)"; }
+   my $l_str = sprintf(" %-".($g_thrd_x - 1)."s %-".($g_thrd_x - 1)."s %".($g_thrd_x - 2)."s", "Sort: ".$l_sort, "FID Filter: ".$l_filter, "Use Ctrl+C to exit...");
+   $g_console->WriteChar($l_str, 0, ($l_bottom - $l_top));
+
+   # Sort FIDs however they want
+   my @l_keys = ();
+   if ($g_sort_mode == 0) { @l_keys = sort keys %l_fields; }
+   elsif ($g_sort_mode == 1) { @l_keys = reverse sort { $l_fields{$a}{"update_count"} <=> $l_fields{$b}{"update_count"} } keys %l_fields; }
+   elsif ($g_sort_mode == 2) { @l_keys = reverse sort { $l_fields{$a}{"updated"} <=> $l_fields{$b}{"updated"} } keys %l_fields; }
+
+   # Fix the display indexes
+   if ($g_start_index < 0) { $g_start_index = 0; }
+   if (defined $g_ric_data{$g_viewing_ric}) 
+   { 
+      my $l_max = (keys %{$g_ric_data{$g_viewing_ric}}) - $g_fids_per_pag;
+      if ($l_max < 0) { $l_max = 0; }
+      if ($g_start_index > $l_max) { $g_start_index = $l_max; }
+   }
+
+   # Display the FIDs they want
+   my $l_x = 2;
+   my $l_y = 4;
+   for (my $i = $g_start_index; $l_x + $g_field_width + 2 < $g_max_x - 2; $i++)
+   {
+      # Got data to display for this field?
+      my $l_blank = 1;
+      if ($i < @l_keys)
+      {
+         # Match current filters?
+         my $l_fid = $l_keys[$i];
+         if (defined $g_fid_regexp and $l_fid !~ m/$g_fid_regexp/i) 
+         { 
+            if ($g_filter_mode == 1) { $l_blank = 1; }
+            elsif ($g_filter_mode == 2) { next; }
+         }
+         else
+         {
+            # Fetch field details
+            my %l_field_h = %{$l_fields{$l_fid}};
+            my $l_field   = substr(sprintf("%-".$g_field_width."s", $l_fid), 0, $g_field_width); 
+            my $l_val     = substr(sprintf("%-".$g_field_width."s", $l_field_h{"value"}), 0, $g_field_width); 
+            my $l_val_raw = $l_field_h{"value"}; $l_val_raw =~ s/^\s+$//g;
+            my $l_updated = $g_fid_updated{$l_fid};
+
+            # Not null filtering
+            if (!$g_not_null or ($g_not_null and ($l_val_raw ne "" and ($l_val_raw != 0 or $l_val_raw !~ m/^[0-9\.-]+$/))))
+            {
+               # Write field name
+               $g_console->WriteChar($l_field, $l_x, $l_y);
+      
+               # Write the field value - highlighted if required
+               if (defined $l_updated and $l_updated + 1 >= $l_now) 
+                  { &highlight_update($l_x, $l_y + 1, $g_field_width, $l_val); }
+               else 
+               { 
+                  $g_console->WriteChar($l_val, $l_x, $l_y + 1); 
+                  $g_console->FillAttr($BG_GRAY| $FG_BLACK, $g_field_width, $l_x, $l_y + 1);
+               }
+         
+               $l_blank = 0;
+            }
+         }
+      }
+
+      # Just blank it
+      if ($l_blank == 1)
+      {
+         my $l_str = sprintf("%-".$g_field_width."s", " ");
+         $g_console->WriteChar($l_str, $l_x, $l_y);
+         $g_console->WriteChar($l_str, $l_x, $l_y + 1); 
+         $g_console->FillAttr($ATTR_NORMAL, $g_field_width, $l_x, $l_y + 1);
+      }
+
+      # Next field
+      $l_y += 3;
+      if ($l_y > $g_max_y - 2) { $l_y = 4; $l_x += $g_field_width + 2; }
+   }
+
+   return 1;
+}
+
+
+#############################
+# APPLICATION BOOTSTRAPPING #
+#############################
+
+# Set the SKitLet to watch this RIC
+if (!$l_skitlet->watch_rics([$g_viewing_ric], \@l_fids))
+{
+   print STDERR "Unable to watch RIC: ".$l_skitlet->last_error()."\n";
+   exit(1);
+}
+
+# Create the input console and start the event handler thread
+SKitLet::skt_create_input_console();
+SKitLet::skt_spawn_input_event_handler();
+
+# Start the SKitLet dispatcher, this won't return till we're done
+SKitLet::skt_dispatch('auto_terminate' => 0);
+exit(0);
+
+
+####################
+# HELPER FUNCTIONS #
+####################
+
+# Called when watched RICs receive an update
+sub process_update
+{
+   local ($a_feed, $a_ric, $a_attr, *a_fids) = @_;
+
+   # Locks
+   lock(%g_ric_data);
+   lock(%g_fid_updated);
+
+   # Scan updated FIDs
+   my $l_now = timelocal(gmtime());
+   foreach my $l_fid (keys %a_fids)
+   {
+      my $l_value = $a_fids{$l_fid};
+      $l_value =~ s/^\+//;
+
+      # Store update time for this FID
+      $g_fid_updated{$l_fid} = $l_now;
+
+      # Create RIC FID store
+      if (!defined $g_ric_data{$a_ric}) { $g_ric_data{$a_ric} = &share({}); }
+      if (!defined $g_ric_data{$a_ric}{$l_fid}) { $g_ric_data{$a_ric}{$l_fid} = &share({}); }
+
+      # Store the FID value
+      $g_ric_data{$a_ric}{$l_fid}{"value"} = $l_value;
+      $g_ric_data{$a_ric}{$l_fid}{"updated"} = $l_now;
+
+      # Increment update count
+      if (!defined $g_ric_data{$a_ric}{$l_fid}{"update_count"})
+         { $g_ric_data{$a_ric}{$l_fid}{"update_count"} = 0; }
+      else 
+         { $g_ric_data{$a_ric}{$l_fid}{"update_count"} ++; }
+   }
+
+   # Tick
+   $g_last_upd_cnt++;
+}
+
+# Case that a RIC is in-active (not built)
+sub process_inactive
+{
+   local ($a_feed, $a_ric, $a_attr, *a_fids) = @_;
+
+   # Remove data for RIC
+   lock(%g_ric_data);
+   delete $g_ric_data{$a_ric};
+}
+
+# Highlights and updates a field
+sub highlight_update
+{
+   my ($a_x, $a_y, $a_width, $a_text) = @_;
+   $g_console->FillAttr($BG_CYAN | $FG_WHITE, $a_width, $a_x, $a_y);
+   $g_console->WriteChar($a_text, $a_x, $a_y);
+}
+
+# Calculate the message rate
+sub upd_msg_rate
+{
+   my $l_now = timelocal(gmtime());
+   if ($g_last_upd_snap != 0)
+   {
+      my $l_rate = $g_last_upd_cnt / ($l_now - $g_last_upd_snap); 
+      $l_rate =~ s/(\..).+$/$1/;
+      $g_last_upd_rate = $l_rate;
+      $g_last_upd_cnt = 0;
+   }
+   $g_last_upd_snap = $l_now;
+}

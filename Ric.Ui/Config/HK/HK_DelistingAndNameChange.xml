@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<HKDelistingAndNameChangeConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HYPHEN> <!--Used to exclude the fake NameChange-->
+    <string>-</string>
+    <string>(</string>
+    <string> </string>
+  </HYPHEN>
+
+  <SECTORCONFIG>
+    <SectorConfig>
+      <SECTOR>Financials</SECTOR>
+      <SECTORCHAIN>0#FINN.HK</SECTORCHAIN>
+    </SectorConfig>
+    <SectorConfig>
+      <SECTOR>Utilities</SECTOR>
+      <SECTORCHAIN>0#UTIL.HK</SECTORCHAIN>
+    </SectorConfig>
+    <SectorConfig>
+      <SECTOR>Miscellaneous</SECTOR>
+      <SECTORCHAIN>0#MISC.HK</SECTORCHAIN>
+    </SectorConfig>
+    <SectorConfig>
+      <SECTOR>Properties</SECTOR>
+      <SECTORCHAIN>0#Properties</SECTORCHAIN>
+    </SectorConfig>
+    <SectorConfig>
+      <SECTOR>Hotels</SECTOR>
+      <SECTORCHAIN>0#HOTL.HK</SECTORCHAIN>
+    </SectorConfig>
+    <SectorConfig>
+      <SECTOR>Industrial</SECTOR>
+      <SECTORCHAIN>0#INDS</SECTORCHAIN>
+    </SectorConfig>
+    <SectorConfig>
+      <SECTOR>Consolidated</SECTOR>
+      <SECTORCHAIN>0#CONS</SECTORCHAIN>
+    </SectorConfig>
+  </SECTORCONFIG>
+
+  <WARRANTDELISTINGCONFIG>
+    <WarrantDelistingConfig>
+      <UnderlyingChain>.DJI</UnderlyingChain>
+      <ChainRic>0#.DJIW.HK</ChainRic>
+    </WarrantDelistingConfig>
+    <WarrantDelistingConfig>
+      <UnderlyingChain>.HSCE</UnderlyingChain>
+      <ChainRic>0#.HSCEW.HK</ChainRic>
+    </WarrantDelistingConfig>
+    <WarrantDelistingConfig>
+    <UnderlyingChain>.HSI</UnderlyingChain>
+      <ChainRic>0#.HSIW.HK</ChainRic>
+    </WarrantDelistingConfig>
+    <WarrantDelistingConfig>
+    <UnderlyingChain>.N225</UnderlyingChain>
+      <ChainRic>0#.N225W.HK</ChainRic>
+    </WarrantDelistingConfig>
+    <WarrantDelistingConfig>
+    <UnderlyingChain>.KS200</UnderlyingChain>
+      <ChainRic>0#.KS200W.HK</ChainRic>
+    </WarrantDelistingConfig>
+    <WarrantDelistingConfig>
+      <UnderlyingChain>.TAMSCI</UnderlyingChain>
+      <ChainRic>0#.MSTWW.HK</ChainRic>
+    </WarrantDelistingConfig>
+    <WarrantDelistingConfig>
+      <UnderlyingChain>.NDX</UnderlyingChain>
+      <ChainRic>0#.NDXW.HK</ChainRic>
+    </WarrantDelistingConfig>
+  </WARRANTDELISTINGCONFIG>
+
+    <OthersWarrantChainRic>0#MISCW.HK</OthersWarrantChainRic>
+
+  <WARRANTCHAINRICSTARTWITH>
+    <WarrantStartWith>
+      <StartWith>CL</StartWith>
+      <ChainRic>0#OWRTS.HK</ChainRic>
+    </WarrantStartWith>
+  </WARRANTCHAINRICSTARTWITH>
+
+
+  <CBBCDELISTINGCONFIG> <!--Currently, it is unused.-->
+    <CBBCDelistingConfig>
+      <UnderlyingChain>.DJI</UnderlyingChain>
+      <ChainRic>0#.DJIC.HK</ChainRic>
+    </CBBCDelistingConfig>
+    <CBBCDelistingConfig>
+      <UnderlyingChain>.HSCE</UnderlyingChain>
+      <ChainRic>0#.HSCEC.HK</ChainRic>
+    </CBBCDelistingConfig>
+    <CBBCDelistingConfig>
+      <UnderlyingChain>.HSI</UnderlyingChain>
+      <ChainRic>0#.HSIC.HK</ChainRic>
+    </CBBCDelistingConfig>
+    <CBBCDelistingConfig>
+      <UnderlyingChain>.N225</UnderlyingChain>
+      <ChainRic>0#.N225C.HK</ChainRic>
+    </CBBCDelistingConfig>
+    <CBBCDelistingConfig>
+      <UnderlyingChain>.NDX</UnderlyingChain>
+      <ChainRic>0#.NDXC.HK</ChainRic>
+    </CBBCDelistingConfig>
+  </CBBCDELISTINGCONFIG>
+
+  <OthersCBBCChainRic>0#MISCC.HK</OthersCBBCChainRic> <!--Currently, it is unused.-->
+
+</HKDelistingAndNameChangeConfig>

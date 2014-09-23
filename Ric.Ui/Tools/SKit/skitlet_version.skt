@@ -1,0 +1,2 @@
+use SKitLet;
+print "SKitLets v".SKitLet::skt_version()."\n";

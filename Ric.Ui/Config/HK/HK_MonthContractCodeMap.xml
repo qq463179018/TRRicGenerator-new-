@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MonthContractCodeMap>
+  <ContractCodeMap>
+    <MonthConversion>
+      <Month>JAN</Month>
+      <CallContractCode>A</CallContractCode>
+      <PutContactCode>M</PutContactCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>FEB</Month>
+      <CallContractCode>B</CallContractCode>
+      <PutContactCode>N</PutContactCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>MAR</Month>
+      <CallContractCode>C</CallContractCode>
+      <PutContactCode>O</PutContactCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>APR</Month>
+      <CallContractCode>D</CallContractCode>
+      <PutContactCode>P</PutContactCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>MAY</Month>
+      <CallContractCode>E</CallContractCode>
+      <PutContactCode>Q</PutContactCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>JUN</Month>
+      <CallContractCode>F</CallContractCode>
+      <PutContactCode>R</PutContactCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>JUL</Month>
+      <CallContractCode>G</CallContractCode>
+      <PutContactCode>S</PutContactCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>AUG</Month>
+      <CallContractCode>H</CallContractCode>
+      <PutContactCode>T</PutContactCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>SEP</Month>
+      <CallContractCode>I</CallContractCode>
+      <PutContactCode>U</PutContactCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>OCT</Month>
+      <CallContractCode>J</CallContractCode>
+      <PutContactCode>V</PutContactCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>NOV</Month>
+      <CallContractCode>K</CallContractCode>
+      <PutContactCode>W</PutContactCode>
+    </MonthConversion>
+
+    <MonthConversion>
+      <Month>DEC</Month>
+      <CallContractCode>L</CallContractCode>
+      <PutContactCode>X</PutContactCode>
+    </MonthConversion>
+  </ContractCodeMap>
+</MonthContractCodeMap>

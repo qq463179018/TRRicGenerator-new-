@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Get data from http://www.set.or.th/set/todaynews.do?language=en&country=US and http://www.setsmart.com-->
+<TailandRic_Config>
+  <TailandRicFields>
+    <field1>DW issuer</field1>
+    <field2>DW name</field2>
+    <field3>Trading date</field3>
+    <field4>Number of derivative warrants (unit:</field4>
+    <field5>Underlying asset(s)</field5>
+    <field6>Exercise ratio (DW : Underlying asset)</field6>
+    <field7>Exercise price (baht per share)</field7>
+    <field8>Last trading date</field8>
+    <field9>Last exercise date</field9>
+  </TailandRicFields>
+  
+  <log_path>D:\TailandRicTemplate</log_path>
+  
+  <!--username and password is for login to SetSmart Site-->
+  <username>27311133</username>
+  <password>reuters1</password>
+  
+  <!--Rule 1: Check item between start_position and end_position.
+  The default value:
+  start_position=5  search start from the first news 
+  end_position=0    search stop to the last news
+  
+  The interval between each item is 2, that's mean if you only want to check news from 1 to 5(sort by topdown) on
+  http://www.set.or.th/set/todaynews.do?language=en&country=US , you should set
+  
+  start_position=5
+  end_position=13
+  
+  Notes: 
+  If defined a specified URL for html_url, start and end position will be ignore, priority of Rule 1 is lower than Rule 2
+  -->
+  <start_position>5</start_position>
+  <end_position>0</end_position>
+  
+  <!--Rule 2:html_url, the default value is <NA>, a specified URL will speed up running time
+    Sample: 
+     <html_url>NA</html_url>
+     <html_url><![CDATA[/set/newsdetails.do?type=H&time=1297322940000&filename=dat%2Fnews%2F201102%2F11003845.e11&source=SET&headline=SET+adds+new+listed+securities+%22BAY06CA%22+to+be+traded+on+February+14%2C+2011+%28Revised%29&symbol=BAY06CA&language=en&country=US]]></html_url>
+  -->
+  <html_url><![CDATA[/set/newsdetails.do;jsessionid=097C3EBAFB5C88CF1796C473338F9D23?type=R&time=1300428283000&filename=dat%2Fprsnews%2Fnews%2F0000NWS180320111304430715E.txt&source=SET&headline=SET+adds+new+listed+securities+%22BGH42CA%22+to+be+traded+on+March+22%2C+2011&symbol=SET&localeoverriding=yes&country=US&language=en]]></html_url>
+</TailandRic_Config>

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0722FEE0-9B02-458D-8D0E-1ED52CD47337}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ric.Tests</RootNamespace>
+    <AssemblyName>Ric.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DbLinq, Version=0.20.0.0, Culture=neutral, PublicKeyToken=61e015a67077348b, processorArchitecture=MSIL" />
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.2.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="PDFNet, Version=5.8.0.0, Culture=neutral, PublicKeyToken=36167be3f67ac39c" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestParserLexer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ric.Core\Ric.Core.csproj">
+      <Project>{8F87EDA8-4B46-4C94-BBA4-A41A25D88B09}</Project>
+      <Name>Ric.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ric.Db\Ric.Db.csproj">
+      <Project>{CEB81D52-8431-4512-B756-EBA964A7512A}</Project>
+      <Name>Ric.Db</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ric.FileLib\Ric.FileLib.csproj">
+      <Project>{0FF1F87B-906C-4CF8-94D7-07E19F3D26F8}</Project>
+      <Name>Ric.FileLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ric.Tasks.Asia\Ric.Tasks.Asia.csproj">
+      <Project>{AF578FE6-E991-4F2D-AB71-DF9244FB767F}</Project>
+      <Name>Ric.Tasks.Asia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ric.Tasks.China\Ric.Tasks.China.csproj">
+      <Project>{84A15C6A-41B7-4519-BD94-1465FA10A58E}</Project>
+      <Name>Ric.Tasks.China</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ric.Tasks.Corax\Ric.Tasks.Corax.csproj">
+      <Project>{98B258E6-D5F8-42C1-B206-B185070C90F6}</Project>
+      <Name>Ric.Tasks.Corax</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ric.Tasks.DataStream\Ric.Tasks.DataStream.csproj">
+      <Project>{B2503795-3AEA-46FF-9056-72FE99EE315F}</Project>
+      <Name>Ric.Tasks.DataStream</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ric.Tasks.HongKong\Ric.Tasks.HongKong.csproj">
+      <Project>{EB208AFC-EE96-4E24-AA7F-B2E354ADE223}</Project>
+      <Name>Ric.Tasks.HongKong</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ric.Tasks.Japan\Ric.Tasks.Japan.csproj">
+      <Project>{A2343448-1932-4F58-A28C-3744654879F4}</Project>
+      <Name>Ric.Tasks.Japan</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ric.Tasks.Korea\Ric.Tasks.Korea.csproj">
+      <Project>{340AAC54-867D-4E47-84FD-B4B275461F1A}</Project>
+      <Name>Ric.Tasks.Korea</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ric.Tasks.Taiwan\Ric.Tasks.Taiwan.csproj">
+      <Project>{72B6413F-7F23-49F5-A8B3-7154A8C08A89}</Project>
+      <Name>Ric.Tasks.Taiwan</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ric.Tasks.Thailand\Ric.Tasks.Thailand.csproj">
+      <Project>{A2C6AB99-EB02-4140-B2BF-7637AC50B290}</Project>
+      <Name>Ric.Tasks.Thailand</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ric.Tasks.Validation\Ric.Tasks.Validation.csproj">
+      <Project>{8A7D6245-A58D-4BC5-B01F-4D1A932AD112}</Project>
+      <Name>Ric.Tasks.Validation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ric.Tasks\Ric.Tasks.csproj">
+      <Project>{5F227F8E-1D9B-4CF9-B4EE-98A9D2887370}</Project>
+      <Name>Ric.Tasks</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ric.Ui\Ric.Ui.csproj">
+      <Project>{4ED4DA1D-6DFE-403E-844A-3C062FB3801C}</Project>
+      <Name>Ric.Ui</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ric.Util\Ric.Util.csproj">
+      <Project>{8C19E447-CE52-41FD-B05D-7F66410F460C}</Project>
+      <Name>Ric.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

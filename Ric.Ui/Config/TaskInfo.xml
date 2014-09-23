@@ -1,0 +1,587 @@
+<?xml version="1.0" standalone="yes"?>
+<ArrayOfTaskInfo>
+  <TaskInfo>
+    <TaskId>1</TaskId>
+    <TaskName>HK FMAndBulkFileGenerator</TaskName>
+    <GroupName>WARRANT/CBBC</GroupName>
+    <Status>Active</Status>
+    <Description>Generate New Warrant/CBBC</Description>
+    <MarketId>1</MarketId>
+    <MarketName>HK</MarketName>
+    <ConfigFile>Config\HK\HK_FMAndBulkFileGenerator.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.HK.HKFMAndBulkFileGeneratorConfig, RicGeneratorLibHK</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.HK.HKFMAndBulkFileGenerator, RicGeneratorLibHK</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>2</TaskId>
+    <TaskName>HK ShortSell</TaskName>
+    <GroupName>OTHER</GroupName>
+    <Status>Active</Status>
+    <Description>Generate New short sell from Exchang to IDN</Description>
+    <MarketId>1</MarketId>
+    <MarketName>HK</MarketName>
+    <ConfigFile>Config\HK\HKShortSell.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.HK.HKShortSellConfig, RicGeneratorLibHK</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.HK.HKShortSellGenerator, RicGeneratorLibHK</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>3</TaskId>
+    <TaskName>HK TradingNews</TaskName>
+    <GroupName>OPTION</GroupName>
+    <Status>Active</Status>
+    <Description>Generate New Option</Description>
+    <MarketId>1</MarketId>
+    <MarketName>HK</MarketName>
+    <ConfigFile>Config\HK\HK_TradingNews.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.HK.HKTradingNewsConfig, RicGeneratorLibHK</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.HK.HKTradingNews, RicGeneratorLibHK</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>4</TaskId>
+    <TaskName>HK BrokerPageFM</TaskName>
+    <GroupName>OTHER</GroupName>
+    <Status>Active</Status>
+    <Description>Generate New Broker to Page</Description>
+    <MarketId>1</MarketId>
+    <MarketName>HK</MarketName>
+    <ConfigFile>Config\HK\HKBrokerPageFM.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.HK.HKBrokerPageFMConfig, RicGeneratorLibHK</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.HK.HKBrokerPageFM, RicGeneratorLibHK</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>5</TaskId>
+    <TaskName>HK SEAUpdate</TaskName>
+    <GroupName>EQUITY+WARRANT/CBBC</GroupName>
+    <Status>Active</Status>
+    <Description>Cicular to HKSEA</Description>
+    <MarketId>1</MarketId>
+    <MarketName>HK</MarketName>
+    <ConfigFile>Config\HK\HK_SEAUpdate.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.HK.HKSEAConfig, RicGeneratorLibHK</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.HK.HKSEAUpdator, RicGeneratorLibHK</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>6</TaskId>
+    <TaskName>HK CBBCAddFileFM</TaskName>
+    <GroupName>WARRANT/CBBC</GroupName>
+    <Status>Active</Status>
+    <Description>Additional data to EMEA</Description>
+    <MarketId>1</MarketId>
+    <MarketName>HK</MarketName>
+    <ConfigFile>Config\HK\HKCBBCAddFileFM.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.HK.HKCBBCAddFileFMConfig, RicGeneratorLibHK</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.HK.HKCBBCAddFileFM, RicGeneratorLibHK</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>7</TaskId>
+    <TaskName>HK DelistSender</TaskName>
+    <GroupName></GroupName>
+    <Status>Disabled</Status>
+    <Description></Description>
+    <MarketId>1</MarketId>
+    <MarketName>HK</MarketName>
+    <ConfigFile>Config\HK\HK_DelistSender.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.HK.HKDelistSenderConfig, RicGeneratorLibHK</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.HK.DelistSender, RicGeneratorLibHK</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>8</TaskId>
+    <TaskName>HK AdditionalRicSender</TaskName>
+    <GroupName></GroupName>
+    <Status>Disabled</Status>
+    <Description></Description>
+    <MarketId>1</MarketId>
+    <MarketName>HK</MarketName>
+    <ConfigFile>Config\HK\HK_FMAndIssueSender.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.HK.HKFMAndIssueSenderConfig, RicGeneratorLibHK</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.HK.HKFMAndIssueSender, RicGeneratorLibHK</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>9</TaskId>
+    <TaskName>HK SPIndexCheck</TaskName>
+    <GroupName></GroupName>
+    <Status>Disabled</Status>
+    <Description></Description>
+    <MarketId>1</MarketId>
+    <MarketName>HK</MarketName>
+    <ConfigFile>Config\HK\HK_SPIndexCheck.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.HK.HKSPIndexCheckConfig, RicGeneratorLibHK</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.HK.HKSPIndexCheck, RicGeneratorLibHK</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>10</TaskId>
+    <TaskName>HK DelistingAndNameChange</TaskName>
+    <GroupName>EQUITY+WARRANT/CBBC</GroupName>
+    <Status>Active</Status>
+    <Description>Circular last minute drop and name change</Description>
+    <MarketId>1</MarketId>
+    <MarketName>HK</MarketName>
+    <ConfigFile>Config\HK\HK_DelistingAndNameChange.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.HK.HKDelistingAndNameChangConfig, RicGeneratorLibHK</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.HK.HKDelistingAndNameChange, RicGeneratorLibHK</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>11</TaskId>
+    <TaskName>HK SpeedGuide</TaskName>
+    <GroupName></GroupName>
+    <Status>Disabled</Status>
+    <Description></Description>
+    <MarketId>1</MarketId>
+    <MarketName>HK</MarketName>
+    <ConfigFile>Config\HK\HK_SpeedGuide.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.HK.HKSpeedGuideConfig, RicGeneratorLibHK</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.HK.HKSpeedGuide, RicGeneratorLibHK</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>12</TaskId>
+    <TaskName>HK Stock Option Ric Generator</TaskName>
+    <GroupName></GroupName>
+    <Status>Disabled</Status>
+    <Description></Description>
+    <MarketId>1</MarketId>
+    <MarketName>HK</MarketName>
+    <ConfigFile>Config\HK\HK_OptionRicGenerator.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.HK.OptionRicGeneratorConfig, RicGeneratorLibHK</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.HK.StockOptionRicGenerator, RicGeneratorLibHK</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>13</TaskId>
+    <TaskName>Korea  ADD</TaskName>
+    <GroupName>Equity</GroupName>
+    <Status>Active</Status>
+    <Description></Description>
+    <MarketId>2</MarketId>
+    <MarketName>Korea</MarketName>
+    <ConfigFile>Config\Korea\KOREA_ADDGenerator.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Korea.KOREA_ADDGeneratorConfig,RicGeneratorLibKorea</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Korea.ADD,RicGeneratorLibKorea</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>14</TaskId>
+    <TaskName>Korea Drop</TaskName>
+    <GroupName>Equity</GroupName>
+    <Status>Active</Status>
+    <Description>
+      1. For stock, ETF, REIT and BC, when there is official delisting announcement from exchange. Generate FM, GEDA and NDA file.
+      2. For Company Warrant, when there is official delisting announcement from exchange. Generate FM, GEDA and NDA file.
+    </Description>
+    <MarketId>2</MarketId>
+    <MarketName>Korea</MarketName>
+    <ConfigFile>Config\Korea\KOREA_DROPGenerator.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Korea.KOREA_DROP_Config,RicGeneratorLibKorea</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Korea.Drop,RicGeneratorLibKorea</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>15</TaskId>
+    <TaskName>Pre-IPO and Pre-mature Drop</TaskName>
+    <GroupName>ELW (Equity linked Warrant)</GroupName>
+    <Status>Active</Status>
+    <Description>Morning task. Generate FM, GEDA, NDA and EMA file.</Description>
+    <MarketId>2</MarketId>
+    <MarketName>Korea</MarketName>
+    <ConfigFile>Config\Korea\KOREA_ELWFM1ELWDropAndFileBulkGenerator.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Korea.KOREA_ELWFM1ELWDropAndFileBulkGeneratorConfig,RicGeneratorLibKorea</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Korea.ELWDropELWFM1ELWFileBulkGenerate,RicGeneratorLibKorea</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>16</TaskId>
+    <TaskName>Other changes for listing ELW</TaskName>
+    <GroupName>ELW (Equity linked Warrant)</GroupName>
+    <Status>Disabled</Status>
+    <Description></Description>
+    <MarketId>2</MarketId>
+    <MarketName>Korea</MarketName>
+    <ConfigFile>Config\Korea\KOREA_ELWStrikeConversionGenerator.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Korea.KOREA_ELWStrikeConversionGeneratorConfig,RicGeneratorLibKorea</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Korea.ELWStrikeConversion,RicGeneratorLibKorea</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>17</TaskId>
+    <TaskName>ELW/KOBA Add and Further Issue</TaskName>
+    <GroupName>ELW (Equity linked Warrant)</GroupName>
+    <Status>Active</Status>
+    <Description>
+      Afternoon task.
+      1. ELW Add: Compare pre-IPO information with official listing information, highlight in FM for any differences. Generate FM, GEDA, NDA and EMA file.
+      2. KOBA Add: Generate FM, GEDA, NDA and EMA file.
+      3. Further Issue: Generate FM and EMA file.
+    </Description>
+    <MarketId>2</MarketId>
+    <MarketName>Korea</MarketName>
+    <ConfigFile>Config\Korea\KOREA_ELWFM2AndFurtherIssuerGenerator.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Korea.KOREA_ELWFM2AndFurtherIssuerGeneratorConfig,RicGeneratorLibKorea</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Korea.ELWFMSecondPart,RicGeneratorLibKorea</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>18</TaskId>
+    <TaskName>Company Warrant Add</TaskName>
+    <GroupName>Company Warrant</GroupName>
+    <Status>Active</Status>
+    <Description>For Company Warrant, when there is official listing announcement from exchange. Generate FM, GEDA, NDA and EMA file.</Description>
+    <MarketId>2</MarketId>
+    <MarketName>Korea</MarketName>
+    <ConfigFile>Config\Korea\KOREA_CompanyWarrantAddGenerator.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Korea.KOREA_CompanyWarrantAddGeneratorConfig,RicGeneratorLibKorea</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Korea.WarrantAdd,RicGeneratorLibKorea</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>19</TaskId>
+    <TaskName>Company Warrant Change</TaskName>
+    <GroupName>Company Warrant</GroupName>
+    <Status>Active</Status>
+    <Description>For Company Warrant strike price change and quantity change. Generate FM, GEDA, NDA and EMA file.</Description>
+    <MarketId>2</MarketId>
+    <MarketName>Korea</MarketName>
+    <ConfigFile>Config\Korea\KOREA_CompanyWarrantChangeGenerator.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Korea.KOREA_CompanyWarrantChangeGeneratorConfig,RicGeneratorLibKorea</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Korea.WarrantChange,RicGeneratorLibKorea</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>20</TaskId>
+    <TaskName>Pre-IPO</TaskName>
+    <GroupName>Equity</GroupName>
+    <Status>Active</Status>
+    <Description>For stock, when there is listing plan.</Description>
+    <MarketId>2</MarketId>
+    <MarketName>Korea</MarketName>
+    <ConfigFile>Config\Korea\KOREA_PEOGenerator.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Korea.KOREA_PEOGeneratorConfig,RicGeneratorLibKorea</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Korea.PEOFirstPart,RicGeneratorLibKorea</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>21</TaskId>
+    <TaskName>Name Change</TaskName>
+    <GroupName>Equity</GroupName>
+    <Status>Active</Status>
+    <Description>For stock, ETF, REIT and BC, when there is  official name change announcement from exchange.</Description>
+    <MarketId>2</MarketId>
+    <MarketName>Korea</MarketName>
+    <ConfigFile>Config\Korea\KOREA_NameChangeGenerator.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Korea.KOREA_NameChangeGeneratorConfig,RicGeneratorLibKorea</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Korea.NameChange,RicGeneratorLibKorea</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>22</TaskId>
+    <TaskName>Rights</TaskName>
+    <GroupName>Rights</GroupName>
+    <Status>Active</Status>
+    <Description>For rights (add and drop), when there is official listing announcement from exchange. Listing announcement contains information both for Rights Add and Drop, so generate FM, GEDA and NDA file for add and drop together.</Description>
+    <MarketId>2</MarketId>
+    <MarketName>Korea</MarketName>
+    <ConfigFile>Config\Korea\KOREA_RightsGenerator.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Korea.KOREA_RightsGeneratorConfig,RicGeneratorLibKorea</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Korea.Rights,RicGeneratorLibKorea</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>23</TaskId>
+    <TaskName>Index</TaskName>
+    <GroupName>Index</GroupName>
+    <Status>Disabled</Status>
+    <Description>For index constituent, chain, cap ratio and free float ratio adjustment.</Description>
+    <MarketId>2</MarketId>
+    <MarketName>Korea</MarketName>
+    <ConfigFile>Config\Korea\KOREA_IndexGenerator.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Korea.KOREA_IndexGeneratorConfig,RicGeneratorLibKorea</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Korea.Index,RicGeneratorLibKorea</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>24</TaskId>
+    <TaskName>ThailandRicGenerator</TaskName>
+    <GroupName></GroupName>
+    <Status>Active</Status>
+    <Description></Description>
+    <MarketId>3</MarketId>
+    <MarketName>Thailand</MarketName>
+    <ConfigFile>Config\Thailand\TailandRic.Config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Thailand.ThailandGeneratorConfig,RicGeneratorLibThailand</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Thailand.ThailandRicGenerator,RicGeneratorLibThailand</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>25</TaskId>
+    <TaskName>China ISIN Generator</TaskName>
+    <GroupName></GroupName>
+    <Status>Disabled</Status>
+    <Description></Description>
+    <MarketId>4</MarketId>
+    <MarketName>China</MarketName>
+    <ConfigFile>Config\China\China_ISINGenerator.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.China.ChinaISINConfig,RicGeneratorLibChina</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.China.ChinaISINGenerator, RicGeneratorLibChina</GeneratorType>
+  </TaskInfo>
+
+  <TaskInfo>
+    <TaskId>26</TaskId>
+    <TaskName>China Indices Adjustment</TaskName>
+    <GroupName></GroupName>
+    <Status>Disabled</Status>
+    <Description></Description>
+    <MarketId>4</MarketId>
+    <MarketName>China</MarketName>
+    <ConfigFile>Config\China\China_IndicesAdjustment.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.China.ChinaIndicesAdjustmentConfig,RicGeneratorLibChina</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.China.ChinaIndicesAdjustment, RicGeneratorLibChina</GeneratorType>
+  </TaskInfo>
+
+  <TaskInfo>
+    <TaskId>27</TaskId>
+    <TaskName>TW Add Drop</TaskName>
+    <GroupName></GroupName>
+    <Status>Active</Status>
+    <Description></Description>
+    <MarketId>6</MarketId>
+    <MarketName>TW</MarketName>
+    <ConfigFile>Config\TW\TW_AddDrop.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.TW.TWAddDropConfig,RicGeneratorLibTW</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.TW.TWAddDropTask,RicGeneratorLibTW</GeneratorType>
+  </TaskInfo>
+
+  <TaskInfo>
+    <TaskId>28</TaskId>
+    <TaskName>TW CB Annoucement</TaskName>
+    <GroupName></GroupName>
+    <Status>Active</Status>
+    <Description></Description>
+    <MarketId>6</MarketId>
+    <MarketName>TW</MarketName>
+    <ConfigFile>Config\TW\TW_CBAnnouncement.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.TW.TWCBAnnouncementConfig,RicGeneratorLibTW</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.TW.TWCBAnnouncement,RicGeneratorLibTW</GeneratorType>
+  </TaskInfo>
+
+  <TaskInfo>
+    <TaskId>29</TaskId>
+    <TaskName>ELW Search With ISIN</TaskName>
+    <GroupName>ELW (Equity linked Warrant)</GroupName>
+    <Status>Disabled</Status>
+    <Description></Description>
+    <MarketId>2</MarketId>
+    <MarketName>Korea</MarketName>
+    <ConfigFile>Config\Korea\KOREA_ELWSearchByISINGenerator.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Korea.KOREA_ELWSearchByISINGeneratorConfig,RicGeneratorLibKorea</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Korea.ELWSingleSearch,RicGeneratorLibKorea</GeneratorType>
+  </TaskInfo>
+
+  <TaskInfo>
+    <TaskId>30</TaskId>
+    <TaskName>China Index QC</TaskName>
+    <GroupName></GroupName>
+    <Status>Disabled</Status>
+    <Description></Description>
+    <MarketId>4</MarketId>
+    <MarketName>China</MarketName>
+    <ConfigFile>Config\China\China_IndexQC.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.China.ChinaIndexQCConfig,RicGeneratorLibChina</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.China.ChinaIndexQC, RicGeneratorLibChina</GeneratorType>
+  </TaskInfo>
+
+  <TaskInfo>
+    <TaskId>31</TaskId>
+    <TaskName>HK ISIN Update</TaskName>
+    <GroupName></GroupName>
+    <Status>Disabled</Status>
+    <Description></Description>
+    <MarketId>1</MarketId>
+    <MarketName>HK</MarketName>
+    <ConfigFile>Config\HK\HK_ISINUpdate.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.HK.HKISINUpdateConfig, RicGeneratorLibHK</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.HK.HKISINUpdator, RicGeneratorLibHK</GeneratorType>
+  </TaskInfo>
+
+  <TaskInfo>
+    <TaskId>32</TaskId>
+    <TaskName>Japan T_TRADG_TRADH Update</TaskName>
+    <GroupName></GroupName>
+    <Status>Active</Status>
+    <Description></Description>
+    <MarketId>5</MarketId>
+    <MarketName>Japan</MarketName>
+    <ConfigFile>Config\Japan\Japan_Tradg_TradhUpdator.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Japan.JapanTRADG_TRADHUpdatorConfig, RicGeneratorLibJapan</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Japan.JapanT_TRADG_TRADHUpdator, RicGeneratorLibJapan</GeneratorType>
+  </TaskInfo>
+
+  <TaskInfo>
+    <TaskId>33</TaskId>
+    <TaskName>Add &amp; Drop Page Updator</TaskName>
+    <GroupName>Add &amp; Drop Page</GroupName>
+    <Status>Active</Status>
+    <Description>Combine all FMs such as ELW/KOBA Add and Pre-mature Drop; Equity/Company Warrant Add, Drop and Name Change; Rights Add and Drop etc. and update the information in the Change Page of production. E.g. KR/CHANGE2</Description>
+    <MarketId>2</MarketId>
+    <MarketName>Korea</MarketName>
+    <ConfigFile>Config\Korea\KOREA_ADDDROPChangeUpdator.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Korea.KOREA_AddDropChangeConfig, RicGeneratorLibKorea</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Korea.AddDropPageUpdator, RicGeneratorLibKorea</GeneratorType>
+  </TaskInfo>
+
+  <TaskInfo>
+    <TaskId>34</TaskId>
+    <TaskName>Japan OSE Outstanding Trade Volume Updator</TaskName>
+    <GroupName></GroupName>
+    <Status>Active</Status>
+    <Description></Description>
+    <MarketId>5</MarketId>
+    <MarketName>Japan</MarketName>
+    <ConfigFile>Config\Japan\Japan_OSETradeVolumeUpdator.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Japan.JapanOSETradeVolumeUpdatorConfig, RicGeneratorLibJapan</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Japan.JapanOSEOutstandingTradeVolumeUpdator, RicGeneratorLibJapan</GeneratorType>
+  </TaskInfo>
+
+  <TaskInfo>
+    <TaskId>35</TaskId>
+    <TaskName>Japan OSE Large Transaction Trade Volume Updator</TaskName>
+    <GroupName></GroupName>
+    <Status>Active</Status>
+    <Description></Description>
+    <MarketId>5</MarketId>
+    <MarketName>Japan</MarketName>
+    <ConfigFile>Config\Japan\JapanLargeTransOSEOptionAndFutureUpdator.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Japan.JapanLargeTransOSEOptionAndFutureUpdatorConfig, RicGeneratorLibJapan</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Japan.JapanLargeTransOSEOptionAndFutureUpdator, RicGeneratorLibJapan</GeneratorType>
+  </TaskInfo>
+
+  <TaskInfo>
+    <TaskId>36</TaskId>
+    <TaskName>TSE TOPIX Futures&amp;Securities Options-Transaction&amp;OUT.O/I</TaskName>
+    <GroupName></GroupName>
+    <Status>Active</Status>
+    <Description></Description>
+    <MarketId>5</MarketId>
+    <MarketName>Japan</MarketName>
+    <ConfigFile>Config\Japan\Japan_Kabusaki3_MailRelatedTasks.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Japan.JapanKabusaki3MailRelatedTasksConfig, RicGeneratorLibJapan</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Japan.JapanKabusaki3MailRelatedTasks, RicGeneratorLibJapan</GeneratorType>
+  </TaskInfo>
+
+  <TaskInfo>
+    <TaskId>37</TaskId>
+    <TaskName>HK ReadFMFiletoGenerateBulkFile</TaskName>
+    <GroupName></GroupName>
+    <Status>Disabled</Status>
+    <Description></Description>
+    <MarketId>1</MarketId>
+    <MarketName>HK</MarketName>
+    <ConfigFile>Config\HK\HK_ReadFMFiletoGenerateBulkFile.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.HK.ReadFMFiletoGenerateBulkFileConfig, RicGeneratorLibHK</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.HK.ReadFMFiletoGenerateBulkFile, RicGeneratorLibHK</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>38</TaskId>
+    <TaskName>HKWarrantAndCBBCFilesDownload</TaskName>
+    <GroupName></GroupName>
+    <Status>Disabled</Status>
+    <Description></Description>
+    <MarketId>1</MarketId>
+    <MarketName>HK</MarketName>
+    <ConfigFile>Config\HK\HK_WarrantAndCBBCFilesDownload.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.HK.HKWarrantAndCBBCFilesDownloadConfig, RicGeneratorLibHK</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.HK.HKWarrantAndCBBCFilesDownload, RicGeneratorLibHK</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>39</TaskId>
+    <TaskName>Stock/Currency Option Maintenance</TaskName>
+    <GroupName>Option</GroupName>
+    <Status>Active</Status>
+    <Description>For stock and currency option daily maintenance and monthly rollover. Generate GEDA file.</Description>
+    <MarketId>2</MarketId>
+    <MarketName>Korea</MarketName>
+    <ConfigFile>Config\Korea\KOREA_StockOptionDailyAndMonthlyMaintain.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Korea.KOREA_StockOptionDailyAndMonthlyMaintainConfig,RicGeneratorLibKorea</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Korea.StockOptionDailyAndMonthlyMaintain,RicGeneratorLibKorea</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>40</TaskId>
+    <TaskName>Index Option Maintenance</TaskName>
+    <GroupName>Option</GroupName>
+    <Status>Active</Status>
+    <Description>For index option daily maintenance and monthly rollover. Generate NDA file.</Description>
+    <MarketId>2</MarketId>
+    <MarketName>Korea</MarketName>
+    <ConfigFile>Config\Korea\KOREA_IndexOptionDailyMaintain.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Korea.KOREA_IndexOptionDailyMaintainConfig,RicGeneratorLibKorea</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Korea.IndexOptionDailyMaintain,RicGeneratorLibKorea</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>41</TaskId>
+    <TaskName>TWISINSupportTask</TaskName>
+    <GroupName></GroupName>
+    <Status>Active</Status>
+    <Description></Description>
+    <MarketId>6</MarketId>
+    <MarketName>TW</MarketName>
+    <ConfigFile>Config\TW\TWISINSupportTask.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.TW.TWISINSupportTaskConfig,RicGeneratorLibTW</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.TW.TWISINSupportTask,RicGeneratorLibTW</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>42</TaskId>
+    <TaskName>EMA File Mantenance</TaskName>
+    <GroupName>EMA File</GroupName>
+    <Status>Active</Status>
+    <Description>For daily EMA file maintenance, file type contains WRT_ADD (for ELW, KOBA and Company Warrant Add), WRT_PRC (for Company Warrant strike price change), WRT_MOD (for ELW changes except quantity change) and WRT_QUA (for ELW and Company Warrant quantity change).</Description>
+    <MarketId>2</MarketId>
+    <MarketName>Korea</MarketName>
+    <ConfigFile>Config\Korea\KOREA_EMAFileMantenance.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Korea.KOREA_SEMAFileMantenanceConfig,RicGeneratorLibKorea</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Korea.EMAFileMantenance,RicGeneratorLibKorea</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>43</TaskId>
+    <TaskName>GedaTest</TaskName>
+    <GroupName></GroupName>
+    <Status>Active</Status>
+    <Description></Description>
+    <MarketId>2</MarketId>
+    <MarketName>Korea</MarketName>
+    <ConfigFile>Config\Korea\GedaTestConfig.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Korea.GedaTestConfig,RicGeneratorLibKorea</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Korea.GedaTest,RicGeneratorLibKorea</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>44</TaskId>
+    <TaskName>HK StampDuty</TaskName>
+    <GroupName>OTHER</GroupName>
+    <Status>Active</Status>
+    <Description>Stamp duty</Description>
+    <MarketId>1</MarketId>
+    <MarketName>HK</MarketName>
+    <ConfigFile>Config\HK\HK_StampDuty.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.HK.HKStampDutyConfig, RicGeneratorLibHK</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.HK.HKStampDuty, RicGeneratorLibHK</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>45</TaskId>
+    <TaskName>ETFinsertTask</TaskName>
+    <GroupName></GroupName>
+    <Status>Active</Status>
+    <Description></Description>
+    <MarketId>1</MarketId>
+    <MarketName>TW</MarketName>
+    <ConfigFile>Config\TW\TW_ETFinsertTaskConfig.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.TW.ETFinsertTaskConfig, RicGeneratorLibTW</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.TW.ETFinsertTask, RicGeneratorLibTW</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>46</TaskId>
+    <TaskName>AutoSendFMEmail</TaskName>
+    <GroupName></GroupName>
+    <Status>Disabled</Status>
+    <Description></Description>
+    <MarketId>2</MarketId>
+    <MarketName>Korea</MarketName>
+    <ConfigFile>Config\Korea\KOREA_AutoSendFMEmail.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.Korea.KOREA_AutoSendFMEmailConfig,RicGeneratorLibKorea</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.Korea.AutoSendFMEmail,RicGeneratorLibKorea</GeneratorType>
+  </TaskInfo>
+  <TaskInfo>
+    <TaskId>47</TaskId>
+    <TaskName>TW FM Add</TaskName>
+    <GroupName></GroupName>
+    <Status>Active</Status>
+    <Description></Description>
+    <MarketId>6</MarketId>
+    <MarketName>TW</MarketName>
+    <ConfigFile>Config\TW\TWFMAdd.config</ConfigFile>
+    <ConfigType>Ric.Generator.Lib.TW.TWFMAddConfig, RicGeneratorLibTW</ConfigType>
+    <GeneratorType>Ric.Generator.Lib.TW.TWFMAdd, RicGeneratorLibTW</GeneratorType>
+  </TaskInfo>
+</ArrayOfTaskInfo>

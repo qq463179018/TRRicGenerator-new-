@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CEB81D52-8431-4512-B756-EBA964A7512A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ric.Db</RootNamespace>
+    <AssemblyName>Ric.Db</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DbLinq">
+      <HintPath>..\Library\DbLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="DbLinq.MySql">
+      <HintPath>..\Library\DbLinq.MySql.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.2.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auth.cs" />
+    <Compile Include="Config\AceDbConfig.cs" />
+    <Compile Include="Consts.cs" />
+    <Compile Include="DbConfig.cs" />
+    <Compile Include="Info\EmailAccountInfo.cs" />
+    <Compile Include="Info\HKRicNumInfo.cs" />
+    <Compile Include="Info\HKUnderlyingInfo.cs" />
+    <Compile Include="Info\KoreaEquityInfo.cs" />
+    <Compile Include="Info\KoreaIssuerInfo.cs" />
+    <Compile Include="Info\KoreaOptionMapInfo.cs" />
+    <Compile Include="Info\KoreaRicNumInfo.cs" />
+    <Compile Include="Info\KoreaUnderlyingInfo.cs" />
+    <Compile Include="Info\ProcessItem.cs" />
+    <Compile Include="Info\TWIssueDatePriceInfo.cs" />
+    <Compile Include="Info\TWIssueInfo.cs" />
+    <Compile Include="Info\TWUnderlyingNameInfo.cs" />
+    <Compile Include="Info\UnderlyingCodeInfo.cs" />
+    <Compile Include="Manager\ConfigureOperator.cs" />
+    <Compile Include="Manager\DBLinqExtension.cs" />
+    <Compile Include="Manager\DealsContext.cs" />
+    <Compile Include="Manager\EmailAccountManager.cs" />
+    <Compile Include="Manager\HKRicNumManager.cs" />
+    <Compile Include="Manager\HKUnderlyingManager.cs" />
+    <Compile Include="Manager\HolidayManager.cs" />
+    <Compile Include="Manager\KoreaCwntManager.cs" />
+    <Compile Include="Manager\KoreaELWManager.cs" />
+    <Compile Include="Manager\KoreaEquityManager.cs" />
+    <Compile Include="Manager\KoreaIssuerManager.cs" />
+    <Compile Include="Manager\KoreaOptionMapManager.cs" />
+    <Compile Include="Manager\KoreaOptionMapNewManager.cs" />
+    <Compile Include="Manager\KoreaRicNumManager.cs" />
+    <Compile Include="Manager\KoreaRightsManager.cs" />
+    <Compile Include="Manager\KoreaUnderlyingManager.cs" />
+    <Compile Include="Manager\MarketManager.cs" />
+    <Compile Include="Manager\TWIssueDatePriceManager.cs" />
+    <Compile Include="Manager\TWIssueManager.cs" />
+    <Compile Include="Manager\TWUnderlyingNameManager.cs" />
+    <Compile Include="Model\Config.cs">
+      <DependentUpon>RicGeneratorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ETI_HK_TradingNews_ExpireDate.cs" />
+    <Compile Include="Model\ETI_HK_TradingNews_ExlName.cs" />
+    <Compile Include="Model\ETI_HK_StampDuty.cs" />
+    <Compile Include="Model\HongKongModel.cs" />
+    <Compile Include="Model\Market.cs">
+      <DependentUpon>RicGeneratorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RicGeneratorModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RicGeneratorModel.Context.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Model\RicGeneratorModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RicGeneratorModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Model\RicGeneratorModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RicGeneratorModel.edmx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Manager\DropGedaManager.cs" />
+    <Compile Include="Info\JobInfo.cs" />
+    <Compile Include="Manager\JobManager.cs" />
+    <Compile Include="Manager\ManagerBase.cs" />
+    <Compile Include="Manager\ScheduleManager.cs" />
+    <Compile Include="Manager\StatsManager.cs" />
+    <Compile Include="Manager\UserManager.cs" />
+    <Compile Include="Model\Run.cs">
+      <DependentUpon>RicGeneratorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Schedule.cs">
+      <DependentUpon>RicGeneratorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ScheduleFrequency.cs">
+      <DependentUpon>RicGeneratorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Task.cs">
+      <DependentUpon>RicGeneratorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TaskResult.cs">
+      <DependentUpon>RicGeneratorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TaskStatus.cs">
+      <DependentUpon>RicGeneratorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tip.cs">
+      <DependentUpon>RicGeneratorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User.cs">
+      <DependentUpon>RicGeneratorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UserGroup.cs">
+      <DependentUpon>RicGeneratorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UserPartial.cs" />
+    <Compile Include="Model\UserStatus.cs">
+      <DependentUpon>RicGeneratorModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Manager\TableManager.cs" />
+    <Compile Include="Manager\TaskConfigManager.cs" />
+    <Compile Include="Info\TaskInfo.cs" />
+    <Compile Include="Manager\TaskManager.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ric.Util\Ric.Util.csproj">
+      <Project>{8c19e447-ce52-41fd-b05d-7f66410f460c}</Project>
+      <Name>Ric.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Model\RicGeneratorModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RicGeneratorModel.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EntityDeploy>
+    <None Include="Model\RicGeneratorModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RicGeneratorModel.edmx</DependentUpon>
+      <LastGenOutput>RicGeneratorModel.Context.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Model\RicGeneratorModel.edmx.diagram">
+      <DependentUpon>RicGeneratorModel.edmx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Model\RicGeneratorModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RicGeneratorModel.edmx</DependentUpon>
+      <LastGenOutput>RicGeneratorModel.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

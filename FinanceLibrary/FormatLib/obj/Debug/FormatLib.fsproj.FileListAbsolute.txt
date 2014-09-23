@@ -1,0 +1,6 @@
+F:\8.19(new ui staging)\Library\FinanceLib\FormatLib.dll
+F:\8.19(new ui staging)\Library\FinanceLib\FormatLib.pdb
+F:\8.19(new ui staging)\Library\FinanceLib\FormatLib.XML
+F:\8.19(new ui staging)\FinanceLibrary\FormatLib\obj\Debug\FormatLib.fsprojResolveAssemblyReference.cache
+F:\8.19(new ui staging)\FinanceLibrary\FormatLib\obj\Debug\FormatLib.dll
+F:\8.19(new ui staging)\FinanceLibrary\FormatLib\obj\Debug\FormatLib.pdb
